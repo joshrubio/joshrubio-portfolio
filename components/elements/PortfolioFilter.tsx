@@ -50,6 +50,54 @@ export default function PortfolioFilter() {
 				</div>
 				<div className="row masonry-active justify-content-between mt-6">
 					<div className="grid-sizer" />
+					<div className="filter-item col-lg-6 col-12 webapp">
+						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
+							<Link href="/projects/teller">
+								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/work/img-teller.png" alt="Teller - AI Writing Assistant" />
+							</Link>
+							<div className="d-flex align-items-center mt-4">
+								<Link href="/projects/teller" className="project-card-content">
+									<h3 className="fw-semibold">Teller</h3>
+									<p>AI Writing Assistant (UX/UI)</p>
+								</Link>
+								<Link href="/projects/teller" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
+									<i className="ri-arrow-right-up-line" />
+								</Link>
+							</div>
+						</div>
+					</div>
+					<div className="filter-item col-lg-6 col-12 webapp">
+						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
+							<Link href="/projects/moods">
+								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/work/img-moods.png" alt="MOODS - Social Music Platform" />
+							</Link>
+							<div className="d-flex align-items-center mt-4">
+								<Link href="/projects/moods" className="project-card-content">
+									<h3 className="fw-semibold">MOODS</h3>
+									<p>Social Music Platform (UX/UI)</p>
+								</Link>
+								<Link href="/projects/moods" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
+									<i className="ri-arrow-right-up-line" />
+								</Link>
+							</div>
+						</div>
+					</div>
+					<div className="filter-item col-lg-6 col-12 webapp">
+						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
+							<Link href="/projects/take-away">
+								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/work/img-takeaway.png" alt="Take Away - Food Delivery App" />
+							</Link>
+							<div className="d-flex align-items-center mt-4">
+								<Link href="/projects/take-away" className="project-card-content">
+									<h3 className="fw-semibold">Take Away</h3>
+									<p>Food Delivery App (UX/UI)</p>
+								</Link>
+								<Link href="/projects/take-away" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
+									<i className="ri-arrow-right-up-line" />
+								</Link>
+							</div>
+						</div>
+					</div>
 					<div className="filter-item col-lg-6 col-12 ecommerce webapp">
 						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
 							<Link href="/projects/the-sower-store">
@@ -82,6 +130,7 @@ export default function PortfolioFilter() {
 							</div>
 						</div>
 					</div>
+
 					<div className="filter-item col-lg-6 col-12 webapp">
 						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
 							<Link href="/projects/thinkboard">
@@ -109,6 +158,22 @@ export default function PortfolioFilter() {
 									<p>WordPress Website</p>
 								</Link>
 								<Link href="/projects/lifepoint-church" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
+									<i className="ri-arrow-right-up-line" />
+								</Link>
+							</div>
+						</div>
+					</div>
+					<div className="filter-item col-lg-6 col-12 wordpress">
+						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
+							<Link href="/projects/carmen-zambrano">
+								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/work/img-carmen.png" alt="Carmen Zambrano Portfolio" />
+							</Link>
+							<div className="d-flex align-items-center mt-4">
+								<Link href="/projects/carmen-zambrano" className="project-card-content">
+									<h3 className="fw-semibold">Carmen Zambrano</h3>
+									<p>Journalist Portfolio (WordPress)</p>
+								</Link>
+								<Link href="/projects/carmen-zambrano" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
 									<i className="ri-arrow-right-up-line" />
 								</Link>
 							</div>
