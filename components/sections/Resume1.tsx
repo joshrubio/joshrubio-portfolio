@@ -34,41 +34,29 @@ export default function Resume1() {
 									<div className="resume-card-item px-4 py-3 mt-5">
 										<div className="d-flex align-items-end">
 											<div>
-												<p className="fw-extra-bold text-linear-1 mb-2">2018-2019</p>
-												<h5>Certification in UX Design</h5>
-												<p className="text-300 mb-0">University of Stanford</p>
+												<p className="fw-extra-bold text-linear-1 mb-2">2014 - 2017</p>
+												<h5>Systems Engineering Degree</h5>
+												<p className="text-300 mb-0">IUTPJAA</p>
 											</div>
-											<h3 className="text-linear-1 ms-auto fw-semibold">4.9<span className="fs-4 fw-bold">/5</span></h3>
 										</div>
 									</div>
 									<div className="resume-card-item px-4 py-3 mt-5">
 										<div className="d-flex align-items-end">
 											<div>
-												<p className="fw-extra-bold text-linear-1 mb-2">2017-2018</p>
-												<h5>Certification in Web Dev</h5>
-												<p className="text-300 mb-0">University of Stanford</p>
+												<p className="fw-extra-bold text-linear-1 mb-2">Certification</p>
+												<h5><Link href="https://www.credly.com/badges/af4248f0-b9d7-4ec5-a34b-6bc1a4f35ee4/linked_in_profile" target="_blank" className="text-dark">Google UX Design Professional</Link></h5>
+												<p className="text-300 mb-0">Coursera / Google</p>
 											</div>
-											<h3 className="text-linear-1 ms-auto fw-semibold">5.0<span className="fs-4 fw-bold">/5</span></h3>
 										</div>
 									</div>
 									<div className="resume-card-item px-4 py-3 mt-5">
 										<div className="d-flex align-items-end">
 											<div>
-												<p className="fw-extra-bold text-linear-1 mb-2">2014-2016</p>
-												<h5>Advanced UX/UI Bootcamp</h5>
-												<p className="text-300 mb-0">Design Academy</p>
+												<p className="fw-extra-bold text-linear-1 mb-2">Certification</p>
+												<h5><Link href="https://cert.efset.org/K6YQH4" target="_blank" className="text-dark">EF SET English Certificate (C2)</Link></h5>
+												<p className="text-300 mb-0">EF Standard English Test</p>
 											</div>
-											<h3 className="text-linear-1 ms-auto fw-semibold">4.9<span className="fs-4 fw-bold">/5</span></h3>
-										</div>
-									</div>
-									<div className="resume-card-item px-4 py-3 mt-5">
-										<div className="d-flex align-items-end">
-											<div>
-												<p className="fw-extra-bold text-linear-1 mb-2">2012-2013</p>
-												<h5>Certification in Graphic Design</h5>
-												<p className="text-300 mb-0">Coursera</p>
-											</div>
-											<h3 className="text-linear-1 ms-auto fw-semibold">4.8<span className="fs-4 fw-bold">/5</span></h3>
+											<h3 className="text-linear-1 ms-auto fw-semibold">72<span className="fs-4 fw-bold">/100</span></h3>
 										</div>
 									</div>
 								</div>
@@ -82,24 +70,24 @@ export default function Resume1() {
 								</div>
 								<div className="resume-card-body">
 									<div className="resume-card-item px-4 py-3 mt-5">
-										<p className="fw-extra-bold text-linear-1 mb-2">2019 - Present</p>
-										<h5>Senior UI/UX Designer</h5>
-										<p className="text-300 mb-0">Leader in Creative team</p>
+										<p className="fw-extra-bold text-linear-1 mb-2">Mar 2025 - May 2025</p>
+										<h5>Product Designer</h5>
+										<p className="text-300 mb-0">Mokku</p>
 									</div>
 									<div className="resume-card-item px-4 py-3 mt-5">
-										<p className="fw-extra-bold text-linear-1 mb-2">2016 - 2019</p>
-										<h5>UI/UX Designer at BOS Agency</h5>
-										<p className="text-300 mb-0">Tech Startup</p>
+										<p className="fw-extra-bold text-linear-1 mb-2">Jan 2025 - Mar 2025</p>
+										<h5>Product Designer</h5>
+										<p className="text-300 mb-0">No Country</p>
 									</div>
 									<div className="resume-card-item px-4 py-3 mt-5">
-										<p className="fw-extra-bold text-linear-1 mb-2">2014-2016</p>
-										<h5>Freelance UI/UX Designer</h5>
-										<p className="text-300 mb-0">Self-Employed</p>
+										<p className="fw-extra-bold text-linear-1 mb-2">Mar 2022 - Present</p>
+										<h5>Design Lead</h5>
+										<p className="text-300 mb-0">LifePoint Church</p>
 									</div>
 									<div className="resume-card-item px-4 py-3 mt-4">
-										<p className="fw-extra-bold text-linear-1 mb-2">2012 - 2014</p>
-										<h5>Junior UI Designer</h5>
-										<p className="text-300 mb-0">Web Solutions team</p>
+										<p className="fw-extra-bold text-linear-1 mb-2">Jan 2016 - Jun 2016</p>
+										<h5>3D Animator</h5>
+										<p className="text-300 mb-0">Vene 3D</p>
 									</div>
 								</div>
 							</div>
