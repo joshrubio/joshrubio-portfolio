@@ -18,13 +18,23 @@ export default function Contact1() {
 
 							<div className="d-flex align-items-center mb-4 position-relative d-inline-flex">
 								<div className="bg-white icon-flip position-relative icon-shape icon-xxl border-linear-2 border-2 rounded-4">
+									<i className="ri-phone-fill text-primary-1 fs-26" />
+								</div>
+								<div className="ps-3">
+									<span className="text-400 fs-5">Phone Number</span>
+									<h6 className="mb-0">+34-643-529-116</h6>
+								</div>
+								<Link href="tel:+34643529116" className="position-absolute top-0 start-0 w-100 h-100" />
+							</div>
+							<div className="d-flex align-items-center mb-4 position-relative d-inline-flex">
+								<div className="bg-white icon-flip position-relative icon-shape icon-xxl border-linear-2 border-2 rounded-4">
 									<i className="ri-mail-fill text-primary-1 fs-26" />
 								</div>
 								<div className="ps-3">
 									<span className="text-400 fs-5">Email</span>
 									<h6 className="mb-0">joshuerubio@gmail.com</h6>
 								</div>
-								<Link href="/mailto:someone@example.com" className="position-absolute top-0 start-0 w-100 h-100" />
+								<Link href="mailto:joshuerubio@gmail.com" className="position-absolute top-0 start-0 w-100 h-100" />
 							</div>
 							<div className="d-flex align-items-center mb-4 position-relative d-inline-flex">
 								<div className="bg-white icon-flip position-relative icon-shape icon-xxl border-linear-2 border-2 rounded-4">

@@ -45,7 +45,7 @@ export default function Thinkboard() {
                                         <h6>GitHub</h6>
                                     </div>
                                 </div>
-                                <img src="/assets/imgs/work/img-background.png" alt="Thinkboard Application" />
+                                <img src="/assets/imgs/work/img-thinkboard.png" alt="Thinkboard Application" className="w-100 rounded-3 mb-5" />
                                 <div className="col-lg-8 mx-lg-auto mt-8">
                                     <h5 className="fs-5 fw-medium">Overview</h5>
                                     <p className="text-300">

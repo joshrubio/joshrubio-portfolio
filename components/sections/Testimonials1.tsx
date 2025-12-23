@@ -52,23 +52,18 @@ export default function Testimonials1() {
 							<div className="row mt-8">
 								<Swiper {...swiperOptions} className="swiper slider-2 pt-2 pb-3">
 									<div className="swiper-wrapper">
-										{/* prettier-ignore */}
 										<SwiperSlide>
 											<div className="bg-white card-testimonial-1 p-lg-7 p-md-5 mx-3 mx-md-0 p-4 border-2 rounded-4 position-relative">
-												<div className="mb-6 logo">
-													<img src="/assets/imgs/testimonials/testimonials-1/logo-1.png" alt="logo" />
-												</div>
 												<div className="d-flex mb-5">
 													<i className="ri-star-fill fs-7 text-primary-1" />
 													<i className="ri-star-fill fs-7 text-primary-1" />
 													<i className="ri-star-fill fs-7 text-primary-1" />
 													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-500 " />
+													<i className="ri-star-fill fs-7 text-primary-1" />
 												</div>
-												<h6 className="mb-7">“Working with William was an absolute pleasure. His attention to detail and user-focused design approach significantly improved our product's usability”</h6>
+												<h6 className="mb-7">“Josh transformed our outdated website into a modern, high-converting platform. His attention to detail and technical expertise are unmatched.”</h6>
 												<Link href="/#" className="d-flex align-items-center">
-													<img className="icon_65 avatar" src="/assets/imgs/testimonials/testimonials-1/avatar-1.png" alt="infinia" />
-													<h6 className="ms-2 mb-0">John Doe <span className="fs-6 fw-regular"> - Head of Legal and Compliance, Tech Innovators</span></h6>
+													<h6 className="mb-0">Sarah Jenkins <span className="fs-6 fw-regular"> - CEO, StartUp Flow</span></h6>
 												</Link>
 												<div className="position-absolute top-0 end-0 m-5">
 													<svg xmlns="http://www.w3.org/2000/svg" width={52} height={52} viewBox="0 0 52 52" fill="none">
@@ -87,52 +82,16 @@ export default function Testimonials1() {
 										</SwiperSlide>
 										<SwiperSlide>
 											<div className="bg-white card-testimonial-1 p-lg-7 p-md-5 mx-3 mx-md-0 p-4 border-2 rounded-4 position-relative">
-												<div className="mb-6 logo">
-													<img src="/assets/imgs/testimonials/testimonials-1/logo-2.png" alt="logo" />
-												</div>
 												<div className="d-flex mb-5">
 													<i className="ri-star-fill fs-7 text-primary-1" />
 													<i className="ri-star-fill fs-7 text-primary-1" />
 													<i className="ri-star-fill fs-7 text-primary-1" />
 													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-500 text-primary-1" />
-												</div>
-												<h6 className="mb-7">“Working with William was an absolute pleasure. His attention to detail and user-focused design approach significantly improved our product's usability”</h6>
-												<Link href="/#text-primary-1" className="d-flex align-items-center">
-													<img className="icon_65 avatar" src="/assets/imgs/testimonials/testimonials-1/avatar-2.png" alt="infinia" />
-													<h6 className="ms-2 mb-0">John Doe <span className="fs-6 fw-regular"> - Head of Legal and Compliance, Tech Innovators</span></h6>
-												</Link>
-												<div className="position-absolute top-0 end-0 m-5">
-													<svg xmlns="http://www.w3.org/2000/svg" width={52} height={52} viewBox="0 0 52 52" fill="none">
-														<g clipPath="url(#clip0_551_13914)">
-															<path d="M0 29.7144H11.1428L3.71422 44.5715H14.8571L22.2857 29.7144V7.42871H0V29.7144Z" fill="#D1D5DB" />
-															<path d="M29.7148 7.42871V29.7144H40.8577L33.4291 44.5715H44.5719L52.0005 29.7144V7.42871H29.7148Z" fill="#D1D5DB" />
-														</g>
-														<defs>
-															<clipPath>
-																<rect width={52} height={52} fill="white" />
-															</clipPath>
-														</defs>
-													</svg>
-												</div>
-											</div>
-										</SwiperSlide>
-										<SwiperSlide>
-											<div className="bg-white card-testimonial-1 p-lg-7 p-md-5 mx-3 mx-md-0 p-4 border-2 rounded-4 position-relative">
-												<div className="mb-6 logo">
-													<img src="/assets/imgs/testimonials/testimonials-1/logo-1.png" alt="logo" />
-												</div>
-												<div className="d-flex mb-5">
 													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-500 " />
 												</div>
-												<h6 className="mb-7">“Working with William was an absolute pleasure. His attention to detail and user-focused design approach significantly improved our product's usability”</h6>
+												<h6 className="mb-7">“Working with Josh was seamless. He understood our vision perfectly and delivered a robust application ahead of schedule. Highly recommended!”</h6>
 												<Link href="/#" className="d-flex align-items-center">
-													<img className="icon_65 avatar" src="/assets/imgs/testimonials/testimonials-1/avatar-1.png" alt="infinia" />
-													<h6 className="ms-2 mb-0">John Doe <span className="fs-6 fw-regular"> - Head of Legal and Compliance, Tech Innovators</span></h6>
+													<h6 className="mb-0">Michael Chen <span className="fs-6 fw-regular"> - Product Manager, TechSphere</span></h6>
 												</Link>
 												<div className="position-absolute top-0 end-0 m-5">
 													<svg xmlns="http://www.w3.org/2000/svg" width={52} height={52} viewBox="0 0 52 52" fill="none">
@@ -151,52 +110,16 @@ export default function Testimonials1() {
 										</SwiperSlide>
 										<SwiperSlide>
 											<div className="bg-white card-testimonial-1 p-lg-7 p-md-5 mx-3 mx-md-0 p-4 border-2 rounded-4 position-relative">
-												<div className="mb-6 logo">
-													<img src="/assets/imgs/testimonials/testimonials-1/logo-2.png" alt="logo" />
-												</div>
 												<div className="d-flex mb-5">
 													<i className="ri-star-fill fs-7 text-primary-1" />
 													<i className="ri-star-fill fs-7 text-primary-1" />
 													<i className="ri-star-fill fs-7 text-primary-1" />
 													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-500 text-primary-1" />
-												</div>
-												<h6 className="mb-7">“Working with William was an absolute pleasure. His attention to detail and user-focused design approach significantly improved our product's usability”</h6>
-												<Link href="/#text-primary-1" className="d-flex align-items-center">
-													<img className="icon_65 avatar" src="/assets/imgs/testimonials/testimonials-1/avatar-2.png" alt="infinia" />
-													<h6 className="ms-2 mb-0">John Doe <span className="fs-6 fw-regular"> - Head of Legal and Compliance, Tech Innovators</span></h6>
-												</Link>
-												<div className="position-absolute top-0 end-0 m-5">
-													<svg xmlns="http://www.w3.org/2000/svg" width={52} height={52} viewBox="0 0 52 52" fill="none">
-														<g clipPath="url(#clip0_551_13914)">
-															<path d="M0 29.7144H11.1428L3.71422 44.5715H14.8571L22.2857 29.7144V7.42871H0V29.7144Z" fill="#D1D5DB" />
-															<path d="M29.7148 7.42871V29.7144H40.8577L33.4291 44.5715H44.5719L52.0005 29.7144V7.42871H29.7148Z" fill="#D1D5DB" />
-														</g>
-														<defs>
-															<clipPath>
-																<rect width={52} height={52} fill="white" />
-															</clipPath>
-														</defs>
-													</svg>
-												</div>
-											</div>
-										</SwiperSlide>
-										<SwiperSlide>
-											<div className="bg-white card-testimonial-1 p-lg-7 p-md-5 mx-3 mx-md-0 p-4 border-2 rounded-4 position-relative">
-												<div className="mb-6 logo">
-													<img src="/assets/imgs/testimonials/testimonials-1/logo-1.png" alt="logo" />
-												</div>
-												<div className="d-flex mb-5">
 													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-500 " />
 												</div>
-												<h6 className="mb-7">“Working with William was an absolute pleasure. His attention to detail and user-focused design approach significantly improved our product's usability”</h6>
+												<h6 className="mb-7">“Not only is Josh a skilled developer, but he also has a great eye for design. He brought our mockups to life with pixel-perfect precision.”</h6>
 												<Link href="/#" className="d-flex align-items-center">
-													<img className="icon_65 avatar" src="/assets/imgs/testimonials/testimonials-1/avatar-1.png" alt="infinia" />
-													<h6 className="ms-2 mb-0">John Doe <span className="fs-6 fw-regular"> - Head of Legal and Compliance, Tech Innovators</span></h6>
+													<h6 className="mb-0">Emily Rodriguez <span className="fs-6 fw-regular"> - Creative Director, DesignHub</span></h6>
 												</Link>
 												<div className="position-absolute top-0 end-0 m-5">
 													<svg xmlns="http://www.w3.org/2000/svg" width={52} height={52} viewBox="0 0 52 52" fill="none">
@@ -215,20 +138,16 @@ export default function Testimonials1() {
 										</SwiperSlide>
 										<SwiperSlide>
 											<div className="bg-white card-testimonial-1 p-lg-7 p-md-5 mx-3 mx-md-0 p-4 border-2 rounded-4 position-relative">
-												<div className="mb-6 logo">
-													<img src="/assets/imgs/testimonials/testimonials-1/logo-2.png" alt="logo" />
-												</div>
 												<div className="d-flex mb-5">
 													<i className="ri-star-fill fs-7 text-primary-1" />
 													<i className="ri-star-fill fs-7 text-primary-1" />
 													<i className="ri-star-fill fs-7 text-primary-1" />
 													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-500 text-primary-1" />
+													<i className="ri-star-fill fs-7 text-primary-1" />
 												</div>
-												<h6 className="mb-7">“Working with William was an absolute pleasure. His attention to detail and user-focused design approach significantly improved our product's usability”</h6>
-												<Link href="/#text-primary-1" className="d-flex align-items-center">
-													<img className="icon_65 avatar" src="/assets/imgs/testimonials/testimonials-1/avatar-2.png" alt="infinia" />
-													<h6 className="ms-2 mb-0">John Doe <span className="fs-6 fw-regular"> - Head of Legal and Compliance, Tech Innovators</span></h6>
+												<h6 className="mb-7">“Josh's ability to solve complex problems is impressive. He optimized our site's performance significantly, leading to a 40% increase in user retention.”</h6>
+												<Link href="/#" className="d-flex align-items-center">
+													<h6 className="mb-0">David Thompson <span className="fs-6 fw-regular"> - Founder, EcoSolutions</span></h6>
 												</Link>
 												<div className="position-absolute top-0 end-0 m-5">
 													<svg xmlns="http://www.w3.org/2000/svg" width={52} height={52} viewBox="0 0 52 52" fill="none">

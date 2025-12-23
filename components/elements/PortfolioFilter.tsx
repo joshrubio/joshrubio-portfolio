@@ -3,6 +3,8 @@ import Isotope from "isotope-layout"
 import Link from "next/link"
 import { useCallback, useEffect, useRef, useState } from "react"
 
+import { projects } from "@/data/projects"
+
 export default function PortfolioFilter() {
 	// Isotope
 	const isotope = useRef<Isotope | null>(null)
@@ -50,137 +52,26 @@ export default function PortfolioFilter() {
 				</div>
 				<div className="row masonry-active justify-content-between mt-6">
 					<div className="grid-sizer" />
-					<div className="filter-item col-lg-6 col-12 webapp">
-						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
-							<Link href="/projects/teller">
-								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/work/img-teller.png" alt="Teller - AI Writing Assistant" />
-							</Link>
-							<div className="d-flex align-items-center mt-4">
-								<Link href="/projects/teller" className="project-card-content">
-									<h3 className="fw-semibold">Teller</h3>
-									<p>AI Writing Assistant (UX/UI)</p>
+					{projects.map((project) => (
+						<div key={project.id} className={`filter-item col-lg-6 col-12 ${project.categories.join(" ")}`}>
+							<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
+								<Link href={`/projects/${project.slug}`}>
+									<img className="rounded-3 w-100 zoom-img" src={project.image} alt={project.title} />
 								</Link>
-								<Link href="/projects/teller" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
-									<i className="ri-arrow-right-up-line" />
-								</Link>
+								<div className="d-flex align-items-center mt-4">
+									<Link href={`/projects/${project.slug}`} className="project-card-content">
+										<h3 className="fw-semibold">{project.title}</h3>
+										<p>{project.subtitle}</p>
+									</Link>
+									<Link href={`/projects/${project.slug}`} className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
+										<i className="ri-arrow-right-up-line" />
+									</Link>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div className="filter-item col-lg-6 col-12 webapp">
-						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
-							<Link href="/projects/moods">
-								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/work/img-moods.png" alt="MOODS - Social Music Platform" />
-							</Link>
-							<div className="d-flex align-items-center mt-4">
-								<Link href="/projects/moods" className="project-card-content">
-									<h3 className="fw-semibold">MOODS</h3>
-									<p>Social Music Platform (UX/UI)</p>
-								</Link>
-								<Link href="/projects/moods" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
-									<i className="ri-arrow-right-up-line" />
-								</Link>
-							</div>
-						</div>
-					</div>
-					<div className="filter-item col-lg-6 col-12 webapp">
-						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
-							<Link href="/projects/take-away">
-								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/work/img-takeaway.png" alt="Take Away - Food Delivery App" />
-							</Link>
-							<div className="d-flex align-items-center mt-4">
-								<Link href="/projects/take-away" className="project-card-content">
-									<h3 className="fw-semibold">Take Away</h3>
-									<p>Food Delivery App (UX/UI)</p>
-								</Link>
-								<Link href="/projects/take-away" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
-									<i className="ri-arrow-right-up-line" />
-								</Link>
-							</div>
-						</div>
-					</div>
-					<div className="filter-item col-lg-6 col-12 ecommerce webapp">
-						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
-							<Link href="/projects/the-sower-store">
-								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/work/img-thesower.png" alt="The Sower Store" />
-							</Link>
-							<div className="d-flex align-items-center mt-4">
-								<Link href="/projects/the-sower-store" className="project-card-content">
-									<h3 className="fw-semibold">The Sower Store</h3>
-									<p>MERN Ecommerce Platform</p>
-								</Link>
-								<Link href="/projects/the-sower-store" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
-									<i className="ri-arrow-right-up-line" />
-								</Link>
-							</div>
-						</div>
-					</div>
-					<div className="filter-item col-lg-6 col-12 elearning webapp">
-						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
-							<Link href="/projects/wissen">
-								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/work/img-wissen.png" alt="Wissen" />
-							</Link>
-							<div className="d-flex align-items-center mt-4">
-								<Link href="/projects/wissen" className="project-card-content">
-									<h3 className="fw-semibold">Wissen</h3>
-									<p>E-learning Platform</p>
-								</Link>
-								<Link href="/projects/wissen" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
-									<i className="ri-arrow-right-up-line" />
-								</Link>
-							</div>
-						</div>
-					</div>
-
-					<div className="filter-item col-lg-6 col-12 webapp">
-						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
-							<Link href="/projects/thinkboard">
-								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/work/img-background.png" alt="Thinkboard" />
-							</Link>
-							<div className="d-flex align-items-center mt-4">
-								<Link href="/projects/thinkboard" className="project-card-content">
-									<h3 className="fw-semibold">Thinkboard</h3>
-									<p>MERN Notes App</p>
-								</Link>
-								<Link href="/projects/thinkboard" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
-									<i className="ri-arrow-right-up-line" />
-								</Link>
-							</div>
-						</div>
-					</div>
-					<div className="filter-item col-lg-6 col-12 wordpress">
-						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
-							<Link href="/projects/lifepoint-church">
-								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/projects/lifepoint.png" alt="Lifepoint Church" />
-							</Link>
-							<div className="d-flex align-items-center mt-4">
-								<Link href="/projects/lifepoint-church" className="project-card-content">
-									<h3 className="fw-semibold">Lifepoint Church</h3>
-									<p>WordPress Website</p>
-								</Link>
-								<Link href="/projects/lifepoint-church" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
-									<i className="ri-arrow-right-up-line" />
-								</Link>
-							</div>
-						</div>
-					</div>
-					<div className="filter-item col-lg-6 col-12 wordpress">
-						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white">
-							<Link href="/projects/carmen-zambrano">
-								<img className="rounded-3 w-100 zoom-img" src="/assets/imgs/work/img-carmen.png" alt="Carmen Zambrano Portfolio" />
-							</Link>
-							<div className="d-flex align-items-center mt-4">
-								<Link href="/projects/carmen-zambrano" className="project-card-content">
-									<h3 className="fw-semibold">Carmen Zambrano</h3>
-									<p>Journalist Portfolio (WordPress)</p>
-								</Link>
-								<Link href="/projects/carmen-zambrano" className="project-card-icon icon-shape ms-auto icon-md rounded-circle">
-									<i className="ri-arrow-right-up-line" />
-								</Link>
-							</div>
-						</div>
-					</div>
+					))}
 				</div>
-			</div>
+			</div >
 		</>
 	)
 }

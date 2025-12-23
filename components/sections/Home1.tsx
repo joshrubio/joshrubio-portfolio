@@ -1,27 +1,51 @@
-
+'use client'
+import { useLayoutEffect, useRef } from "react"
 import Link from "next/link"
+import gsap from "gsap"
 
 export default function Home1() {
+	const containerRef = useRef(null)
+
+	useLayoutEffect(() => {
+		const ctx = gsap.context(() => {
+			const tl = gsap.timeline({ defaults: { ease: "power3.out" } })
+
+			tl.from(".animate-text", {
+				y: 30,
+				opacity: 0,
+				duration: 0.8,
+				stagger: 0.1,
+				delay: 0.2
+			})
+
+		}, containerRef)
+
+		return () => ctx.revert()
+	}, [])
+
 	return (
 		<>
-
 			<section className="section-hero-1 position-relative pt-200 pb-120 overflow-hidden">
-				<div className="container position-relative z-3">
+				<div className="container position-relative z-3" ref={containerRef}>
 					<div className="row">
 						<div className="col-lg-6 col-md-12">
-							<span className="text-dark">👋 Hi, I'm Josh</span>
-							<h1 className="ds-2 mb-3">UX Designer & <span className="text-primary-1">Fullstack Developer</span></h1>
-							<p className="text-300 mb-6">I design and build digital experiences that feel effortless, meaningful, and human-centered. My work blends product thinking, storytelling, and modern web technologies like Next.js, WordPress, and AI-powered tooling to create interfaces that solve real problems and scale with clarity.</p>
-							<Link href="https://drive.google.com/file/d/1J-FkOhU1cP-_04kxy6oPREKI4pbpieBq/view?usp=sharing" className="btn btn-gradient me-2" target="_blank">
-								Download CV
-								<i className="ri-download-line ms-2" />
-							</Link>
-							<Link href="/#contact" className="btn btn-outline-secondary d-inline-flex align-items-center">
-								<span>Let's Connect</span>
-								<i className="ri-arrow-right-line ms-2" />
-							</Link>
-							<p className="text-400 mt-6 mb-3">Technologies I work with</p>
-							<div className="d-flex gap-3">
+							<span className="text-dark animate-text d-block">👋 Hi, I'm Josh</span>
+							<h1 className="ds-2 mb-3 animate-text">UX Designer & <span className="text-primary-1">Fullstack Developer</span></h1>
+							<p className="text-300 mb-6 animate-text">I design and build digital experiences that feel effortless, meaningful, and human-centered. My work blends product thinking, storytelling, and modern web technologies like Next.js, WordPress, and AI-powered tooling to create interfaces that solve real problems and scale with clarity.</p>
+
+							<div className="animate-text d-flex align-items-center mb-6">
+								<Link href="https://drive.google.com/file/d/1J-FkOhU1cP-_04kxy6oPREKI4pbpieBq/view?usp=sharing" className="btn btn-gradient me-2" target="_blank">
+									Download CV
+									<i className="ri-download-line ms-2" />
+								</Link>
+								<Link href="/#contact" className="btn btn-outline-secondary d-inline-flex align-items-center">
+									<span>Let's Connect</span>
+									<i className="ri-arrow-right-line ms-2" />
+								</Link>
+							</div>
+
+							<p className="text-400 mb-3 animate-text">Technologies I work with</p>
+							<div className="d-flex gap-3 flex-wrap">
 								<div className="brand-logo icon-xl icon-shape rounded-3 bg-900">
 									<img src="/assets/imgs/hero/hero-1/brand-1.png" alt="brand" />
 								</div>
@@ -52,7 +76,6 @@ export default function Home1() {
 				</div>
 				<div className="position-absolute top-0 start-0 w-100 h-100 filter-invert" data-background="assets/imgs/hero/hero-1/background.png" />
 			</section>
-
 		</>
 	)
 }

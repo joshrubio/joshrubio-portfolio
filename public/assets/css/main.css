@@ -3692,6 +3692,9 @@ Preloader
 .masonry-active .filter-item:hover .project-item {
   background: linear-gradient(#ffffff, #ffffff) padding-box, var(--tc-linear-2) border-box;
 }
+.masonry-active .filter-item:hover .project-item .project-card-content h3 {
+  color: #1f1f24;
+}
 .masonry-active .filter-item:hover .project-item .project-card-icon {
   color: #ffffff;
   border: none;

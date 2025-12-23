@@ -76,32 +76,6 @@ export default function CarmenZambrano() {
                                         <li><p className="text-dark fw-bold">Responsiveness: <span className="text-300 fw-medium">Ensured a seamless reading experience across all devices, from desktops to mobile phones.</span></p></li>
                                     </ul>
 
-                                    <h6 className="mt-4">Content Strategy</h6>
-                                    <ul>
-                                        <li><p className="text-dark fw-bold">Storytelling: <span className="text-300 fw-medium">Structured the "About Me" and "Portfolio" sections to tell a cohesive story of her professional evolution.</span></p></li>
-                                    </ul>
-
-                                    {/* Contributions Image Placeholder */}
-                                    <div className="my-4 bg-light rounded-3 d-flex align-items-center justify-content-center" style={{ height: '300px', border: '2px dashed #ccc' }}>
-                                        <p className="text-muted">IMAGE: Screenshots of the Portfolio and Blog sections</p>
-                                    </div>
-
-                                    <h5 className="fs-5 fw-medium mt-5">3. Impact</h5>
-                                    <p className="text-300">
-                                        <strong>Connecting stories with the world.</strong><br />
-                                        The new website provides Carmen with a professional platform to share her voice and connect with a global audience.
-                                    </p>
-                                    <ul>
-                                        <li><p className="text-dark fw-bold">Professionalism: <span className="text-300 fw-medium">Establishes a strong digital brand for a senior journalist.</span></p></li>
-                                        <li><p className="text-dark fw-bold">Accessibility: <span className="text-300 fw-medium">Makes her extensive archive of work easily accessible to potential clients and readers.</span></p></li>
-                                        <li><p className="text-dark fw-bold">Autonomy: <span className="text-300 fw-medium">Empowers her to manage and update her own content without technical dependency.</span></p></li>
-                                    </ul>
-
-                                    {/* Final Image Placeholder */}
-                                    <div className="my-4 bg-light rounded-3 d-flex align-items-center justify-content-center" style={{ height: '400px', border: '2px dashed #ccc' }}>
-                                        <p className="text-muted">IMAGE: Final polished mockup of the website on mobile and desktop</p>
-                                    </div>
-
                                     <div className="mt-5">
                                         <Link href="https://carmenzambrano.nl/" target="_blank" className="btn btn-gradient me-2">
                                             Visit Live Site
