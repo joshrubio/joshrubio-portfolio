@@ -65,28 +65,6 @@ npm start
 npm run lint
 ```
 
-## 🎨 Featured Projects
-
-### The Sower Store
-Full-stack MERN e-commerce platform with payment integration, user authentication, and admin dashboard.
-
-**Tech**: MongoDB, Express, React, Node.js, Stripe
-
-### Wissen
-E-learning platform featuring course management, progress tracking, and interactive learning modules.
-
-**Tech**: Next.js, TypeScript, Database Integration
-
-### Thinkboard
-MERN-based notes application with real-time updates and collaborative features.
-
-**Tech**: MongoDB, Express, React, Node.js
-
-### Lifepoint Church
-Custom WordPress website with modern design and content management capabilities.
-
-**Tech**: WordPress, PHP, MySQL
-
 ## 📁 Project Structure
 
 ```
@@ -102,15 +80,6 @@ josh-portfolio/
 ├── package.json          # Dependencies and scripts
 └── README.md            # This file
 ```
-
-## 🌐 Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Import your repository on [Vercel](https://vercel.com)
-3. Vercel will automatically detect Next.js and configure the build settings
-4. Deploy!
 
 ### Manual Deployment
 
@@ -137,7 +106,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🤝 Connect
 
 - **GitHub**: [@joshrubio](https://github.com/joshrubio)
-- **Portfolio**: [Live Site](https://joshrubio-portfolio.vercel.app) *(update with your deployed URL)*
+- **Portfolio**: [Live Site](https://joshrubio.es)
 
 ## 🎯 Future Enhancements
 

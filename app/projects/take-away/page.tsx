@@ -72,28 +72,28 @@ export default function TakeAway() {
                                             <div className="p-3 rounded-3 border bg-light h-100">
                                                 <div className="fw-bold text-dark fs-5">01</div>
                                                 <div className="fw-semibold text-dark mt-2">DEFINE</div>
-                                                <div className="text-300 text-uppercase small mt-1">Scope</div>
+                                                <div className="text-uppercase small mt-1" style={{ color: '#5e5e65' }}>Scope</div>
                                             </div>
                                         </div>
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
                                                 <div className="fw-bold text-dark fs-5">02</div>
                                                 <div className="fw-semibold text-dark mt-2">RESEARCH</div>
-                                                <div className="text-300 text-uppercase small mt-1">Activities</div>
+                                                <div className="text-uppercase small mt-1" style={{ color: '#5e5e65' }}>Activities</div>
                                             </div>
                                         </div>
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
                                                 <div className="fw-bold text-dark fs-5">03</div>
                                                 <div className="fw-semibold text-dark mt-2">IDEATE</div>
-                                                <div className="text-300 text-uppercase small mt-1">Features</div>
+                                                <div className="text-uppercase small mt-1" style={{ color: '#5e5e65' }}>Features</div>
                                             </div>
                                         </div>
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
                                                 <div className="fw-bold text-dark fs-5">04</div>
                                                 <div className="fw-semibold text-dark mt-2">DESIGN</div>
-                                                <div className="text-300 text-uppercase small mt-1">Iterate</div>
+                                                <div className="text-uppercase small mt-1" style={{ color: '#5e5e65' }}>Iterate</div>
                                             </div>
                                         </div>
                                     </div>
