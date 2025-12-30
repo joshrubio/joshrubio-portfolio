@@ -14332,3 +14332,6 @@ strong {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+.text-force-black { color: #000 !important; }
+.text-force-gray { color: #5e5e65 !important; }
