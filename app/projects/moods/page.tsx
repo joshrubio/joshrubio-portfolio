@@ -76,29 +76,29 @@ export default function Moods() {
                                     <div className="row text-center mt-4 mb-5 g-3">
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
-                                                <div className="fw-bold text-100 fs-5">01</div>
-                                                <div className="fw-semibold text-100 mt-2">DEFINE</div>
+                                                <div className="fw-bold text-300 fs-5">01</div>
+                                                <div className="fw-semibold text-300 mt-2">DEFINE</div>
                                                 <div className="text-force-gray text-uppercase small mt-1">Scope</div>
                                             </div>
                                         </div>
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
-                                                <div className="fw-bold text-100 fs-5">02</div>
-                                                <div className="fw-semibold text-100 mt-2">RESEARCH</div>
+                                                <div className="fw-bold text-300 fs-5">02</div>
+                                                <div className="fw-semibold text-300 mt-2">RESEARCH</div>
                                                 <div className="text-force-gray text-uppercase small mt-1">Activities</div>
                                             </div>
                                         </div>
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
-                                                <div className="fw-bold text-100 fs-5">03</div>
-                                                <div className="fw-semibold text-100 mt-2">IDEATE</div>
+                                                <div className="fw-bold text-300 fs-5">03</div>
+                                                <div className="fw-semibold text-300 mt-2">IDEATE</div>
                                                 <div className="text-force-gray text-uppercase small mt-1">Features</div>
                                             </div>
                                         </div>
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
-                                                <div className="fw-bold text-100 fs-5">04</div>
-                                                <div className="fw-semibold text-100 mt-2">DESIGN</div>
+                                                <div className="fw-bold text-300 fs-5">04</div>
+                                                <div className="fw-semibold text-300 mt-2">DESIGN</div>
                                                 <div className="text-force-gray text-uppercase small mt-1">Iterate</div>
                                             </div>
                                         </div>
@@ -152,15 +152,15 @@ export default function Moods() {
 
                                     <div className="p-4 bg-light rounded-3 mt-4">
                                         <h6 className="fw-semibold mb-3">🎯 Research Goals</h6>
-                                        <ul className="text-300 mb-0">
+                                        <ul className="text-300 mb-0" style={{ color: 'var(--tc-neutral-300)' }}>
                                             <li className="mb-2">
-                                                <strong className="text-100">Analyze User Interaction Trends:</strong> Review how users engage with social features in existing music-driven apps to inform MOODS' design.
+                                                <strong style={{ color: 'var(--tc-neutral-300)' }}>Analyze User Interaction Trends:</strong> Review how users engage with social features in existing music-driven apps to inform MOODS' design.
                                             </li>
                                             <li className="mb-2">
-                                                <strong className="text-100">Identify Motivations for Social Engagement:</strong> Investigate user motivations behind music-based social interactions to guide MOODS' feature development.
+                                                <strong style={{ color: 'var(--tc-neutral-300)' }}>Identify Motivations for Social Engagement:</strong> Investigate user motivations behind music-based social interactions to guide MOODS' feature development.
                                             </li>
                                             <li className="mb-0">
-                                                <strong className="text-100">Assess Social Features' Impact on Retention:</strong> Study the effect of social elements on user retention in similar platforms to predict MOODS' potential impact.
+                                                <strong style={{ color: 'var(--tc-neutral-300)' }}>Assess Social Features' Impact on Retention:</strong> Study the effect of social elements on user retention in similar platforms to predict MOODS' potential impact.
                                             </li>
                                         </ul>
                                     </div>

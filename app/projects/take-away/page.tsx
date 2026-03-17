@@ -70,29 +70,29 @@ export default function TakeAway() {
                                     <div className="row text-center mt-4 mb-5 g-3">
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
-                                                <div className="fw-bold text-100 fs-5">01</div>
-                                                <div className="fw-semibold text-100 mt-2">DEFINE</div>
+                                                <div className="fw-bold text-300 fs-5">01</div>
+                                                <div className="fw-semibold text-300 mt-2">DEFINE</div>
                                                 <div className="text-force-gray text-uppercase small mt-1">Scope</div>
                                             </div>
                                         </div>
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
-                                                <div className="fw-bold text-100 fs-5">02</div>
-                                                <div className="fw-semibold text-100 mt-2">RESEARCH</div>
+                                                <div className="fw-bold text-300 fs-5">02</div>
+                                                <div className="fw-semibold text-300 mt-2">RESEARCH</div>
                                                 <div className="text-force-gray text-uppercase small mt-1">Activities</div>
                                             </div>
                                         </div>
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
-                                                <div className="fw-bold text-100 fs-5">03</div>
-                                                <div className="fw-semibold text-100 mt-2">IDEATE</div>
+                                                <div className="fw-bold text-300 fs-5">03</div>
+                                                <div className="fw-semibold text-300 mt-2">IDEATE</div>
                                                 <div className="text-force-gray text-uppercase small mt-1">Features</div>
                                             </div>
                                         </div>
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
-                                                <div className="fw-bold text-100 fs-5">04</div>
-                                                <div className="fw-semibold text-100 mt-2">DESIGN</div>
+                                                <div className="fw-bold text-300 fs-5">04</div>
+                                                <div className="fw-semibold text-300 mt-2">DESIGN</div>
                                                 <div className="text-force-gray text-uppercase small mt-1">Iterate</div>
                                             </div>
                                         </div>
@@ -114,15 +114,15 @@ export default function TakeAway() {
                                     </p>
                                     <div className="p-4 bg-light rounded-3 mt-4">
                                         <h6 className="fw-semibold mb-3">🎯 Research Goals</h6>
-                                        <ul className="text-300 mb-0">
+                                        <ul className="text-300 mb-0" style={{ color: 'var(--tc-neutral-300)' }}>
                                             <li className="mb-2">
-                                                <strong className="text-100">Explore successful features:</strong> Identify the most effective features in current applications to inform the design of our platform.
+                                                <strong style={{ color: 'var(--tc-neutral-300)' }}>Explore successful features:</strong> Identify the most effective features in current applications to inform the design of our platform.
                                             </li>
                                             <li className="mb-2">
-                                                <strong className="text-100">Identifying innovation opportunities:</strong> Analyzing potential gaps in the market to propose a differentiating approach.
+                                                <strong style={{ color: 'var(--tc-neutral-300)' }}>Identifying innovation opportunities:</strong> Analyzing potential gaps in the market to propose a differentiating approach.
                                             </li>
                                             <li className="mb-0">
-                                                <strong className="text-100">Evaluate usability and retention:</strong> Understand how key features impact the user experience and their decision to remain on the platform.
+                                                <strong style={{ color: 'var(--tc-neutral-300)' }}>Evaluate usability and retention:</strong> Understand how key features impact the user experience and their decision to remain on the platform.
                                             </li>
                                         </ul>
                                     </div>
