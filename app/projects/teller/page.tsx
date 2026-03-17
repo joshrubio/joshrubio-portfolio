@@ -137,29 +137,29 @@ export default function Teller() {
                                     <div className="row text-center mt-4 mb-5 g-3">
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
-                                                <div className="fw-bold text-force-black fs-5">01</div>
-                                                <div className="fw-semibold text-force-black mt-2">DEFINE</div>
+                                                <div className="fw-bold text-100 fs-5">01</div>
+                                                <div className="fw-semibold text-100 mt-2">DEFINE</div>
                                                 <div className="text-force-gray text-uppercase small mt-1">Scope</div>
                                             </div>
                                         </div>
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
-                                                <div className="fw-bold text-force-black fs-5">02</div>
-                                                <div className="fw-semibold text-force-black mt-2">RESEARCH</div>
+                                                <div className="fw-bold text-100 fs-5">02</div>
+                                                <div className="fw-semibold text-100 mt-2">RESEARCH</div>
                                                 <div className="text-force-gray text-uppercase small mt-1">Activities</div>
                                             </div>
                                         </div>
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
-                                                <div className="fw-bold text-force-black fs-5">03</div>
-                                                <div className="fw-semibold text-force-black mt-2">IDEATE</div>
+                                                <div className="fw-bold text-100 fs-5">03</div>
+                                                <div className="fw-semibold text-100 mt-2">IDEATE</div>
                                                 <div className="text-force-gray text-uppercase small mt-1">Features</div>
                                             </div>
                                         </div>
                                         <div className="col-6 col-md-3">
                                             <div className="p-3 rounded-3 border bg-light h-100">
-                                                <div className="fw-bold text-force-black fs-5">04</div>
-                                                <div className="fw-semibold text-force-black mt-2">DESIGN</div>
+                                                <div className="fw-bold text-100 fs-5">04</div>
+                                                <div className="fw-semibold text-100 mt-2">DESIGN</div>
                                                 <div className="text-force-gray text-uppercase small mt-1">Iterate</div>
                                             </div>
                                         </div>
@@ -321,28 +321,13 @@ export default function Teller() {
                                     {/* Screens - Fully Visible */}
                                     <div className="row g-4 my-4">
                                         <div className="col-12">
-                                            <div className="position-relative">
-                                                <img src="/assets/imgs/projects/teller/screen-plotting.png" alt="Plotting Flow Screen" className="w-100 rounded-3 border shadow-sm" />
-                                                <div className="position-absolute top-0 start-0 m-3">
-                                                    <span className="badge bg-success">Plotting Flow</span>
-                                                </div>
-                                            </div>
+                                            <img src="/assets/imgs/projects/teller/screen-plotting.png" alt="Plotting Flow Screen" className="w-100 rounded-3 border shadow-sm" />
                                         </div>
                                         <div className="col-12">
-                                            <div className="position-relative">
-                                                <img src="/assets/imgs/projects/teller/screen-rewriting.png" alt="Re-writing Flow Screen" className="w-100 rounded-3 border shadow-sm" />
-                                                <div className="position-absolute top-0 start-0 m-3">
-                                                    <span className="badge bg-warning">Re-writing Flow</span>
-                                                </div>
-                                            </div>
+                                            <img src="/assets/imgs/projects/teller/screen-rewriting.png" alt="Re-writing Flow Screen" className="w-100 rounded-3 border shadow-sm" />
                                         </div>
                                         <div className="col-12">
-                                            <div className="position-relative">
-                                                <img src="/assets/imgs/projects/teller/screen-brainstorming.png" alt="Brainstorming Flow Screen" className="w-100 rounded-3 border shadow-sm" />
-                                                <div className="position-absolute top-0 start-0 m-3">
-                                                    <span className="badge bg-info">Brainstorming Flow</span>
-                                                </div>
-                                            </div>
+                                            <img src="/assets/imgs/projects/teller/screen-brainstorming.png" alt="Brainstorming Flow Screen" className="w-100 rounded-3 border shadow-sm" />
                                         </div>
                                     </div>
 
