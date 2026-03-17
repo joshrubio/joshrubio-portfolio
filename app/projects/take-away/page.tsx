@@ -112,7 +112,7 @@ export default function TakeAway() {
                                     <p className="text-300">
                                         <strong>Definition and Research Plan.</strong> The project began with a strategic definition phase to establish a solid knowledge base. The main objective was to discover best practices in food delivery applications by analyzing existing platforms, identifying key functions, and exploring opportunities to integrate innovative features that improve the user experience and foster loyalty.
                                     </p>
-                                    <div className="p-4 bg-light rounded-3 mt-4">
+                                    <div className="p-4 rounded-3 mt-4">
                                         <h6 className="fw-semibold mb-3">🎯 Research Goals</h6>
                                         <ul className="text-300 mb-0" style={{ color: 'var(--tc-neutral-300)' }}>
                                             <li className="mb-2">

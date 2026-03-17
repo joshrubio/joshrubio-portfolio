@@ -150,7 +150,7 @@ export default function Moods() {
                                         To explore <strong>user behavior and preferences</strong> regarding social interactions in music-driven apps—or music-focused interactions within social media platforms—while validating the effectiveness of MOODS' key features in fostering <strong>engagement and community</strong> among music enthusiasts.
                                     </p>
 
-                                    <div className="p-4 bg-light rounded-3 mt-4">
+                                    <div className="p-4 rounded-3 mt-4">
                                         <h6 className="fw-semibold mb-3">🎯 Research Goals</h6>
                                         <ul className="text-300 mb-0" style={{ color: 'var(--tc-neutral-300)' }}>
                                             <li className="mb-2">

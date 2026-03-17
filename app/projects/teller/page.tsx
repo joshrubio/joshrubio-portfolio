@@ -207,7 +207,7 @@ export default function Teller() {
                                         To validate Teller's market fit, I investigated existing tools, analyzed workflows, and created data-informed personas.
                                     </p>
 
-                                    <div className="p-4 bg-light rounded-3 mt-4">
+                                    <div className="p-4 rounded-3 mt-4">
                                         <h6 className="fw-semibold mb-3">🎯 Research Goals</h6>
                                         <ul className="text-300 mb-0">
                                             <li>Map current workflows through <strong>user journeys and personas</strong></li>
