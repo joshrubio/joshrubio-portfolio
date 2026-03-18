@@ -30,33 +30,33 @@ export default function Skills2() {
 														<ul className="carouselTicker__list m-0">
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-4.svg" alt="brand" />
-																</Link>
-																<span className="tool-tip">NodeJS</span>
-															</li>
-															<li className="carouselTicker__item mt-6">
-																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-1.svg" alt="brand" />
-																</Link>
-																<span className="tool-tip">NextJS</span>
-															</li>
-															<li className="carouselTicker__item mt-6">
-																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-2.svg" alt="brand" />
-																</Link>
-																<span className="tool-tip">Firebase</span>
-															</li>
-															<li className="carouselTicker__item mt-6">
-																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-3.svg" alt="brand" />
-																</Link>
-																<span className="tool-tip">MongoDB</span>
-															</li>
-															<li className="carouselTicker__item mt-6">
-																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-6.svg" alt="brand" />
+																	<img src="assets/imgs/home-page-2/hero-1/react.svg" alt="React" />
 																</Link>
 																<span className="tool-tip">React</span>
+															</li>
+															<li className="carouselTicker__item mt-6">
+																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
+																	<img src="assets/imgs/home-page-2/hero-1/javascript.svg" alt="JavaScript" />
+																</Link>
+																<span className="tool-tip">JavaScript</span>
+															</li>
+															<li className="carouselTicker__item mt-6">
+																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
+																	<img src="assets/imgs/home-page-2/hero-1/nodejs.svg" alt="Node.js" />
+																</Link>
+																<span className="tool-tip">Node.js</span>
+															</li>
+															<li className="carouselTicker__item mt-6">
+																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
+																	<img src="assets/imgs/home-page-2/hero-1/python.svg" alt="Python" />
+																</Link>
+																<span className="tool-tip">Python</span>
+															</li>
+															<li className="carouselTicker__item mt-6">
+																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
+																	<img src="assets/imgs/home-page-2/hero-1/mongodb.svg" alt="MongoDB" />
+																</Link>
+																<span className="tool-tip">MongoDB</span>
 															</li>
 														</ul>
 													</Marquee>
@@ -67,27 +67,27 @@ export default function Skills2() {
 														<ul className="carouselTicker__list m-0 ">
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-7.svg" alt="brand" />
+																	<img src="assets/imgs/home-page-2/hero-1/svelte.svg" alt="Svelte" />
 																</Link>
-																<span className="tool-tip">VueJS</span>
+																<span className="tool-tip">Svelte</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-8.svg" alt="brand" />
+																	<img src="assets/imgs/home-page-2/hero-1/docker.svg" alt="Docker" />
 																</Link>
-																<span className="tool-tip">Angular</span>
+																<span className="tool-tip">Docker</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-9.svg" alt="brand" />
+																	<img src="assets/imgs/home-page-2/hero-1/git.svg" alt="Git" />
 																</Link>
-																<span className="tool-tip">Laravel</span>
+																<span className="tool-tip">Git</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/icon-5.svg" alt="brand" />
+																	<img src="assets/imgs/home-page-2/hero-1/php.svg" alt="PHP" />
 																</Link>
-																<span className="tool-tip">Tailwind</span>
+																<span className="tool-tip">PHP</span>
 															</li>
 														</ul>
 													</Marquee>
@@ -102,13 +102,13 @@ export default function Skills2() {
 															<li className="mb-3">
 																<div className="d-flex flex-column flex-md-row gap-2">
 																	<p className="text-dark text-nowrap mb-0">Front-End:</p>
-																	<span className="text-300">HTML, CSS, JavaScript, React, Angular</span>
+																	<span className="text-300">HTML, CSS, JavaScript, React, Svelte</span>
 																</div>
 															</li>
 															<li className="mb-3">
 																<div className="d-flex flex-column flex-md-row gap-2">
 																	<p className="text-dark text-nowrap mb-0">Back-End:</p>
-																	<span className="text-300">Node.js, Express, Python, Django</span>
+																	<span className="text-300">Node.js, Express, Python, PHP</span>
 																</div>
 															</li>
 															<li className="mb-3">

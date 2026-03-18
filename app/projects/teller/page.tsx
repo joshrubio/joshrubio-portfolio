@@ -217,9 +217,9 @@ export default function Teller() {
                                     </div>
 
                                     <div className="d-flex flex-wrap justify-content-center gap-2 gap-md-3 my-5 text-center">
-                                        <span className="badge bg-primary text-white fw-normal py-2 px-4 fs-6">UX Audits</span>
-                                        <span className="badge bg-primary text-white fw-normal py-2 px-4 fs-6">Competitive Analysis</span>
-                                        <span className="badge bg-primary text-white fw-normal py-2 px-4 fs-6">Persona Development</span>
+                                        <span className="badge text-white fw-normal py-2 px-4 fs-6" style={{ backgroundColor: '#6e4ef2' }}>UX Audits</span>
+                                        <span className="badge text-white fw-normal py-2 px-4 fs-6" style={{ backgroundColor: '#6e4ef2' }}>Competitive Analysis</span>
+                                        <span className="badge text-white fw-normal py-2 px-4 fs-6" style={{ backgroundColor: '#6e4ef2' }}>Persona Development</span>
                                     </div>
 
                                     {/* COMPETITIVE AUDIT */}

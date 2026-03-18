@@ -8,11 +8,9 @@ export default function Brands1() {
 			<section className="section-brands-1 section-padding">
 				<div className="container">
 					<div className="text-center">
-						<h2>Trusted by industry leaders</h2>
+						<h2>Working within leading digital ecosystems</h2>
 						<p className="text-300">
-							I have collaborated with many large corporations, companies, and agencies around
-							<br />
-							the world in many fields of design and consulting
+							Experience designing and building across widely adopted platforms and technologies. From modern frontend frameworks and design systems to scalable CMS and commerce solutions, my work integrates tools and standards shaped by industry leaders—ensuring flexibility, performance, and alignment with real-world product environments.
 						</p>
 					</div>
 				</div>
