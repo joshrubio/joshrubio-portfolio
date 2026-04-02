@@ -236,7 +236,7 @@ export default function Moods() {
                                         <img src="/assets/imgs/projects/moods/need-to-feature.png" alt="Need-to-Feature Report" className="w-100 rounded-3 border shadow-sm" />
                                     </div>
 
-                                    <h6 className="mt-6 fw-semibold">Gaps and Opportunities</h6>
+                                    <h6 className="mt-6 fw-semibold">Gaps and Opportunities, Feature Matrix Framework, Feature Prioritization</h6>
                                     <p className="text-300">
                                         During this stage, the features that ranked the highest during the curation process were matched with <strong>opportunities and gaps</strong> known during the process, resulting in a comprehensive analysis:
                                     </p>
@@ -269,17 +269,8 @@ export default function Moods() {
                                         For each high-priority feature, I mapped detailed <strong>user journey workflows</strong> tracking emotional states, actions, and pain points across six stages: <strong>Stage → Awareness → Engagement → Interaction → Enjoyment → Reflection & Sharing</strong>.
                                     </p>
 
-                                    <div className="row g-4 my-4">
-                                        <div className="col-12">
-                                            <h6 className="fw-semibold mb-3">Music Stories</h6>
-                                            <p className="text-300 mb-3">
-                                                <strong>Share Your Music Journey.</strong> Jamie loves sharing snippets of her artistic life with her followers in Germany. Inspired by a song from her latest playlist, she uses <strong>Music Stories</strong> to create a visual story paired with music—establishing her vibe, receiving reactions and comments from her community, sparking a meaningful exchange about music and art.
-                                            </p>
-                                            <img src="/assets/imgs/projects/moods/music-stories-journey.png" alt="Music Stories User Journey" className="w-100 rounded-3 border shadow-sm" />
-                                        </div>
-
-                                        <div className="col-12">
-                                            <h6 className="fw-semibold mb-3">Smart Suggestions & Mood Matcher</h6>
+                                    <div className="col-12">
+                                            <h6 className="fw-semibold mb-3">Definitions & Mood Matcher</h6>
                                             <p className="text-300 mb-3">
                                                 <strong>Let the Music Find You.</strong> Taylor wakes up early to prepare for his morning run. As he ties his shoes, his phone buzzes with a notification from MOODS: <em>"Start your day with energy!"</em> He taps it and finds the "Running Beats" playlist. Later, Jamie uses the <strong>Mood Matcher</strong> to find a playlist that complements her current mood—calm and introspective—offering her suggestions that align with her emotional state.
                                             </p>
@@ -289,26 +280,35 @@ export default function Moods() {
                                             <img src="/assets/imgs/projects/moods/definitions-mood-matcher.png" alt="Smart Suggestions and Mood Matcher Journey" className="w-100 rounded-3 border shadow-sm" />
                                         </div>
 
+                                    <div className="row g-4 my-4">
                                         <div className="col-12">
-                                            <h6 className="fw-semibold mb-3">Dynamic Lyrics Mode</h6>
+                                            <h6 className="fw-semibold mb-3">Music Stories & Smart Suggestions</h6>
+                                            <p className="text-300 mb-3">
+                                                <strong>Share Your Music Journey.</strong> Jamie loves sharing snippets of her artistic life with her followers in Germany. Inspired by a song from her latest playlist, she uses <strong>Music Stories</strong> to create a visual story paired with music—establishing her vibe, receiving reactions and comments from her community, sparking a meaningful exchange about music and art.
+                                            </p>
+                                            <img src="/assets/imgs/projects/moods/music-stories-journey.png" alt="Music Stories User Journey" className="w-100 rounded-3 border shadow-sm" />
+                                        </div>
+
+
+                                        <div className="col-12">
+                                            <h6 className="fw-semibold mb-3">Dynamic Lyrics Mode & Collaborative Playlists</h6>
                                             <p className="text-300 mb-3">
                                                 <strong>Understand the Music, Anywhere.</strong> Taylor often listens to songs in languages he's learning. During his morning commute, he plays a Spanish track and enables <strong>Dynamic Lyrics Mode</strong>—which synchronizes lyrics with the song being played. Users can adjust font sizes, themes, and even enable translations, making music accessible to diverse audiences.
                                             </p>
                                             <p className="text-300 mb-3">
                                                 <strong>Dynamic Lyrics Mode</strong> bridges music and language, helping users like Taylor connect to songs on a deeper, multilingual level.
                                             </p>
-                                            <img src="/assets/imgs/projects/moods/dynamic-lyrics-journey.png" alt="Dynamic Lyrics Mode User Journey" className="w-100 rounded-3 border shadow-sm" />
-                                        </div>
 
-                                        <div className="col-12">
-                                            <h6 className="fw-semibold mb-3">Collaborative Playlists</h6>
                                             <p className="text-300 mb-3">
                                                 <strong>Music for Every Great Vibe.</strong> Taylor frequently hosts casual get-togethers with friends. Using <strong>Collaborative Playlists</strong>, he creates a shared playlist for the evening. His friends can search, vote on songs, and add their own favorites—creating a dynamic, crowd-sourced soundtrack. The playlist evolves in real-time, reflecting the group's collective taste and energy.
                                             </p>
                                             <p className="text-300 mb-3">
                                                 <strong>Collaborative Playlists</strong> bring people together by allowing users like Taylor to co-create shared music experiences in real time.
                                             </p>
+
+                                            <img src="/assets/imgs/projects/moods/dynamic-lyrics-journey.png" alt="Dynamic Lyrics Mode User Journey" className="w-100 rounded-3 border shadow-sm" />
                                         </div>
+
                                     </div>
 
                                     {/* DESIGN SECTION */}
