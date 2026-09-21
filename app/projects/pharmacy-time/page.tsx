@@ -35,7 +35,7 @@ export default function PharmacyTime() {
             <ProjectBody>
                 <Section title="Overview">
                     <Paragraph>
-                        Client project developed for the agency Proventheory, for the Pharmacy Time brand. I designed the site and built the custom theme, the WooCommerce store and the tooling around it, from catalog import to deployment. The brand now appears live as Pharmacy You (the pharmacytime.com domain redirects there), which is the name visible in the screenshots.
+                        Client project developed for the agency Proventheory, for the Pharmacy Time brand. I designed the site and built the custom theme, the WooCommerce store and the tooling around it, from catalog import to deployment.
                     </Paragraph>
                 </Section>
 

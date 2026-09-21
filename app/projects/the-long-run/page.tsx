@@ -32,7 +32,7 @@ export default function TheLongRun() {
                 title="The Long Run - Brand Identity"
                 summary="A pet nutrition brand that borrows the language of old-school track and field. One promise, More Days Together, carried by a wordmark, a badge, a running dog and cat, and a color system where only the flavor changes."
                 meta={[
-                    { label: "Role", value: "Brand Design" },
+                    { label: "Role", value: "Brand Designer" },
                     { label: "Category", value: "Pet nutrition" },
                     { label: "Scope", value: "Identity, packaging, social, email" },
                     { label: "Brand book", value: "v03, Sept 2026" },
@@ -46,7 +46,7 @@ export default function TheLongRun() {
                         <strong>Every part of the identity exists to carry one promise: More Days Together.</strong> The Long Run makes single-ingredient, freeze-dried treats for dogs and cats that are human grade, protein packed and crafted for vitality. The name and the track-and-field world it borrows from say the same thing twice: this is nutrition built for a lifetime, not a trend.
                     </Paragraph>
                     <Paragraph>
-                        The identity system was applied to packaging, social and apparel, and then extended to the brand&apos;s email program. The result is a brand that is documented in a 24-slide brand book, and where every element ships as a locked file that is used exactly as supplied.
+                        I designed the identity system, applied it to packaging, social and apparel, and then rebuilt the brand&apos;s email program on top of it, working under the supervision of the Proventheory team. The result is a brand that is documented in a 24-slide brand book, and where every element ships as a locked file that is used exactly as supplied.
                     </Paragraph>
                 </Section>
                 <Figure src={`${IMG}/mockup-five-flavors.webp`} alt="The five flavors of The Long Run stand-up pouch" caption="Five flavors, one layout: only the flavor color changes" />
@@ -182,7 +182,7 @@ export default function TheLongRun() {
 
                 <Section title="9. Applied: The Email System">
                     <Paragraph>
-                        The last area was email, where <strong>a brand usually falls apart</strong>: templates get built one at a time, with different fonts, colors and voice. Six flows were rebuilt on the brand book, thirty emails in total, as a single system with one grammar of fifteen blocks. Blocks drop out when an email does not need them, and nothing else moves.
+                        The last area was email, where <strong>a brand usually falls apart</strong>: templates get built one at a time, with different fonts, colors and voice. I rebuilt six flows on the brand book, thirty emails in total, as a single system with one grammar of fifteen blocks. Blocks drop out when an email does not need them, and nothing else moves.
                     </Paragraph>
                     <FeatureList
                         items={[
