@@ -48,7 +48,7 @@ export default function Teller() {
 
                                 {/* Hero Image */}
                                 <div className="col-12 mb-5">
-                                    <img src="/assets/imgs/work/img-teller.png" alt="Teller Hero" className="w-100 rounded-3" />
+                                    <img src="/assets/imgs/projects/teller/thumbnail.png" alt="Teller Hero" className="w-100 rounded-3" />
                                 </div>
 
                                 <div className="col-lg-8 mx-lg-auto mt-8">

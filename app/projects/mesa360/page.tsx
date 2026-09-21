@@ -48,7 +48,7 @@ export default function Mesa360() {
 
                                 {/* Hero Image */}
                                 <div className="col-12 mb-5">
-                                    <img src="/assets/imgs/projects/mesa360/hero.jpg" alt="Mesa360 Hero" className="w-100 rounded-3" />
+                                    <img src="/assets/imgs/projects/mesa360/thumbnail.jpg" alt="Mesa360 Hero" className="w-100 rounded-3" />
                                 </div>
 
                                 <div className="col-lg-8 mx-lg-auto mt-8">

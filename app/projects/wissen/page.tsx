@@ -45,7 +45,7 @@ export default function Wissen() {
                                         <h6>GitHub</h6>
                                     </div>
                                 </div>
-                                <img src="/assets/imgs/work/img-wissen.png" alt="Wissen Platform" />
+                                <img src="/assets/imgs/projects/wissen/thumbnail.png" alt="Wissen Platform" />
                                 <div className="col-lg-8 mx-lg-auto mt-8">
                                     <h5 className="fs-5 fw-medium">Overview</h5>
                                     <p className="text-300">

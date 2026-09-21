@@ -48,7 +48,7 @@ export default function LifepointChurch() {
                                         <h6>2024</h6>
                                     </div>
                                 </div>
-                                <img src="/assets/imgs/projects/lifepoint.png" alt="Lifepoint Church Website Mockup" className="w-100 rounded-4" />
+                                <img src="/assets/imgs/projects/lifepoint-church/thumbnail.png" alt="Lifepoint Church Website Mockup" className="w-100 rounded-4" />
                                 <div className="col-lg-8 mx-lg-auto mt-8">
                                     <h5 className="fs-5 fw-medium">Overview</h5>
                                     <p className="text-300">

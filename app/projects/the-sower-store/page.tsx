@@ -45,7 +45,7 @@ export default function TheSowerStore() {
                                         <h6>GitHub</h6>
                                     </div>
                                 </div>
-                                <img src="/assets/imgs/work/img-thesower.png" alt="The Sower Store" />
+                                <img src="/assets/imgs/projects/the-sower-store/thumbnail.png" alt="The Sower Store" />
                                 <div className="col-lg-8 mx-lg-auto mt-8">
                                     <h5 className="fs-5 fw-medium">Overview</h5>
                                     <p className="text-300">

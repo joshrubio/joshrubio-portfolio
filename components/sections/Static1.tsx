@@ -5,7 +5,7 @@ import CountUp from 'react-countup'
 
 export default function Static1() {
 	const totalProjects = projects.length
-	const webApps = projects.filter(p => p.categories.includes('webapp')).length
+	const webApps = projects.filter(p => p.categories.includes('uxui') || p.categories.includes('fullstack')).length
 	const wordpressProjects = projects.filter(p => p.categories.includes('wordpress')).length
 
 	return (
