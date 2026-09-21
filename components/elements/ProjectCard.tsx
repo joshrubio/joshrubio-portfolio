@@ -36,10 +36,12 @@ export default function ProjectCard({ project }: { project: Project }) {
 						<p className="mb-0 fs-7 text-dark text-uppercase w-40">Client</p>
 						<p className="mb-0 card__description text-300 fs-6 mb-0">{project.client}</p>
 					</div>
-					<div className="d-md-flex content">
-						<p className="mb-0 fs-7 text-dark text-uppercase w-40">Completion Time</p>
-						<p className="mb-0 card__description text-300 fs-6 mb-0">{project.duration}</p>
-					</div>
+					{project.duration && (
+						<div className="d-md-flex content">
+							<p className="mb-0 fs-7 text-dark text-uppercase w-40">Completion Time</p>
+							<p className="mb-0 card__description text-300 fs-6 mb-0">{project.duration}</p>
+						</div>
+					)}
 					<div className="d-md-flex content">
 						<p className="mb-0 fs-7 text-dark text-uppercase w-40">Tools</p>
 						<p className="mb-0 card__description text-300 fs-6 mb-0">{project.tools.join(", ")}</p>

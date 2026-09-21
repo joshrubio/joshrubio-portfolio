@@ -102,11 +102,11 @@ Projects are defined once in `data/projects.ts` and rendered automatically in th
        duration: "4 Weeks",
        tools: ["Figma", "React"],
        thumbnail: { src: "/assets/imgs/projects/my-project/thumbnail.png", width: 1024, height: 576 },
-       categories: ["uxui"]                    // uxui | fullstack | wordpress
+       categories: ["uxui"]                    // uxui | fullstack | automation | branding | wordpress
    }
    ```
    `width` and `height` are the real pixel dimensions of the thumbnail (used by `next/image` to reserve space).
-3. **Create the detail page** at `app/projects/<slug>/page.tsx`. Copy a similar existing page (e.g. `thinkboard` for code projects, `mesa360` for UX/UI case studies).
+3. **Create the detail page** at `app/projects/<slug>/page.tsx`. Build it with the shared components in `components/projects/ProjectPage.tsx` (`ProjectHeader`, `Section`, `Callout`, `ProcessSteps`, `Figure`, `FigureGrid`, `Terminal`, `Takeaways`...); see `conquest-brain`, `teller-framework` or `rx-library` for complete examples. Images referenced with `Figure` are read from `public/` at build time (PNG, JPEG and WebP), so no `width`/`height` is needed.
 4. **New filter category?** Add it to `projectCategories` in `data/projects.ts`; the filter buttons are generated from that list.
 
 ### Manual Deployment
