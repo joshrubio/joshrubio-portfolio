@@ -27,9 +27,20 @@ const dmMono = DM_Mono({
 	display: 'swap',
 })
 
+const siteUrl =
+	process.env.NEXT_PUBLIC_SITE_URL ||
+	(process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000")
+
+const title = "Josh D. Rubio - Design Engineer Portfolio"
+const description = "Josh D. Rubio - UX Designer & AI-Driven Web Developer. Crafting intuitive, content-driven web experiences with Next.js, WordPress, and modern UX practices."
+
+// Preview images come from app/opengraph-image.png and app/twitter-image.png (Next file convention)
 export const metadata: Metadata = {
-	title: "Josh D. Rubio - Design Engineer Portfolio",
-	description: "Josh D. Rubio - UX Designer & AI-Driven Web Developer. Crafting intuitive, content-driven web experiences with Next.js, WordPress, and modern UX practices.",
+	metadataBase: new URL(siteUrl),
+	title,
+	description,
+	openGraph: { title, description, type: "website", siteName: "Josh D. Rubio" },
+	twitter: { card: "summary_large_image", title, description },
 }
 
 export default function RootLayout({
