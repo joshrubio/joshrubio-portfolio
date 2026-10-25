@@ -26,6 +26,7 @@ export default function Siren() {
     return (
         <ProjectPage>
             <ProjectHeader
+                badge={{ label: "View on GitHub", href: "https://github.com/joshrubio/Siren" }}
                 status="Siegfried satellite · 2 of 5"
                 title="Siren - Acoustic Classification Viewer"
                 summary="Real recordings of ships, a real and imperfect classifier, and an interface that helps an analyst read each prediction: what the model heard, how sure it was, and where it tends to be wrong."
@@ -152,8 +153,9 @@ export default function Siren() {
 
                 <ProjectCTA
                     links={[
+                        { label: "View Source Code", href: "https://github.com/joshrubio/Siren", icon: "ri-github-fill" },
                         { label: "Siegfried Case Study", href: "/projects/siegfried" },
-                        { label: "Discuss This Project", href: "/#contact", icon: "ri-arrow-right-line" },
+                        { label: "Discuss This Project", href: "/#contact" },
                     ]}
                 />
             </ProjectBody>

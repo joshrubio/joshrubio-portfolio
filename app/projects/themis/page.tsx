@@ -26,6 +26,7 @@ export default function Themis() {
     return (
         <ProjectPage>
             <ProjectHeader
+                badge={{ label: "View on GitHub", href: "https://github.com/joshrubio/Themis" }}
                 status="Siegfried satellite · 3 of 5"
                 title="Themis - Compliance Findings Viewer"
                 summary="An LLM reads infrastructure-as-code like an auditor and cites real NIST SP 800-171 controls. Themis presents what it finds the way security engineers already read scanners, and is upfront about not being one."
@@ -149,8 +150,9 @@ export default function Themis() {
 
                 <ProjectCTA
                     links={[
+                        { label: "View Source Code", href: "https://github.com/joshrubio/Themis", icon: "ri-github-fill" },
                         { label: "Siegfried Case Study", href: "/projects/siegfried" },
-                        { label: "Discuss This Project", href: "/#contact", icon: "ri-arrow-right-line" },
+                        { label: "Discuss This Project", href: "/#contact" },
                     ]}
                 />
             </ProjectBody>

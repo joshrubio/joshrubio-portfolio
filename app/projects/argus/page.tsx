@@ -26,6 +26,7 @@ export default function Argus() {
     return (
         <ProjectPage>
             <ProjectHeader
+                badge={{ label: "View on GitHub", href: "https://github.com/joshrubio/Argus" }}
                 status="Siegfried satellite · 5 of 5"
                 title="Argus - Simulated Operations Console"
                 summary="One dense operator screen: a live map with moving assets, a status bar, an asset list, an event feed and a panel of recommended actions, each one showing the rule that produced it."
@@ -143,8 +144,9 @@ export default function Argus() {
 
                 <ProjectCTA
                     links={[
+                        { label: "View Source Code", href: "https://github.com/joshrubio/Argus", icon: "ri-github-fill" },
                         { label: "Siegfried Case Study", href: "/projects/siegfried" },
-                        { label: "Discuss This Project", href: "/#contact", icon: "ri-arrow-right-line" },
+                        { label: "Discuss This Project", href: "/#contact" },
                     ]}
                 />
             </ProjectBody>

@@ -26,6 +26,7 @@ export default function Athena() {
     return (
         <ProjectPage>
             <ProjectHeader
+                badge={{ label: "View on GitHub", href: "https://github.com/joshrubio/Athena" }}
                 status="Siegfried satellite · 4 of 5"
                 title="Athena - Drone Swarm Mission Planner"
                 summary="Draw an area on a real map, choose a fleet size and get a coverage plan: real computational geometry splits the area into lanes, deals them across the drones and plays the mission back."
@@ -140,8 +141,9 @@ export default function Athena() {
 
                 <ProjectCTA
                     links={[
+                        { label: "View Source Code", href: "https://github.com/joshrubio/Athena", icon: "ri-github-fill" },
                         { label: "Siegfried Case Study", href: "/projects/siegfried" },
-                        { label: "Discuss This Project", href: "/#contact", icon: "ri-arrow-right-line" },
+                        { label: "Discuss This Project", href: "/#contact" },
                     ]}
                 />
             </ProjectBody>
