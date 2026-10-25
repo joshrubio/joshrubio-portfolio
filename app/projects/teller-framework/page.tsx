@@ -144,7 +144,7 @@ export default function TellerFramework() {
                     </Paragraph>
                 </Section>
                 <Figure src={`${IMG}/session-lifecycle.png`} alt="Session lifecycle" caption="From opening a session to the gated close" />
-                <Figure src={`${IMG}/commands.png`} alt="Commands reference" caption="Actions and commands, and what each one loads, reads and writes" />
+                <Figure src={`${IMG}/commands.png`} alt="Commands reference" caption="Actions and commands, and what each one loads and touches" />
 
                 <Section title="7. Features in Depth">
                     <Paragraph>
