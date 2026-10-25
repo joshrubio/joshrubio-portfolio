@@ -70,26 +70,46 @@ export default function Resume1() {
 								</div>
 								<div className="resume-card-body">
 									<div className="resume-card-item px-4 py-3 mt-5">
-										<p className="fw-extra-bold text-linear-1 mb-2">Mar 2025 - May 2025</p>
-										<h5>Product Designer</h5>
-										<p className="text-300 mb-0">Mokku</p>
+										<p className="fw-extra-bold text-linear-1 mb-2">Mar 2026 - Present</p>
+										<h5>UX/UI Designer &amp; Frontend Developer</h5>
+										<p className="text-300 mb-0">Proven Theory (Freelance)</p>
 									</div>
 									<div className="resume-card-item px-4 py-3 mt-5">
-										<p className="fw-extra-bold text-linear-1 mb-2">Jan 2025 - Mar 2025</p>
-										<h5>Product Designer</h5>
-										<p className="text-300 mb-0">No Country</p>
+										<p className="fw-extra-bold text-linear-1 mb-2">Mar 2026 - Present</p>
+										<h5>Fullstack Software Engineer, AI Training</h5>
+										<p className="text-300 mb-0">Scale AI</p>
+									</div>
+									<div className="resume-card-item px-4 py-3 mt-5">
+										<p className="fw-extra-bold text-linear-1 mb-2">Nov 2025 - Present</p>
+										<h5>UX/UI Designer &amp; PHP Developer</h5>
+										<p className="text-300 mb-0">Upwork (Freelance)</p>
+									</div>
+									<div className="resume-card-item px-4 py-3 mt-5">
+										<p className="fw-extra-bold text-linear-1 mb-2">Mar 2024 - Present</p>
+										<h5>UX/UI Designer &amp; Fullstack Developer</h5>
+										<p className="text-300 mb-0">FIEIDE</p>
 									</div>
 									<div className="resume-card-item px-4 py-3 mt-5">
 										<p className="fw-extra-bold text-linear-1 mb-2">Mar 2022 - Present</p>
 										<h5>Design Lead</h5>
 										<p className="text-300 mb-0">LifePoint Church</p>
 									</div>
+									<div className="resume-card-item px-4 py-3 mt-5">
+										<p className="fw-extra-bold text-linear-1 mb-2">Apr 2026 - Jul 2026</p>
+										<h5>UX Designer &amp; Frontend Developer (Consulting)</h5>
+										<p className="text-300 mb-0">Inversion Space</p>
+									</div>
+									<div className="resume-card-item px-4 py-3 mt-5">
+										<p className="fw-extra-bold text-linear-1 mb-2">Jan 2025 - Mar 2025</p>
+										<h5>Product Designer</h5>
+										<p className="text-300 mb-0">No Country</p>
+									</div>
 									<div className="resume-card-item px-4 py-3 mt-4">
 										<p className="fw-extra-bold text-linear-1 mb-2">Jan 2016 - Jun 2016</p>
 										<h5>3D Animator</h5>
 										<p className="text-300 mb-0">Vene 3D</p>
 									</div>
-								</div>
+									</div>
 							</div>
 						</div>
 					</div>
