@@ -283,15 +283,15 @@ export const projects: Project[] = [
     {
         slug: "lifepoint-church",
         title: "Lifepoint Church",
-        subtitle: "WordPress Website",
-        workTitle: "Lifepoint Church Website",
-        label: "WORDPRESS",
-        description: "A welcoming, content-driven WordPress website designed and developed for a growing evangelical community. Focused on clarity and accessibility.",
+        subtitle: "From WordPress to a Custom Platform",
+        workTitle: "Lifepoint Church - Custom Platform",
+        label: "FULL-STACK",
+        description: "A church website that grew from a WordPress theme into a four-language platform: a public Next.js site, a content console and a NestJS API, with accessibility, dark mode and Arabic right-to-left support. Built with Oswaldo.",
         client: "Lifepoint Church",
-        duration: "4 Weeks",
-        tools: ["WordPress", "PHP", "CSS"],
-        thumbnail: { src: "/assets/imgs/projects/lifepoint-church/thumbnail.png", width: 1024, height: 684 },
-        categories: ["wordpress"]
+        duration: "2024 - 2026",
+        tools: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Tailwind CSS", "Docker"],
+        thumbnail: { src: "/assets/imgs/projects/lifepoint-church/thumbnail.webp", width: 1536, height: 864 },
+        categories: ["fullstack"]
     },
     {
         slug: "carmen-zambrano",

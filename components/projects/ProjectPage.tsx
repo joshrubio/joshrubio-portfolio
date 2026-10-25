@@ -77,12 +77,34 @@ export function ProjectBody({ children }: { children: ReactNode }) {
 	return <div className="col-lg-8 mx-lg-auto mt-8">{children}</div>
 }
 
-export function Section({ title, children }: { title: string; children: ReactNode }) {
+/** Anchor id of a section: its title without the leading number ("3. The Web" -> "the-web"). */
+export const sectionId = (title: string) =>
+	title.replace(/^\d+\.\s*/, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")
+
+export function Section({ title, children, id }: { title: string; children: ReactNode; id?: string }) {
 	return (
 		<>
-			<h5 className="fs-5 fw-medium mt-5">{title}</h5>
+			<h5 id={id ?? sectionId(title)} className="fs-5 fw-medium mt-5" style={{ scrollMarginTop: 110 }}>{title}</h5>
 			{children}
 		</>
+	)
+}
+
+/** In-page navigation: a row of anchor pills. Items are the section titles, in order. */
+export function TableOfContents({ items, label = "On this page" }: { items: string[]; label?: string }) {
+	return (
+		<nav aria-label={label} className="my-4 p-3 bg-light rounded-3 border">
+			<p className="text-uppercase small fw-bold text-300 mb-2">{label}</p>
+			<ul className="list-unstyled d-flex flex-wrap gap-2 mb-0">
+				{items.map((title) => (
+					<li key={title}>
+						<a href={`#${sectionId(title)}`} className="btn btn-outline-secondary btn-sm">
+							{title}
+						</a>
+					</li>
+				))}
+			</ul>
+		</nav>
 	)
 }
 
