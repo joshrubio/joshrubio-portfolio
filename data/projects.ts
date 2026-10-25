@@ -34,6 +34,78 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        slug: "siegfried",
+        title: "Siegfried",
+        subtitle: "Development Control Plane",
+        workTitle: "Siegfried - Development Control Plane",
+        label: "FULL-STACK & AI",
+        description: "A markdown vault with RAG search over Supabase and pgvector, plus a kanban that tracked five satellite apps from idea to launch. Designed and built end to end.",
+        client: "Personal Project",
+        tools: ["Next.js", "Supabase", "pgvector", "Voyage AI"],
+        thumbnail: { src: "/assets/imgs/projects/siegfried/thumbnail.png", width: 1536, height: 864 },
+        categories: ["fullstack", "automation"]
+    },
+    {
+        slug: "argus",
+        title: "Argus",
+        subtitle: "Simulated Operations Console",
+        workTitle: "Argus - Operations Console",
+        label: "WEB APP",
+        description: "A map-first operations dashboard: a seeded simulation of eight assets, a live event feed and a rules engine that explains every recommendation. A Siegfried satellite.",
+        client: "Personal Project",
+        tools: ["Next.js", "MapLibre", "TypeScript"],
+        thumbnail: { src: "/assets/imgs/projects/argus/thumbnail.png", width: 1536, height: 864 },
+        categories: ["fullstack", "uxui"]
+    },
+    {
+        slug: "athena",
+        title: "Athena",
+        subtitle: "Drone Swarm Mission Planner",
+        workTitle: "Athena - Mission Planner",
+        label: "WEB APP",
+        description: "Draw an area on a real map and get a boustrophedon coverage plan split across a fleet, with a kinematic playback of the swarm. A Siegfried satellite.",
+        client: "Personal Project",
+        tools: ["Next.js", "MapLibre", "Turf.js"],
+        thumbnail: { src: "/assets/imgs/projects/athena/thumbnail.png", width: 1536, height: 864 },
+        categories: ["fullstack", "uxui"]
+    },
+    {
+        slug: "themis",
+        title: "Themis",
+        subtitle: "Compliance Findings Viewer",
+        workTitle: "Themis - Compliance Findings",
+        label: "AI INTERFACE",
+        description: "LLM-generated NIST SP 800-171 findings on infrastructure-as-code, shown as a scanner-style log with detail pages and a live paste-and-scan. A Siegfried satellite.",
+        client: "Personal Project",
+        tools: ["Next.js", "Groq", "TypeScript"],
+        thumbnail: { src: "/assets/imgs/projects/themis/thumbnail.png", width: 1536, height: 864 },
+        categories: ["fullstack", "uxui"]
+    },
+    {
+        slug: "siren",
+        title: "Siren",
+        subtitle: "Acoustic Classification Viewer",
+        workTitle: "Siren - Acoustic Classifier Viewer",
+        label: "ML INTERFACE",
+        description: "An interpretation layer over a real vessel-noise classifier: spectrograms, per-class confidence and an honest page on where the model fails. A Siegfried satellite.",
+        client: "Personal Project",
+        tools: ["Next.js", "Python", "scikit-learn", "librosa"],
+        thumbnail: { src: "/assets/imgs/projects/siren/thumbnail.png", width: 1536, height: 864 },
+        categories: ["fullstack", "uxui"]
+    },
+    {
+        slug: "janus",
+        title: "Janus",
+        subtitle: "Developer Platform Portal",
+        workTitle: "Janus - Developer Platform",
+        label: "FULL-STACK & AI",
+        description: "A self-service developer portal in miniature: service catalog, simulated provisioning, pipelines and a RAG assistant over its own docs. A Siegfried satellite.",
+        client: "Personal Project",
+        tools: ["Next.js", "Voyage AI", "Groq", "shadcn/ui"],
+        thumbnail: { src: "/assets/imgs/projects/janus/thumbnail.png", width: 1536, height: 864 },
+        categories: ["fullstack"]
+    },
+    {
         slug: "conquest-brain",
         title: "Conquest Brain",
         subtitle: "YouTube Production Pipeline",
