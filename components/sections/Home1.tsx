@@ -1,9 +1,11 @@
 'use client'
 import { useLayoutEffect, useRef } from "react"
-import Link from "next/link"
+import Link from "@/components/elements/LocaleLink"
 import gsap from "gsap"
 
-export default function Home1() {
+import type { Dictionary } from "@/i18n/dictionaries"
+
+export default function Home1({ t }: { t: Dictionary["home"]["hero"] }) {
 	const containerRef = useRef(null)
 
 	useLayoutEffect(() => {
@@ -29,22 +31,22 @@ export default function Home1() {
 				<div className="container position-relative z-3" ref={containerRef}>
 					<div className="row">
 						<div className="col-lg-6 col-md-12">
-							<span className="text-dark animate-text d-block">👋 Hi, I'm Josh</span>
-							<h1 className="ds-2 mb-3 animate-text">UX Designer & <span className="text-primary-1">Fullstack Developer</span></h1>
-							<p className="text-300 mb-6 animate-text">I design and build digital experiences that feel effortless, meaningful, and human-centered. My work blends product thinking, storytelling, and modern web technologies like Next.js, WordPress, and AI-powered tooling to create interfaces that solve real problems and scale with clarity.</p>
+							<span className="text-dark animate-text d-block">{t.greeting}</span>
+							<h1 className="ds-2 mb-3 animate-text">{t.title} <span className="text-primary-1">{t.titleAccent}</span></h1>
+							<p className="text-300 mb-6 animate-text">{t.body}</p>
 
 							<div className="animate-text d-flex align-items-center mb-6">
 								<Link href="https://drive.google.com/file/d/1J-FkOhU1cP-_04kxy6oPREKI4pbpieBq/view?usp=sharing" className="btn btn-gradient me-2" target="_blank">
-									Download CV
+									{t.cv}
 									<i className="ri-download-line ms-2" />
 								</Link>
 								<Link href="/#contact" className="btn btn-outline-secondary d-inline-flex align-items-center">
-									<span>Let's Connect</span>
+									<span>{t.connect}</span>
 									<i className="ri-arrow-right-line ms-2" />
 								</Link>
 							</div>
 
-							<p className="text-400 mb-3 animate-text">Technologies I work with</p>
+							<p className="text-400 mb-3 animate-text">{t.technologies}</p>
 							<div className="d-flex gap-3 flex-wrap">
 								<div className="brand-logo icon-xl icon-shape rounded-3 bg-900">
 									<img src="/assets/imgs/hero/hero-1/brand-1.png" alt="brand" />
@@ -74,7 +76,7 @@ export default function Home1() {
 						<img className="ribbonRotate" src="/assets/imgs/hero/hero-1/decorate.png" alt="" />
 					</div>
 				</div>
-				<div className="position-absolute top-0 start-0 w-100 h-100 filter-invert" data-background="assets/imgs/hero/hero-1/background.png" />
+				<div className="position-absolute top-0 start-0 w-100 h-100 filter-invert" data-background="/assets/imgs/hero/hero-1/background.png" />
 			</section>
 		</>
 	)

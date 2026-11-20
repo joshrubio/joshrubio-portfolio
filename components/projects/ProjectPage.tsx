@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Link from "next/link"
+import Link from "@/components/elements/LocaleLink"
 import type { ReactNode } from "react"
 
 import Layout from "@/components/layout/Layout"

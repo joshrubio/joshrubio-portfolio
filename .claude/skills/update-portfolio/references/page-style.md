@@ -1,6 +1,6 @@
 # Case-study pages: structure, tone and components
 
-Models to open first: `app/projects/lifepoint-church/page.tsx` (rebuild + evolution, long), `janus/page.tsx` (short, satellite), `conquest-brain/page.tsx` and `teller-framework/page.tsx` (no UI, diagrams and terminals), `rx-library/page.tsx` (client work, role split), `the-new-paper/page.tsx` (UI-heavy), `pressroom/page.tsx` and `learn-by-doing/page.tsx` (tooling).
+Models to open first: `app/[lang]/projects/lifepoint-church/page.tsx` (rebuild + evolution, long), `janus/page.tsx` (short, satellite), `conquest-brain/page.tsx` and `teller-framework/page.tsx` (no UI, diagrams and terminals), `rx-library/page.tsx` (client work, role split), `the-new-paper/page.tsx` (UI-heavy), `pressroom/page.tsx` and `learn-by-doing/page.tsx` (tooling).
 
 ## Skeleton
 

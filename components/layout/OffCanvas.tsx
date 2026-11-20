@@ -1,6 +1,10 @@
-import Link from 'next/link'
+'use client'
+import Link from "@/components/elements/LocaleLink"
+
+import { useLocale } from "@/i18n/LocaleProvider"
 
 export default function OffCanvas({ isOffCanvas, handleOffCanvas }: any) {
+	const { t } = useLocale()
 	return (
 		<>
 			{/* offCanvas-menu */}
@@ -9,18 +13,18 @@ export default function OffCanvas({ isOffCanvas, handleOffCanvas }: any) {
 					<button><i className="ri-close-line" /></button>
 				</div>
 				<div className="offCanvas__logo mb-5">
-					<h3 className="mb-0">Get in touch</h3>
+					<h3 className="mb-0">{t.offcanvas.title}</h3>
 				</div>
 				<div className="offCanvas__side-info mb-30">
 					<div className="contact-list mb-30">
-						<p className="fs-6 fw-medium text-200 mb-5">I'm always excited to take on new projects and collaborate with innovative minds.</p>
+						<p className="fs-6 fw-medium text-200 mb-5">{t.offcanvas.intro}</p>
 						<div className="mb-3">
-							<span className="text-400 fs-5">Email</span>
+							<span className="text-400 fs-5">{t.offcanvas.email}</span>
 							<p className="mb-0">joshuerubio@gmail.com</p>
 						</div>
 					</div>
 					<div className="contact-list">
-						<p className="text-400 fs-5 mb-2">Social</p>
+						<p className="text-400 fs-5 mb-2">{t.offcanvas.social}</p>
 						<div className="d-md-flex d-none gap-3">
 							<Link href="https://www.linkedin.com/in/joshuerubio/" target="_blank">
 								<i className="ri-linkedin-fill fs-18" />

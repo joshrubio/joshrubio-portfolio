@@ -70,14 +70,18 @@ npm run lint
 ```
 josh-portfolio/
 ├── app/                    # Next.js app directory
-│   ├── projects/<slug>/   # Individual project pages
-│   ├── work/              # Portfolio page (cards generated from data/projects.ts)
-│   └── page.tsx           # Home page
+│   └── [lang]/            # Every page lives here: en (no prefix) and es
+│       ├── projects/<slug>/   # Individual project pages
+│       ├── work/              # Portfolio page (cards generated from data/projects.ts)
+│       └── page.tsx           # Home page
 ├── components/            # React components
 │   ├── elements/         # Reusable UI elements (ProjectCard, PortfolioFilter...)
 │   └── sections/         # Page sections
 ├── data/
-│   └── projects.ts       # Single source of truth for all projects
+│   ├── projects.ts       # Single source of truth for all projects
+│   └── projects.es.ts    # Spanish text of the project cards
+├── i18n/                 # Languages: config, dictionaries (en.ts, es.ts), provider, preferences
+├── middleware.ts         # Serves English without a prefix and Spanish under /es
 ├── public/               # Static assets
 │   └── assets/imgs/projects/<slug>/   # Thumbnail and case-study images per project
 ├── package.json          # Dependencies and scripts
@@ -106,8 +110,19 @@ Projects are defined once in `data/projects.ts` and rendered automatically in th
    }
    ```
    `width` and `height` are the real pixel dimensions of the thumbnail (used by `next/image` to reserve space).
-3. **Create the detail page** at `app/projects/<slug>/page.tsx`. Build it with the shared components in `components/projects/ProjectPage.tsx` (`ProjectHeader`, `Section`, `Callout`, `ProcessSteps`, `Figure`, `FigureGrid`, `Terminal`, `Takeaways`...); see `conquest-brain`, `teller-framework`, `rx-library`, `lifepoint-church` or `the-new-paper` for complete examples. Images referenced with `Figure` are read from `public/` at build time (PNG, JPEG and WebP), so no `width`/`height` is needed.
+3. **Create the detail page** at `app/[lang]/projects/<slug>/page.tsx`. Build it with the shared components in `components/projects/ProjectPage.tsx` (`ProjectHeader`, `Section`, `Callout`, `ProcessSteps`, `Figure`, `FigureGrid`, `Terminal`, `Takeaways`...); see `conquest-brain`, `teller-framework`, `rx-library`, `lifepoint-church` or `the-new-paper` for complete examples. Images referenced with `Figure` are read from `public/` at build time (PNG, JPEG and WebP), so no `width`/`height` is needed.
 4. **New filter category?** Add it to `projectCategories` in `data/projects.ts`; the filter buttons are generated from that list.
+5. **Spanish card text.** Add the project to `data/projects.es.ts` (`label`, `subtitle`, `workTitle`, `description`) so its cards read in Spanish. Without it the cards fall back to English. The case-study page itself is English only.
+
+## 🌐 Languages
+
+The site has English (default, no prefix, so every existing URL is unchanged) and Spanish under `/es`. `middleware.ts` rewrites unprefixed paths to `/en/...` and redirects `/en/...` to the unprefixed path; the pages live in `app/[lang]/`.
+
+- **Translated:** the site chrome (menu, footer, off-canvas, switch) and the home page, plus the `/work` header and the project cards. Strings live in `i18n/dictionaries/en.ts` and `es.ts`, which must have the same shape (TypeScript enforces it). Internal links go through `components/elements/LocaleLink.tsx`, which adds the `/es` prefix.
+- **English only:** case studies, blog posts and the template pages (services, pricing...). Their chrome is in the chosen language.
+- **Switch:** `EN | ES` in the navbar. Choosing Spanish shows a module saying that most content is English and where the translate button is.
+- **Translate button (navbar):** translates the content of the current page with the browser's built-in Translator API (on the device, Chrome 138+ and desktop Edge), or opens Google Translate where the API is missing. The first click also shows a module explaining it. The browser remembers the visitor's language (`localStorage`: `preferred-language`); when a later page is in another language, a module offers to translate it (with "always translate" and "not now" options). No extra permanent button is needed.
+- **Adding a language:** add it to `i18n/config.ts`, create its dictionary and its `projects.<code>.ts`, and check the middleware.
 
 ### Adding projects with Claude Code
 

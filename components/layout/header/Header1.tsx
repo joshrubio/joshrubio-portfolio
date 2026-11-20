@@ -1,5 +1,7 @@
+import LanguageSwitch from '@/components/elements/LanguageSwitch'
 import ThemeSwitch from '@/components/elements/ThemeSwitch'
-import Link from 'next/link'
+import TranslateButton from '@/components/elements/TranslateButton'
+import Link from "@/components/elements/LocaleLink"
 import Menu from '../Menu'
 import MobileMenu from '../MobileMenu'
 import OffCanvas from '../OffCanvas'
@@ -23,7 +25,9 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isOffC
 							</div>
 						</div>
 						<div className="navbar-social d-flex align-items-center pe-5 pe-lg-0 me-5 me-lg-0">
-							<div className="d-md-flex d-none gap-3">
+							<TranslateButton />
+							<LanguageSwitch />
+							<div className="d-none d-md-flex d-lg-none d-xl-flex gap-3">
 								<Link href="https://www.linkedin.com/in/joshuerubio/" target="_blank">
 									<i className="ri-linkedin-fill fs-18" />
 								</Link>

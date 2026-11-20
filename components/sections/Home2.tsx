@@ -1,5 +1,5 @@
 
-import Link from 'next/link'
+import Link from "@/components/elements/LocaleLink"
 import Marquee from 'react-fast-marquee'
 
 export default function Home2() {
@@ -13,9 +13,9 @@ export default function Home2() {
 							<div className="row align-items-end py-60">
 								<div className="col-lg-5 ps-lg-5 text-lg-start text-center">
 									<div className="position-relative mb-lg-0 mb-5">
-										<img src="assets/imgs/home-page-2/hero-1/people.png" alt="zelio" />
+										<img src="/assets/imgs/home-page-2/hero-1/people.png" alt="zelio" />
 										<div className="position-absolute end-0 top-100 translate-middle-y icon-decorate">
-											<img src="assets/imgs/home-page-2/hero-1/icon.svg" alt="zelio" />
+											<img src="/assets/imgs/home-page-2/hero-1/icon.svg" alt="zelio" />
 										</div>
 									</div>
 								</div>
@@ -39,27 +39,27 @@ export default function Home2() {
 													<ul className="carouselTicker__list ">
 														<li className="carouselTicker__item">
 															<Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
-																<img src="assets/imgs/home-page-2/hero-1/icon-1.svg" alt="brand" />
+																<img src="/assets/imgs/home-page-2/hero-1/icon-1.svg" alt="brand" />
 															</Link>
 														</li>
 														<li className="carouselTicker__item">
 															<Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
-																<img src="assets/imgs/home-page-2/hero-1/icon-2.svg" alt="brand" />
+																<img src="/assets/imgs/home-page-2/hero-1/icon-2.svg" alt="brand" />
 															</Link>
 														</li>
 														<li className="carouselTicker__item">
 															<Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
-																<img src="assets/imgs/home-page-2/hero-1/icon-3.svg" alt="brand" />
+																<img src="/assets/imgs/home-page-2/hero-1/icon-3.svg" alt="brand" />
 															</Link>
 														</li>
 														<li className="carouselTicker__item">
 															<Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
-																<img src="assets/imgs/home-page-2/hero-1/icon-4.svg" alt="brand" />
+																<img src="/assets/imgs/home-page-2/hero-1/icon-4.svg" alt="brand" />
 															</Link>
 														</li>
 														<li className="carouselTicker__item">
 															<Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
-																<img src="assets/imgs/home-page-2/hero-1/icon-5.svg" alt="brand" />
+																<img src="/assets/imgs/home-page-2/hero-1/icon-5.svg" alt="brand" />
 															</Link>
 														</li>
 													</ul>
@@ -69,7 +69,7 @@ export default function Home2() {
 												<span className="fs-6 text-300 mb-2">...and more</span>
 											</div>
 										</div>
-										<Link href="assets/resume.pdf" className="btn me-2 text-300 ps-0 mt-4" target="_blank">
+										<Link href="/assets/resume.pdf" className="btn me-2 text-300 ps-0 mt-4" target="_blank">
 											<i className="ri-download-line text-primary-2" />
 											[ Download my CV ]
 										</Link>
@@ -80,8 +80,8 @@ export default function Home2() {
 					</div>
 				</div>
 				<div className="background position-absolute top-0 start-0 w-100 h-100">
-					<img className="bg-w" src="assets/imgs/home-page-2/hero-1/bg.png" alt="zelio" />
-					<img className="bg-d" src="assets/imgs/home-page-2/hero-1/bg-dark.png" alt="zelio" />
+					<img className="bg-w" src="/assets/imgs/home-page-2/hero-1/bg.png" alt="zelio" />
+					<img className="bg-d" src="/assets/imgs/home-page-2/hero-1/bg-dark.png" alt="zelio" />
 				</div>
 			</section>
 

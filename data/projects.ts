@@ -1,3 +1,6 @@
+import type { Locale } from "@/i18n/config"
+import { clientEs, durationEs, projectsEs } from "./projects.es"
+
 export const projectCategories = [
     { key: "uxui", label: "UX/UI" },
     { key: "fullstack", label: "Full-stack" },
@@ -96,6 +99,18 @@ export const projects: Project[] = [
         categories: ["fullstack", "automation"]
     },
     {
+        slug: "teller-framework",
+        title: "Teller Framework",
+        subtitle: "AI Story Bible for Writers",
+        workTitle: "Teller Framework - AI Story Bible",
+        label: "AUTOMATION",
+        description: "A file-based story bible where markdown nodes declare their own dependencies, so any AI with file access can write consistent, canon-accurate fiction across sessions.",
+        client: "Personal Project",
+        tools: ["Markdown", "YAML", "Claude Code"],
+        thumbnail: { src: "/assets/imgs/projects/teller-framework/thumbnail.png", width: 1024, height: 576 },
+        categories: ["automation"]
+    },
+    {
         slug: "argus",
         title: "Argus",
         subtitle: "Simulated Operations Console",
@@ -108,6 +123,19 @@ export const projects: Project[] = [
         categories: ["fullstack", "uxui"]
     },
     {
+        slug: "moods",
+        title: "MOODS",
+        subtitle: "Social Music Platform (UX/UI)",
+        workTitle: "MOODS - Social Music Platform",
+        label: "UX/UI",
+        description: "A social music platform that allows users to share their moods through playlists and discover new music. Pivot from BeatBoop with a focus on community.",
+        client: "Personal Project",
+        duration: "5 Weeks",
+        tools: ["Figma", "React", "Spotify API"],
+        thumbnail: { src: "/assets/imgs/projects/moods/thumbnail.png", width: 1024, height: 717 },
+        categories: ["uxui"]
+    },
+    {
         slug: "athena",
         title: "Athena",
         subtitle: "Drone Swarm Mission Planner",
@@ -118,6 +146,19 @@ export const projects: Project[] = [
         tools: ["Next.js", "MapLibre", "Turf.js"],
         thumbnail: { src: "/assets/imgs/projects/athena/thumbnail.png", width: 1536, height: 864 },
         categories: ["fullstack", "uxui"]
+    },
+    {
+        slug: "take-away",
+        title: "Take Away",
+        subtitle: "Food Delivery App (UX/UI)",
+        workTitle: "Take Away - Food Delivery App",
+        label: "UX/UI",
+        description: "A food delivery app developed to meet the needs of both clients and restaurants combining beauty and simplicity. MVP developed in 5 weeks.",
+        client: "No-country",
+        duration: "5 Weeks",
+        tools: ["Figma", "ShadCN"],
+        thumbnail: { src: "/assets/imgs/projects/take-away/thumbnail.png", width: 1024, height: 477 },
+        categories: ["uxui"]
     },
     {
         slug: "themis",
@@ -165,18 +206,6 @@ export const projects: Project[] = [
         client: "Personal Project",
         tools: ["Python", "FFmpeg", "Whisper", "LLM tooling"],
         thumbnail: { src: "/assets/imgs/projects/conquest-brain/thumbnail.png", width: 1024, height: 576 },
-        categories: ["automation"]
-    },
-    {
-        slug: "teller-framework",
-        title: "Teller Framework",
-        subtitle: "AI Story Bible for Writers",
-        workTitle: "Teller Framework - AI Story Bible",
-        label: "AUTOMATION",
-        description: "A file-based story bible where markdown nodes declare their own dependencies, so any AI with file access can write consistent, canon-accurate fiction across sessions.",
-        client: "Personal Project",
-        tools: ["Markdown", "YAML", "Claude Code"],
-        thumbnail: { src: "/assets/imgs/projects/teller-framework/thumbnail.png", width: 1024, height: 576 },
         categories: ["automation"]
     },
     {
@@ -266,32 +295,6 @@ export const projects: Project[] = [
         categories: ["uxui"]
     },
     {
-        slug: "moods",
-        title: "MOODS",
-        subtitle: "Social Music Platform (UX/UI)",
-        workTitle: "MOODS - Social Music Platform",
-        label: "UX/UI",
-        description: "A social music platform that allows users to share their moods through playlists and discover new music. Pivot from BeatBoop with a focus on community.",
-        client: "Personal Project",
-        duration: "5 Weeks",
-        tools: ["Figma", "React", "Spotify API"],
-        thumbnail: { src: "/assets/imgs/projects/moods/thumbnail.png", width: 1024, height: 717 },
-        categories: ["uxui"]
-    },
-    {
-        slug: "take-away",
-        title: "Take Away",
-        subtitle: "Food Delivery App (UX/UI)",
-        workTitle: "Take Away - Food Delivery App",
-        label: "UX/UI",
-        description: "A food delivery app developed to meet the needs of both clients and restaurants combining beauty and simplicity. MVP developed in 5 weeks.",
-        client: "No-country",
-        duration: "5 Weeks",
-        tools: ["Figma", "ShadCN"],
-        thumbnail: { src: "/assets/imgs/projects/take-away/thumbnail.png", width: 1024, height: 477 },
-        categories: ["uxui"]
-    },
-    {
         slug: "the-sower-store",
         title: "The Sower Store",
         subtitle: "MERN Ecommerce Platform",
@@ -343,3 +346,15 @@ export const projects: Project[] = [
         categories: ["fullstack", "uxui"]
     }
 ];
+
+/** The project with its card text in the given language (case-study pages are English only). */
+export function localizeProject(project: Project, lang: Locale): Project {
+    if (lang === "en") return project
+    const text = projectsEs[project.slug]
+    return {
+        ...project,
+        ...(text ?? {}),
+        client: clientEs(project.client),
+        duration: project.duration ? durationEs(project.duration) : undefined
+    }
+}

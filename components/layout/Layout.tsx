@@ -6,6 +6,8 @@ import BackToTop from '../elements/BackToTop'
 import DataBg from '../elements/DataBg'
 import ImageHoverEffects from '../elements/ImageHoverEffects'
 import Breadcrumb from './Breadcrumb'
+import TranslateProvider from '../elements/TranslateProvider'
+import { useLocale } from '@/i18n/LocaleProvider'
 import MobileMenu from './MobileMenu'
 import Footer1 from './footer/Footer1'
 import Footer2 from './footer/Footer2'
@@ -19,10 +21,14 @@ interface LayoutProps {
 	footerStyle?: Number
 	children?: React.ReactNode
 	breadcrumbTitle?: string
+	/** True when the page content is translated into the active language. Otherwise its content is English. */
+	translated?: boolean
 }
 
 
-export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, children }: LayoutProps) {
+export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, translated, children }: LayoutProps) {
+	const { lang } = useLocale()
+	const contentLang = translated ? lang : 'en'
 	const [scroll, setScroll] = useState<boolean>(false)
 	// Mobile Menu
 	const [isMobileMenu, setMobileMenu] = useState<boolean>(false)
@@ -62,7 +68,7 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 		}
 	}, [scroll])
 	return (
-		<>
+		<TranslateProvider contentLang={contentLang}>
 			<div id="top" />
 			<AddClassBody />
 			<DataBg />
@@ -73,7 +79,7 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 			{headerStyle == 3 ? <Header3 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} /> : null}
 			<MobileMenu />
 
-			<main className="main">
+			<main className="main" id="page-content" lang={contentLang}>
 				{breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
 
 				{children}
@@ -85,6 +91,6 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 			{footerStyle == 3 ? < Footer3 /> : null}
 
 			<BackToTop target="#top" />
-		</>
+		</TranslateProvider>
 	)
 }

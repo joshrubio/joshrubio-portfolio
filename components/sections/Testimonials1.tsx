@@ -1,7 +1,9 @@
 'use client'
-import Link from "next/link"
+import Link from "@/components/elements/LocaleLink"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+
+import type { Dictionary } from "@/i18n/dictionaries"
 
 const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
@@ -35,135 +37,46 @@ const swiperOptions = {
 	},
 }
 
-export default function Testimonials1() {
+export default function Testimonials1({ t }: { t: Dictionary["home"]["testimonials"] }) {
 	return (
 		<>
-
 			<section className="section-testimonials-1 position-relative pt-120 pb-120 bg-900 overflow-hidden">
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-8">
-							<h3 className="ds-3 mt-3 mb-3 text-primary-1">Client's Testimonials</h3>
-							<span className="fs-5 fw-medium text-200">
-								I believe that working hard and trying to learn every day will make me
-								<br />
-								improve in satisfying my customers.
-							</span>
+							<h3 className="ds-3 mt-3 mb-3 text-primary-1">{t.title}</h3>
+							<span className="fs-5 fw-medium text-200">{t.subtitle}</span>
 							<div className="row mt-8">
 								<Swiper {...swiperOptions} className="swiper slider-2 pt-2 pb-3">
 									<div className="swiper-wrapper">
-										<SwiperSlide>
-											<div className="bg-white card-testimonial-1 p-lg-7 p-md-5 mx-3 mx-md-0 p-4 border-2 rounded-4 position-relative">
-												<div className="d-flex mb-5">
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
+										{t.items.map((item) => (
+											<SwiperSlide key={item.name}>
+												<div className="bg-white card-testimonial-1 p-lg-7 p-md-5 mx-3 mx-md-0 p-4 border-2 rounded-4 position-relative">
+													<div className="d-flex mb-5">
+														{[0, 1, 2, 3, 4].map((star) => (
+															<i key={star} className="ri-star-fill fs-7 text-primary-1" />
+														))}
+													</div>
+													<h6 className="mb-7">“{item.quote}”</h6>
+													<Link href="/#" className="d-flex align-items-center">
+														<h6 className="mb-0">{item.name} <span className="fs-6 fw-regular"> - {item.role}</span></h6>
+													</Link>
+													<div className="position-absolute top-0 end-0 m-5">
+														<svg xmlns="http://www.w3.org/2000/svg" width={52} height={52} viewBox="0 0 52 52" fill="none">
+															<g clipPath="url(#clip0_551_13914)">
+																<path d="M0 29.7144H11.1428L3.71422 44.5715H14.8571L22.2857 29.7144V7.42871H0V29.7144Z" fill="#D1D5DB" />
+																<path d="M29.7148 7.42871V29.7144H40.8577L33.4291 44.5715H44.5719L52.0005 29.7144V7.42871H29.7148Z" fill="#D1D5DB" />
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width={52} height={52} fill="white" />
+																</clipPath>
+															</defs>
+														</svg>
+													</div>
 												</div>
-												<h6 className="mb-7">“Josh transformed our outdated website into a modern, high-converting platform. His attention to detail and technical expertise are unmatched.”</h6>
-												<Link href="/#" className="d-flex align-items-center">
-													<h6 className="mb-0">Sarah Jenkins <span className="fs-6 fw-regular"> - CEO, StartUp Flow</span></h6>
-												</Link>
-												<div className="position-absolute top-0 end-0 m-5">
-													<svg xmlns="http://www.w3.org/2000/svg" width={52} height={52} viewBox="0 0 52 52" fill="none">
-														<g clipPath="url(#clip0_551_13914)">
-															<path d="M0 29.7144H11.1428L3.71422 44.5715H14.8571L22.2857 29.7144V7.42871H0V29.7144Z" fill="#D1D5DB" />
-															<path d="M29.7148 7.42871V29.7144H40.8577L33.4291 44.5715H44.5719L52.0005 29.7144V7.42871H29.7148Z" fill="#D1D5DB" />
-														</g>
-														<defs>
-															<clipPath>
-																<rect width={52} height={52} fill="white" />
-															</clipPath>
-														</defs>
-													</svg>
-												</div>
-											</div>
-										</SwiperSlide>
-										<SwiperSlide>
-											<div className="bg-white card-testimonial-1 p-lg-7 p-md-5 mx-3 mx-md-0 p-4 border-2 rounded-4 position-relative">
-												<div className="d-flex mb-5">
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-												</div>
-												<h6 className="mb-7">“Working with Josh was seamless. He understood our vision perfectly and delivered a robust application ahead of schedule. Highly recommended!”</h6>
-												<Link href="/#" className="d-flex align-items-center">
-													<h6 className="mb-0">Michael Chen <span className="fs-6 fw-regular"> - Product Manager, TechSphere</span></h6>
-												</Link>
-												<div className="position-absolute top-0 end-0 m-5">
-													<svg xmlns="http://www.w3.org/2000/svg" width={52} height={52} viewBox="0 0 52 52" fill="none">
-														<g clipPath="url(#clip0_551_13914)">
-															<path d="M0 29.7144H11.1428L3.71422 44.5715H14.8571L22.2857 29.7144V7.42871H0V29.7144Z" fill="#D1D5DB" />
-															<path d="M29.7148 7.42871V29.7144H40.8577L33.4291 44.5715H44.5719L52.0005 29.7144V7.42871H29.7148Z" fill="#D1D5DB" />
-														</g>
-														<defs>
-															<clipPath>
-																<rect width={52} height={52} fill="white" />
-															</clipPath>
-														</defs>
-													</svg>
-												</div>
-											</div>
-										</SwiperSlide>
-										<SwiperSlide>
-											<div className="bg-white card-testimonial-1 p-lg-7 p-md-5 mx-3 mx-md-0 p-4 border-2 rounded-4 position-relative">
-												<div className="d-flex mb-5">
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-												</div>
-												<h6 className="mb-7">“Not only is Josh a skilled developer, but he also has a great eye for design. He brought our mockups to life with pixel-perfect precision.”</h6>
-												<Link href="/#" className="d-flex align-items-center">
-													<h6 className="mb-0">Emily Rodriguez <span className="fs-6 fw-regular"> - Creative Director, DesignHub</span></h6>
-												</Link>
-												<div className="position-absolute top-0 end-0 m-5">
-													<svg xmlns="http://www.w3.org/2000/svg" width={52} height={52} viewBox="0 0 52 52" fill="none">
-														<g clipPath="url(#clip0_551_13914)">
-															<path d="M0 29.7144H11.1428L3.71422 44.5715H14.8571L22.2857 29.7144V7.42871H0V29.7144Z" fill="#D1D5DB" />
-															<path d="M29.7148 7.42871V29.7144H40.8577L33.4291 44.5715H44.5719L52.0005 29.7144V7.42871H29.7148Z" fill="#D1D5DB" />
-														</g>
-														<defs>
-															<clipPath>
-																<rect width={52} height={52} fill="white" />
-															</clipPath>
-														</defs>
-													</svg>
-												</div>
-											</div>
-										</SwiperSlide>
-										<SwiperSlide>
-											<div className="bg-white card-testimonial-1 p-lg-7 p-md-5 mx-3 mx-md-0 p-4 border-2 rounded-4 position-relative">
-												<div className="d-flex mb-5">
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-													<i className="ri-star-fill fs-7 text-primary-1" />
-												</div>
-												<h6 className="mb-7">“Josh's ability to solve complex problems is impressive. He optimized our site's performance significantly, leading to a 40% increase in user retention.”</h6>
-												<Link href="/#" className="d-flex align-items-center">
-													<h6 className="mb-0">David Thompson <span className="fs-6 fw-regular"> - Founder, EcoSolutions</span></h6>
-												</Link>
-												<div className="position-absolute top-0 end-0 m-5">
-													<svg xmlns="http://www.w3.org/2000/svg" width={52} height={52} viewBox="0 0 52 52" fill="none">
-														<g clipPath="url(#clip0_551_13914)">
-															<path d="M0 29.7144H11.1428L3.71422 44.5715H14.8571L22.2857 29.7144V7.42871H0V29.7144Z" fill="#D1D5DB" />
-															<path d="M29.7148 7.42871V29.7144H40.8577L33.4291 44.5715H44.5719L52.0005 29.7144V7.42871H29.7148Z" fill="#D1D5DB" />
-														</g>
-														<defs>
-															<clipPath>
-																<rect width={52} height={52} fill="white" />
-															</clipPath>
-														</defs>
-													</svg>
-												</div>
-											</div>
-										</SwiperSlide>
+											</SwiperSlide>
+										))}
 									</div>
 									<div className="swiper-pagination" />
 									<div className="text-center mt-8 position-relative z-3">
@@ -180,7 +93,6 @@ export default function Testimonials1() {
 					</div>
 				</div>
 			</section>
-
 		</>
 	)
 }

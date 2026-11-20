@@ -1,5 +1,5 @@
 import ThemeSwitch from '@/components/elements/ThemeSwitch'
-import Link from 'next/link'
+import Link from "@/components/elements/LocaleLink"
 import OffCanvas from '../OffCanvas'
 import MobileMenu from '../MobileMenu'
 
@@ -11,7 +11,7 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu,isOffCa
 					<div className="container py-3 px-0">
 						<Link className="navbar-brand d-flex main-logo align-items-center ms-lg-0 ms-md-5 ms-3" href="/index-3">
 							<h1 className="fs-28 mb-0 me-2">Meisa</h1>
-							<img src="assets/imgs/home-page-3/template/favicon.svg" alt="zelio" />
+							<img src="/assets/imgs/home-page-3/template/favicon.svg" alt="zelio" />
 						</Link>
 						<div className="d-none d-lg-flex">
 							<div className="collapse navbar-collapse" id="navbarSupportedContent">

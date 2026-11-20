@@ -1,8 +1,13 @@
-import Link from 'next/link'
+'use client'
+import Link from "@/components/elements/LocaleLink"
 import Marquee from 'react-fast-marquee'
+
+import { useLocale } from "@/i18n/LocaleProvider"
 
 
 export default function Skills2() {
+	const { t } = useLocale()
+	const skills = t.home.skills
 	return (
 		<>
 
@@ -18,7 +23,7 @@ export default function Skills2() {
 										</svg>
 										<span className="text-linear-4 d-flex align-items-center"> Projects </span>
 									</div>
-									<h3>My Skills</h3>
+									<h3>{skills.title}</h3>
 								</div>
 								<div className="container mt-8">
 									<div className="row">
@@ -30,31 +35,31 @@ export default function Skills2() {
 														<ul className="carouselTicker__list m-0">
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/react.svg" alt="React" />
+																	<img src="/assets/imgs/home-page-2/hero-1/react.svg" alt="React" />
 																</Link>
 																<span className="tool-tip">React</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/javascript.svg" alt="JavaScript" />
+																	<img src="/assets/imgs/home-page-2/hero-1/javascript.svg" alt="JavaScript" />
 																</Link>
 																<span className="tool-tip">JavaScript</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/nodejs.svg" alt="Node.js" />
+																	<img src="/assets/imgs/home-page-2/hero-1/nodejs.svg" alt="Node.js" />
 																</Link>
 																<span className="tool-tip">Node.js</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/python.svg" alt="Python" />
+																	<img src="/assets/imgs/home-page-2/hero-1/python.svg" alt="Python" />
 																</Link>
 																<span className="tool-tip">Python</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/mongodb.svg" alt="MongoDB" />
+																	<img src="/assets/imgs/home-page-2/hero-1/mongodb.svg" alt="MongoDB" />
 																</Link>
 																<span className="tool-tip">MongoDB</span>
 															</li>
@@ -67,25 +72,25 @@ export default function Skills2() {
 														<ul className="carouselTicker__list m-0 ">
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/svelte.svg" alt="Svelte" />
+																	<img src="/assets/imgs/home-page-2/hero-1/svelte.svg" alt="Svelte" />
 																</Link>
 																<span className="tool-tip">Svelte</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/docker.svg" alt="Docker" />
+																	<img src="/assets/imgs/home-page-2/hero-1/docker.svg" alt="Docker" />
 																</Link>
 																<span className="tool-tip">Docker</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/git.svg" alt="Git" />
+																	<img src="/assets/imgs/home-page-2/hero-1/git.svg" alt="Git" />
 																</Link>
 																<span className="tool-tip">Git</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
-																	<img src="assets/imgs/home-page-2/hero-1/php.svg" alt="PHP" />
+																	<img src="/assets/imgs/home-page-2/hero-1/php.svg" alt="PHP" />
 																</Link>
 																<span className="tool-tip">PHP</span>
 															</li>
@@ -101,31 +106,31 @@ export default function Skills2() {
 														<ul className="ps-3 d-flex flex-column justify-content-between h-100 position-relative">
 															<li className="mb-3">
 																<div className="d-flex flex-column flex-md-row gap-2">
-																	<p className="text-dark text-nowrap mb-0">Front-End:</p>
+																	<p className="text-dark text-nowrap mb-0">{skills.groups[0]}</p>
 																	<span className="text-300">HTML, CSS, JavaScript, React, Svelte</span>
 																</div>
 															</li>
 															<li className="mb-3">
 																<div className="d-flex flex-column flex-md-row gap-2">
-																	<p className="text-dark text-nowrap mb-0">Back-End:</p>
+																	<p className="text-dark text-nowrap mb-0">{skills.groups[1]}</p>
 																	<span className="text-300">Node.js, Express, Python, PHP</span>
 																</div>
 															</li>
 															<li className="mb-3">
 																<div className="d-flex flex-column flex-md-row gap-2">
-																	<p className="text-dark text-nowrap mb-0">Databases:</p>
+																	<p className="text-dark text-nowrap mb-0">{skills.groups[2]}</p>
 																	<span className="text-300">MySQL, PostgreSQL, MongoDB</span>
 																</div>
 															</li>
 															<li className="mb-3">
 																<div className="d-flex flex-column flex-md-row gap-2">
-																	<p className="text-dark text-nowrap mb-0">Tools &amp; Platforms:</p>
+																	<p className="text-dark text-nowrap mb-0">{skills.groups[3]}</p>
 																	<span className="text-300">Git, Docker, AWS, Heroku</span>
 																</div>
 															</li>
 															<li className="mb-3">
 																<div className="d-flex flex-column flex-md-row gap-2">
-																	<p className="text-dark text-nowrap mb-0">Others:</p>
+																	<p className="text-dark text-nowrap mb-0">{skills.groups[4]}</p>
 																	<span className="text-300">RESTful APIs, GraphQL, Agile Methodologies</span>
 																</div>
 															</li>

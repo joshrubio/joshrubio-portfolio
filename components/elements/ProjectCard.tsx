@@ -1,9 +1,10 @@
 import Image from "next/image"
-import Link from "next/link"
+import Link from "@/components/elements/LocaleLink"
 
 import type { Project } from "@/data/projects"
+import type { Dictionary } from "@/i18n/dictionaries"
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project, labels }: { project: Project; labels: Dictionary["card"] }) {
 	const href = `/projects/${project.slug}`
 
 	return (
@@ -32,17 +33,17 @@ export default function ProjectCard({ project }: { project: Project }) {
 					</div>
 					<p className="text-300 mb-lg-auto mb-md-4 mb-3">{project.description}</p>
 					<div className="d-md-flex content">
-						<p className="mb-0 fs-7 text-dark text-uppercase w-40">Client</p>
+						<p className="mb-0 fs-7 text-dark text-uppercase w-40">{labels.client}</p>
 						<p className="mb-0 card__description text-300 fs-6 mb-0">{project.client}</p>
 					</div>
 					{project.duration && (
 						<div className="d-md-flex content">
-							<p className="mb-0 fs-7 text-dark text-uppercase w-40">Completion Time</p>
+							<p className="mb-0 fs-7 text-dark text-uppercase w-40">{labels.completion}</p>
 							<p className="mb-0 card__description text-300 fs-6 mb-0">{project.duration}</p>
 						</div>
 					)}
 					<div className="d-md-flex content">
-						<p className="mb-0 fs-7 text-dark text-uppercase w-40">Tools</p>
+						<p className="mb-0 fs-7 text-dark text-uppercase w-40">{labels.tools}</p>
 						<p className="mb-0 card__description text-300 fs-6 mb-0">{project.tools.join(", ")}</p>
 					</div>
 				</div>

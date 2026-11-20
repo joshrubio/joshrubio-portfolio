@@ -1,11 +1,13 @@
 
-import Link from "next/link"
+import Link from "@/components/elements/LocaleLink"
 import dynamic from 'next/dynamic'
+
+import type { Dictionary } from "@/i18n/dictionaries"
 const PortfolioFilter = dynamic(() => import('../elements/PortfolioFilter'), {
 	ssr: false,
 })
 
-export default function Projects1() {
+export default function Projects1({ t }: { t: Dictionary["home"]["projects"] }) {
 	return (
 		<>
 
@@ -13,23 +15,21 @@ export default function Projects1() {
 				<div className="container">
 					<div className="row align-items-end">
 						<div className="col-lg-7 me-auto">
-							<h3 className="ds-3 mt-3 mb-3 text-primary-1">Featured Projects</h3>
+							<h3 className="ds-3 mt-3 mb-3 text-primary-1">{t.title}</h3>
 							<span className="fs-5 fw-medium text-200">
-								A selection of full-stack applications and digital experiences
-								<br />
-								built with modern technologies and user-centric design.
+								{t.subtitle}
 							</span>
 						</div>
 						<div className="col-lg-auto">
 							<Link href="https://github.com/joshrubio" target="_blank" className="btn btn-gradient mt-lg-0 mt-5 ms-lg-auto d-none d-xl-block">
-								View GitHub
+								{t.viewGithub}
 								<i className="ri-github-fill ms-2" />
 							</Link>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className="bg-900 fillter-project" data-background="assets/imgs/projects/projects-1/background.png">
+			<div className="bg-900 fillter-project" data-background="/assets/imgs/projects/projects-1/background.png">
 				<PortfolioFilter />
 			</div>
 			<div className="contairer overflow-hidden">
@@ -37,7 +37,7 @@ export default function Projects1() {
 					<Link href="https://github.com/joshrubio" target="_blank" className="icon_hover position-relative z-1 icon-shape icon_150 border-linear-2 rounded-circle position-relative overflow-hidden bg-white hover-up">
 						<span className="icon-shape icon-md bg-linear-2 rounded-circle position-absolute bottom-0 end-0" />
 						<p className="m-0 fs-7 fw-bold text-capitalize position-absolute top-50 start-50 translate-middle">
-							More on GitHub
+							{t.moreGithub}
 							<i className="ri-arrow-right-up-line fs-7" />
 						</p>
 					</Link>

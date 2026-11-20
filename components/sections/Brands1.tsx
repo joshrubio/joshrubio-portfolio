@@ -1,16 +1,18 @@
 import Marquee from 'react-fast-marquee'
 
+import type { Dictionary } from "@/i18n/dictionaries"
 
-export default function Brands1() {
+
+export default function Brands1({ t }: { t: Dictionary["home"]["brands"] }) {
 	return (
 		<>
 
 			<section className="section-brands-1 section-padding">
 				<div className="container">
 					<div className="text-center">
-						<h2>Working within leading digital ecosystems</h2>
+						<h2>{t.title}</h2>
 						<p className="text-300">
-							Experience designing and building across widely adopted platforms and technologies. From modern frontend frameworks and design systems to scalable CMS and commerce solutions, my work integrates tools and standards shaped by industry leaders—ensuring flexibility, performance, and alignment with real-world product environments.
+							{t.text}
 						</p>
 					</div>
 				</div>

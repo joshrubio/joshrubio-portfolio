@@ -3,6 +3,8 @@
 import { projects } from "@/data/projects"
 import CountUp from 'react-countup'
 
+import { useLocale } from "@/i18n/LocaleProvider"
+
 const EXPERIENCE_START = new Date(2022, 0, 1)
 
 function yearsSince(start: Date, now = new Date()) {
@@ -13,6 +15,8 @@ function yearsSince(start: Date, now = new Date()) {
 }
 
 export default function Static1() {
+	const { t } = useLocale()
+	const labels = t.home.stats
 	const yearsOfExperience = yearsSince(EXPERIENCE_START)
 	const totalProjects = projects.length
 	const automationProjects = projects.filter(p => p.categories.includes('automation')).length
@@ -30,8 +34,8 @@ export default function Static1() {
 									<div className="content text-center mx-auto d-flex align-items-center">
 										<span className="ds-3 count text-primary-1 fw-medium my-0">+<CountUp enableScrollSpy={true} end={yearsOfExperience} className="odometer ds-1 text-dark fw-semibold" /></span>
 										<div className="text-start ms-2">
-											<p className="fs-5 mb-0 text-300">Years of</p>
-											<p className="fs-5 mb-0 fw-bold">Experience</p>
+											<p className="fs-5 mb-0 text-300">{labels.years[0]}</p>
+											<p className="fs-5 mb-0 fw-bold">{labels.years[1]}</p>
 										</div>
 									</div>
 								</div>
@@ -41,8 +45,8 @@ export default function Static1() {
 									<div className="content text-center mx-auto d-flex align-items-center">
 										<span className="ds-3 count text-primary-1 fw-medium my-0">+<CountUp enableScrollSpy={true} end={totalProjects} className="odometer ds-1 text-dark fw-semibold" /></span>
 										<div className="text-start ms-2">
-											<p className="fs-5 mb-0 text-300">Projects</p>
-											<p className="fs-5 mb-0 fw-bold">Completed</p>
+											<p className="fs-5 mb-0 text-300">{labels.projects[0]}</p>
+											<p className="fs-5 mb-0 fw-bold">{labels.projects[1]}</p>
 										</div>
 									</div>
 								</div>
@@ -52,8 +56,8 @@ export default function Static1() {
 									<div className="content text-center mx-auto d-flex align-items-center">
 										<span className="ds-3 count text-primary-1 fw-medium my-0">+<CountUp enableScrollSpy={true} end={webApps} className="odometer ds-1 text-dark fw-semibold" /></span>
 										<div className="text-start ms-2">
-											<p className="fs-5 mb-0 text-300">Web</p>
-											<p className="fs-5 mb-0 fw-bold">Applications</p>
+											<p className="fs-5 mb-0 text-300">{labels.web[0]}</p>
+											<p className="fs-5 mb-0 fw-bold">{labels.web[1]}</p>
 										</div>
 									</div>
 								</div>
@@ -63,8 +67,8 @@ export default function Static1() {
 									<div className="content text-center mx-auto d-flex align-items-center">
 										<span className="ds-3 count text-primary-1 fw-medium my-0">+<CountUp enableScrollSpy={true} end={automationProjects} className="odometer ds-1 text-dark fw-semibold" /></span>
 										<div className="text-start ms-2">
-											<p className="fs-5 mb-0 text-300">Automation</p>
-											<p className="fs-5 mb-0 fw-bold">Projects</p>
+											<p className="fs-5 mb-0 text-300">{labels.automation[0]}</p>
+											<p className="fs-5 mb-0 fw-bold">{labels.automation[1]}</p>
 										</div>
 									</div>
 								</div>
@@ -74,8 +78,8 @@ export default function Static1() {
 									<div className="content text-center mx-auto d-flex align-items-center">
 										<span className="ds-3 count text-primary-1 fw-medium my-0">+<CountUp enableScrollSpy={true} end={wordpressProjects} className="odometer ds-1 text-dark fw-semibold" /></span>
 										<div className="text-start ms-2">
-											<p className="fs-5 mb-0 text-300">WordPress</p>
-											<p className="fs-5 mb-0 fw-bold">Projects</p>
+											<p className="fs-5 mb-0 text-300">{labels.wordpress[0]}</p>
+											<p className="fs-5 mb-0 fw-bold">{labels.wordpress[1]}</p>
 										</div>
 									</div>
 								</div>

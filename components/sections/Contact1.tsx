@@ -1,17 +1,20 @@
+'use client'
 
-import Link from "next/link"
+import Link from "@/components/elements/LocaleLink"
+
+import { useLocale } from "@/i18n/LocaleProvider"
 
 export default function Contact1() {
+	const { t } = useLocale()
+	const c = t.home.contact
 	return (
 		<>
 
 			<section id="contact" className="section-contact-1 bg-900 position-relative pt-150 pb-lg-250 pb-150 overflow-hidden">
 				<div className="container position-relative z-1">
-					<h3 className="ds-3 mt-3 mb-3 text-primary-1">Get in touch</h3>
+					<h3 className="ds-3 mt-3 mb-3 text-primary-1">{c.title}</h3>
 					<span className="fs-5 fw-medium text-200">
-						I'm always excited to take on new projects and collaborate with innovative minds.
-						<br />
-						Let's create something meaningful together!
+						{c.subtitle}
 					</span>
 					<div className="row mt-8">
 						<div className="col-lg-4 d-flex flex-column">
@@ -60,32 +63,32 @@ export default function Contact1() {
 						<div className="col-lg-7 offset-lg-1 ps-lg-0 pt-5 pt-lg-0">
 							<div className="position-relative">
 								<div className="position-relative z-2">
-									<h3>Leave a messge</h3>
+									<h3>{c.formTitle}</h3>
 									<form action="#">
 										<div className="row mt-3">
 											<div className="col-md-6 ">
-												<label className="mb-1 mt-3 text-dark" htmlFor="name">Your name <span className="text-primary-1">*</span></label>
-												<input type="text" className="form-control border rounded-3" id="name" name="name" placeholder="John Doe" aria-label="username" />
+												<label className="mb-1 mt-3 text-dark" htmlFor="name">{c.name} <span className="text-primary-1">*</span></label>
+												<input type="text" className="form-control border rounded-3" id="name" name="name" placeholder={c.namePlaceholder} aria-label="username" />
 											</div>
 											<div className="col-md-6">
-												<label className="mb-1 mt-3 text-dark" htmlFor="email">Email address <span className="text-primary-1">*</span></label>
-												<input type="text" className="form-control border rounded-3" id="email" name="email" placeholder="contact.john@gmail.com" aria-label="email" />
+												<label className="mb-1 mt-3 text-dark" htmlFor="email">{c.email} <span className="text-primary-1">*</span></label>
+												<input type="text" className="form-control border rounded-3" id="email" name="email" placeholder={c.emailPlaceholder} aria-label="email" />
 											</div>
 											<div className="col-md-6">
-												<label className="mb-1 mt-3 text-dark" htmlFor="phone">Your phone <span className="text-primary-1">*</span></label>
-												<input type="text" className="form-control border rounded-3" id="phone" name="phone" placeholder="+01 234 567 89" aria-label="phone" />
+												<label className="mb-1 mt-3 text-dark" htmlFor="phone">{c.phone} <span className="text-primary-1">*</span></label>
+												<input type="text" className="form-control border rounded-3" id="phone" name="phone" placeholder={c.phonePlaceholder} aria-label="phone" />
 											</div>
 											<div className="col-md-6">
-												<label className="mb-1 mt-3 text-dark" htmlFor="subject">Subject <span className="text-primary-1">*</span></label>
-												<input type="text" className="form-control border rounded-3" id="subject" name="subject" placeholder="I want to contact for...." aria-label="subject" />
+												<label className="mb-1 mt-3 text-dark" htmlFor="subject">{c.subject} <span className="text-primary-1">*</span></label>
+												<input type="text" className="form-control border rounded-3" id="subject" name="subject" placeholder={c.subjectPlaceholder} aria-label="subject" />
 											</div>
 											<div className="col-12">
-												<label className="mb-1 mt-3 text-dark" htmlFor="message">Message <span className="text-primary-1">*</span></label>
-												<textarea className="form-control border rounded-3 pb-10" id="message" name="message" placeholder="Your message here...." aria-label="With textarea" />
+												<label className="mb-1 mt-3 text-dark" htmlFor="message">{c.message} <span className="text-primary-1">*</span></label>
+												<textarea className="form-control border rounded-3 pb-10" id="message" name="message" placeholder={c.messagePlaceholder} aria-label="With textarea" />
 											</div>
 											<div className="col-12">
 												<button type="submit" className="btn btn-gradient mt-3">
-													Send Message
+													{c.send}
 													<i className="ri-arrow-right-up-line" />
 												</button>
 											</div>

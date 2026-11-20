@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "@/components/elements/LocaleLink"
 import type { ReactNode } from "react"
 
 /**

@@ -14345,3 +14345,62 @@ strong {
 
 .text-force-black { color: #000 !important; }
 .text-force-gray { color: #5e5e65 !important; }
+
+/* Hero technology strip: the hover ring is a fading gradient outline plus a small lift.
+   The old rule swapped the border for a gradient background and the dark-theme rule then forced
+   the border to 0, so the highlight never showed and only the border colour crept in late. */
+.section-hero-1 .brand-logo {
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.section-hero-1 .brand-logo::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--tc-linear-1);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+[data-bs-theme] .section-hero-1 .brand-logo:hover {
+  background: var(--tc-neutral-800);
+  border: 1px solid transparent !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px -8px rgba(109, 77, 242, 0.45);
+}
+.section-hero-1 .brand-logo:hover::before {
+  opacity: 1;
+}
+
+/* Navbar translate button: spinner while the page is being translated */
+.translate-button { cursor: pointer; transition: color 0.2s ease, border-color 0.2s ease; }
+.translate-button:hover:not(:disabled) { color: #6e4ef2 !important; border-color: #6e4ef2 !important; }
+.translate-button .translate-spin { display: inline-block; animation: translate-spin 0.9s linear infinite; }
+@keyframes translate-spin { to { transform: rotate(360deg); } }
+
+/* Phones: a slightly smaller brand name leaves room for the translate and language buttons */
+@media (max-width: 575.98px) {
+  .navbar .navbar-brand span.fs-4 { font-size: 1.15rem !important; }
+  .navbar .navbar-brand img { width: 30px; height: auto; }
+}
+@media (max-width: 379.98px) {
+  .navbar .navbar-brand span.fs-4 { font-size: 1rem !important; }
+  .navbar .navbar-brand img { width: 26px; }
+  .navbar .navbar-brand { margin-left: 0.75rem !important; }
+}
+@media (max-width: 339.98px) {
+  .navbar .navbar-brand span.fs-4 { display: none; }
+}
+
+/* Narrow desktops (992 to 1099 px): the full menu plus the new buttons needs a little more room */
+@media (min-width: 992px) and (max-width: 1099.98px) {
+  .navbar .navbar-brand span.fs-4 { font-size: 1rem !important; }
+  .navbar .navbar-nav .nav-link { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+  .navbar .language-switch.d-sm-none { display: inline-flex !important; }
+  .navbar .language-switch.d-sm-flex { display: none !important; }
+}

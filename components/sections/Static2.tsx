@@ -60,7 +60,7 @@ export default function Static2() {
 								</div>
 							</div>
 						</div>
-						<div className="background position-absolute top-0 start-0 w-100 h-100 filter-invert" data-background="assets/imgs/home-page-2/static/bg.png" />
+						<div className="background position-absolute top-0 start-0 w-100 h-100 filter-invert" data-background="/assets/imgs/home-page-2/static/bg.png" />
 					</div>
 				</div>
 			</div>

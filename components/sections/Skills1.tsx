@@ -1,5 +1,5 @@
 'use client'
-import Link from "next/link"
+import Link from "@/components/elements/LocaleLink"
 import CountUp from 'react-countup'
 export default function Skills1() {
 	return (
