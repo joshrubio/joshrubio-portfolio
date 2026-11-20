@@ -3,6 +3,7 @@ import Link from "next/link"
 import type { ReactNode } from "react"
 
 import Layout from "@/components/layout/Layout"
+import ImageCarousel from "@/components/projects/ImageCarousel"
 import ImageGallery from "@/components/projects/ImageGallery"
 import TerminalDemo, { type TerminalLine } from "@/components/projects/TerminalDemo"
 import { getImageSize } from "@/util/image-size"
@@ -312,6 +313,20 @@ export function Gallery({ images }: { images: { src: string; alt: string; captio
 	})
 	if (items.length === 0) return null
 	return <ImageGallery items={items} />
+}
+
+/**
+ * Looping carousel for a set of landscape screenshots of one thing (an admin console, a flow).
+ * Each image is shown whole at its own aspect ratio, so nothing is cropped or squeezed.
+ * Missing files are skipped.
+ */
+export function Carousel({ images, interval }: { images: { src: string; alt: string; caption?: string }[]; interval?: number }) {
+	const items = images.flatMap((img) => {
+		const size = getImageSize(img.src)
+		return size ? [{ ...img, ...size }] : []
+	})
+	if (items.length === 0) return null
+	return <ImageCarousel items={items} interval={interval} />
 }
 
 /** Animated, illustrative terminal session (client component, plays when scrolled into view). */

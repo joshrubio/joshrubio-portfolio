@@ -49,7 +49,7 @@ export default function ImageGallery({ items }: { items: GalleryItem[] }) {
 								height={item.height}
 								sizes="(min-width: 992px) 300px, 50vw"
 								className="rounded-3 border shadow-sm"
-								style={{ width: "100%", aspectRatio: "16 / 10", objectFit: "cover", objectPosition: "top", cursor: "zoom-in" }}
+								style={{ width: "100%", height: "auto", aspectRatio: "16 / 10", objectFit: "cover", objectPosition: "top", cursor: "zoom-in" }}
 							/>
 							{item.caption && <span className="d-block text-muted small mt-1">{item.caption}</span>}
 						</button>
