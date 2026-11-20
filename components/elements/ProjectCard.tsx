@@ -12,11 +12,10 @@ export default function ProjectCard({ project }: { project: Project }) {
 				<div className="card__image-container zoom-img position-relative">
 					<Image
 						className="card__image"
-						style={{ height: '450px', objectFit: 'cover', width: '100%' }}
 						src={project.thumbnail.src}
 						width={project.thumbnail.width}
 						height={project.thumbnail.height}
-						sizes="(min-width: 1200px) 1200px, 100vw"
+						sizes="(min-width: 992px) 640px, 100vw"
 						alt={project.title}
 					/>
 					<Link href={href} className="card-image-overlay position-absolute start-0 end-0 w-100 h-100" />

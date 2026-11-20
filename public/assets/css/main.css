@@ -4134,14 +4134,18 @@ textarea.form-control {
 .section-work .card-scroll .cards .card-custom .card__inner .card__image-container {
   display: flex;
   border-radius: 11px;
-  flex-shrink: 0;
+  flex: 0 0 56%;
+  max-width: 56%;
+  aspect-ratio: 16/9;
+  align-self: flex-start;
+  overflow: hidden;
 }
 .section-work .card-scroll .cards .card-custom .card__inner .card__image-container .card__image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  aspect-ratio: 1;
+  aspect-ratio: 16/9;
 }
 .section-work .card-scroll .cards .card-custom .card__inner .card__content {
   padding: 40px 0px 40px 40px;
@@ -4206,15 +4210,20 @@ textarea.form-control {
   .section-work .card-scroll .cards .card-custom .card__inner .card__image-container {
     display: flex;
     border-radius: 11px;
-    height: 300px;
-    flex-shrink: 0;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    align-self: stretch;
+    overflow: hidden;
   }
   .section-work .card-scroll .cards .card-custom .card__inner .card__image-container .card__image {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    aspect-ratio: 1;
+    aspect-ratio: 16/9;
   }
   .section-work .card-scroll .cards .card-custom .card__inner .card__content {
     padding: 1.5rem;
