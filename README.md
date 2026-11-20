@@ -88,7 +88,7 @@ josh-portfolio/
 
 Projects are defined once in `data/projects.ts` and rendered automatically in the home grid (with filters) and in `/work`.
 
-1. **Add images** under `public/assets/imgs/projects/<slug>/`. The card image must be named `thumbnail.png` (or `.jpg`); put any case-study images in the same folder.
+1. **Add images** under `public/assets/imgs/projects/<slug>/`. The card image must be named `thumbnail.webp` (or `.png`/`.jpg`); put any case-study images in the same folder.
 2. **Add an entry** to the `projects` array in `data/projects.ts`:
    ```ts
    {
@@ -106,8 +106,12 @@ Projects are defined once in `data/projects.ts` and rendered automatically in th
    }
    ```
    `width` and `height` are the real pixel dimensions of the thumbnail (used by `next/image` to reserve space).
-3. **Create the detail page** at `app/projects/<slug>/page.tsx`. Build it with the shared components in `components/projects/ProjectPage.tsx` (`ProjectHeader`, `Section`, `Callout`, `ProcessSteps`, `Figure`, `FigureGrid`, `Terminal`, `Takeaways`...); see `conquest-brain`, `teller-framework` or `rx-library` for complete examples. Images referenced with `Figure` are read from `public/` at build time (PNG, JPEG and WebP), so no `width`/`height` is needed.
+3. **Create the detail page** at `app/projects/<slug>/page.tsx`. Build it with the shared components in `components/projects/ProjectPage.tsx` (`ProjectHeader`, `Section`, `Callout`, `ProcessSteps`, `Figure`, `FigureGrid`, `Terminal`, `Takeaways`...); see `conquest-brain`, `teller-framework`, `rx-library`, `lifepoint-church` or `the-new-paper` for complete examples. Images referenced with `Figure` are read from `public/` at build time (PNG, JPEG and WebP), so no `width`/`height` is needed.
 4. **New filter category?** Add it to `projectCategories` in `data/projects.ts`; the filter buttons are generated from that list.
+
+### Adding projects with Claude Code
+
+The workflow above is also captured as a project skill, `.claude/skills/update-portfolio/`. It holds the structure and tone of the case studies, how screenshots and diagrams are produced, a privacy checklist and a log of earlier passes, and it is updated at the end of each pass. Ask Claude Code to "add my new projects to the portfolio" and it will read it first.
 
 ### Manual Deployment
 
