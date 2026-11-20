@@ -34,6 +34,56 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        slug: "learn-by-doing",
+        title: "Learn by Doing",
+        subtitle: "Claude Code Learning Plugin",
+        workTitle: "Learn by Doing - Claude Code Plugin",
+        label: "AI TOOLING",
+        description: "A Claude Code plugin that turns every commit Claude makes into short lessons, saved as Markdown and studied later with spaced review and a 3D map of what you know. Designed and built end to end.",
+        client: "Personal Project",
+        tools: ["Node.js", "MCP", "Claude Code", "Artifacts"],
+        thumbnail: { src: "/assets/imgs/projects/learn-by-doing/thumbnail.webp", width: 1280, height: 720 },
+        categories: ["automation", "fullstack"]
+    },
+    {
+        slug: "lifepoint-church",
+        title: "Lifepoint Church",
+        subtitle: "From WordPress to a Custom Platform",
+        workTitle: "Lifepoint Church - Custom Platform",
+        label: "FULL-STACK",
+        description: "A church website that grew from a WordPress theme into a four-language platform: a public Next.js site, a content console and a NestJS API, with accessibility, dark mode and Arabic right-to-left support. Built with Oswaldo.",
+        client: "Lifepoint Church",
+        duration: "2024 - 2026",
+        tools: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Tailwind CSS", "Docker"],
+        thumbnail: { src: "/assets/imgs/projects/lifepoint-church/thumbnail.webp", width: 1536, height: 864 },
+        categories: ["fullstack"]
+    },
+    {
+        slug: "the-new-paper",
+        title: "The New Paper",
+        subtitle: "Trilingual Local Newspaper",
+        workTitle: "The New Paper - Local Newspaper",
+        label: "FULL-STACK",
+        description: "A local newspaper for Rotterdam with a publishing console, a double opt-in newsletter and email-verified comments. Articles live in git and personal data in Redis. Designed and built end to end.",
+        client: "Carmen Zambrano",
+        duration: "2026",
+        tools: ["Next.js", "TypeScript", "Upstash Redis", "Resend"],
+        thumbnail: { src: "/assets/imgs/projects/the-new-paper/thumbnail.webp", width: 1440, height: 810 },
+        categories: ["fullstack", "uxui"]
+    },
+    {
+        slug: "pressroom",
+        title: "Pressroom",
+        subtitle: "Press Release Automation",
+        workTitle: "Pressroom - Press Release Automation",
+        label: "AUTOMATION",
+        description: "A markdown-and-git memory that lets Claude Code draft Dutch press releases for an independent journalist and remember every contact and message. A public repository with no contacts in it.",
+        client: "Carmen Zambrano",
+        tools: ["TypeScript", "Zod", "Claude Code", "Markdown"],
+        thumbnail: { src: "/assets/imgs/projects/pressroom/thumbnail.webp", width: 1440, height: 810 },
+        categories: ["automation"]
+    },
+    {
         slug: "siegfried",
         title: "Siegfried",
         subtitle: "Development Control Plane",
@@ -281,29 +331,15 @@ export const projects: Project[] = [
         categories: ["fullstack"]
     },
     {
-        slug: "lifepoint-church",
-        title: "Lifepoint Church",
-        subtitle: "From WordPress to a Custom Platform",
-        workTitle: "Lifepoint Church - Custom Platform",
-        label: "FULL-STACK",
-        description: "A church website that grew from a WordPress theme into a four-language platform: a public Next.js site, a content console and a NestJS API, with accessibility, dark mode and Arabic right-to-left support. Built with Oswaldo.",
-        client: "Lifepoint Church",
-        duration: "2024 - 2026",
-        tools: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Tailwind CSS", "Docker"],
-        thumbnail: { src: "/assets/imgs/projects/lifepoint-church/thumbnail.webp", width: 1536, height: 864 },
-        categories: ["fullstack"]
-    },
-    {
         slug: "carmen-zambrano",
         title: "Carmen Zambrano",
-        subtitle: "Journalist Portfolio (WordPress)",
-        workTitle: "Carmen Zambrano Portfolio",
-        label: "WORDPRESS",
-        description: "A professional portfolio designed for a veteran journalist to showcase her extensive work in media. Built with WordPress and Elementor.",
+        subtitle: "Journalist Portfolio",
+        workTitle: "Carmen Zambrano - Journalist Portfolio",
+        label: "WEB DESIGN & DEV",
+        description: "A trilingual portfolio for a journalist with over 30 years of experience, rebuilt from WordPress into a static Next.js site with motion and dark and light themes. Designed and developed end to end.",
         client: "Carmen Zambrano",
-        duration: "4 Weeks",
-        tools: ["WordPress", "Elementor"],
-        thumbnail: { src: "/assets/imgs/projects/carmen-zambrano/thumbnail.png", width: 1024, height: 576 },
-        categories: ["wordpress"]
+        tools: ["Next.js", "Framer Motion", "GSAP", "Vercel"],
+        thumbnail: { src: "/assets/imgs/projects/carmen-zambrano/thumbnail.webp", width: 1440, height: 810 },
+        categories: ["fullstack", "uxui"]
     }
 ];
