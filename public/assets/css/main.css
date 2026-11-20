@@ -14404,3 +14404,22 @@ strong {
   .navbar .language-switch.d-sm-none { display: inline-flex !important; }
   .navbar .language-switch.d-sm-flex { display: none !important; }
 }
+
+/* Navbar buttons (translate, language on phones) are the same square so they line up */
+.nav-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  line-height: 1;
+}
+@media (min-width: 576px) {
+  .nav-chip { width: 36px; height: 36px; }
+}
+/* With its text label (very wide screens) the translate button grows in width only */
+@media (min-width: 1400px) {
+  .translate-button.nav-chip { width: auto; padding: 0 0.75rem; }
+}

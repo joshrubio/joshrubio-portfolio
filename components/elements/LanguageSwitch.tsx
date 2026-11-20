@@ -25,7 +25,7 @@ export default function LanguageSwitch() {
 				hrefLang={other}
 				title={t.language.names[other]}
 				aria-label={`${t.language.label}: ${t.language.names[other]}`}
-				className="language-switch d-inline-flex d-sm-none align-items-center border rounded-3 px-1 py-1 me-0 fs-7 fw-bold text-decoration-none text-300"
+				className="language-switch d-inline-flex d-sm-none align-items-center nav-chip border rounded-3 me-0 fs-7 fw-bold text-decoration-none text-300"
 				onClick={go(other, otherHref)}
 				data-no-translate
 			>

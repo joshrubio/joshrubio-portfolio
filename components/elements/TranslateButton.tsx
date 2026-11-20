@@ -16,7 +16,7 @@ export default function TranslateButton() {
 	return (
 		<button
 			type="button"
-			className="translate-button d-inline-flex align-items-center border rounded-3 bg-transparent text-300 px-1 px-sm-2 py-1 me-1 me-md-2"
+			className="translate-button d-inline-flex align-items-center border rounded-3 bg-transparent text-300 nav-chip me-1 me-md-2"
 			onClick={toggle}
 			disabled={working}
 			aria-label={label}
