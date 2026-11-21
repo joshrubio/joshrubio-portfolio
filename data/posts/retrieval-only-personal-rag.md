@@ -4,7 +4,7 @@ description: The design of the search over my markdown vault in Siegfried, why i
 category: AI & Retrieval
 author: Josh D. Rubio
 date: 2026-10-09
-cover: /assets/imgs/projects/siegfried/architecture.png
+cover: /assets/imgs/projects/siegfried/architecture.webp
 coverAlt: Siegfried architecture, from markdown files to search and live project status
 ---
 

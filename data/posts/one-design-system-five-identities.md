@@ -4,7 +4,7 @@ description: How a shared neutral base and four deliberate axes of difference ma
 category: Design Systems
 author: Josh D. Rubio
 date: 2026-10-25
-cover: /assets/imgs/projects/siegfried/identities.png
+cover: /assets/imgs/projects/siegfried/identities.webp
 coverAlt: The Siegfried satellite identity system, showing each satellite's accent, type and radius
 ---
 

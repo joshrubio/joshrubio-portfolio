@@ -4,7 +4,7 @@ description: Three WordPress projects and one rebuild. When a theme stops being 
 category: WordPress
 author: Josh D. Rubio
 date: 2026-10-17
-cover: /assets/imgs/projects/pharmacy-time/thumbnail.png
+cover: /assets/imgs/projects/pharmacy-time/thumbnail.webp
 coverAlt: The PharmacyTime WooCommerce website
 ---
 

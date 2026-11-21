@@ -3,7 +3,9 @@
 const LANGUAGE = "preferred-language"
 const INTRO_SEEN = "translate-intro-seen"
 const AUTO = "translate-auto"
-const PROMPT_DISMISSED = "translate-prompt-dismissed" // sessionStorage: "Not now" lasts for the visit
+const PROMPT_DISMISSED = "translate-prompt-dismissed" // localStorage: when "Not now" was chosen
+const NOTICE_SEEN = "language-notice-seen"
+const PROMPT_SILENCE_MS = 30 * 24 * 60 * 60 * 1000
 
 const read = (store: "localStorage" | "sessionStorage", key: string): string | null => {
 	try {
@@ -36,5 +38,11 @@ export const markIntroSeen = () => write("localStorage", INTRO_SEEN, "1")
 export const autoTranslate = () => read("localStorage", AUTO) === "1"
 export const setAutoTranslate = (on: boolean) => write("localStorage", AUTO, on ? "1" : "0")
 
-export const promptDismissed = () => read("sessionStorage", PROMPT_DISMISSED) === "1"
-export const dismissPrompt = () => write("sessionStorage", PROMPT_DISMISSED, "1")
+export function promptDismissed(): boolean {
+	const savedAt = Number(read("localStorage", PROMPT_DISMISSED))
+	return Number.isFinite(savedAt) && savedAt > 0 && Date.now() - savedAt < PROMPT_SILENCE_MS
+}
+export const dismissPrompt = () => write("localStorage", PROMPT_DISMISSED, String(Date.now()))
+
+export const noticeSeen = () => read("localStorage", NOTICE_SEEN) === "1"
+export const markNoticeSeen = () => write("localStorage", NOTICE_SEEN, "1")

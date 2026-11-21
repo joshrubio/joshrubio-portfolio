@@ -1,0 +1,118 @@
+@theme inline {
+	--color-*: initial;
+
+	--color-paper: #ecebe6;
+	--color-paper-grid: #d6d5ce;
+	--color-paper-dark: #0c0c0c;
+	--color-ink: #262626;
+	--color-ink-soft: #5a5a55;
+	--color-chrome: #4b4b4b;
+	--color-chrome-line: #8d8d87;
+	--color-accent: #f25a24;
+	--color-accent-hot: #e3281e;
+	--color-white: #ffffff;
+	--color-term-bg: #0b0f17;
+	--color-term-bar: #111827;
+	--color-term-line: #1e293b;
+	--color-term-you: #5eead4;
+	--color-term-agent: #a5b4fc;
+	--color-term-flag: #fbbf24;
+	--color-term-ok: #86efac;
+	--color-term-dim: #94a3b8;
+	--color-term-red: #ef4444;
+	--color-term-yellow: #f59e0b;
+	--color-term-green: #22c55e;
+	--color-black: #000000;
+	--color-transparent: transparent;
+	--color-current: currentColor;
+
+	--font-display: var(--font-archivo), "Arial Black", sans-serif;
+	--font-body: var(--font-archivo), system-ui, sans-serif;
+	--font-mono: var(--font-dm-mono), ui-monospace, monospace;
+	--font-hand: var(--font-caveat), cursive;
+
+	--text-display: clamp(3.25rem, 9.5vw, 8.5rem);
+	--text-display--line-height: 0.82;
+	--text-display--letter-spacing: -0.02em;
+	--text-title: clamp(2.5rem, 6vw, 5rem);
+	--text-title--line-height: 0.9;
+	--text-title--letter-spacing: -0.015em;
+	--text-heading: clamp(1.75rem, 3vw, 2.5rem);
+	--text-heading--line-height: 1;
+	--text-subhead: 1.25rem;
+	--text-subhead--line-height: 1.15;
+	--text-small: 0.9375rem;
+	--text-small--line-height: 1.5;
+	--text-body: 1.0625rem;
+	--text-body--line-height: 1.55;
+	--text-label: 0.75rem;
+	--text-label--line-height: 1;
+	--text-label--letter-spacing: 0.08em;
+
+	--radius-none: 0;
+	--radius-tile: 0.375rem;
+	--radius-pill: 999px;
+
+	--shadow-sticker: 0.3rem 0.3rem 0 var(--color-ink);
+	--shadow-sticker-accent: 0.3rem 0.3rem 0 var(--color-accent);
+	--shadow-panel: 0 0.5rem 1.5rem rgb(0 0 0 / 0.25);
+
+	--spacing-gutter: clamp(1rem, 4vw, 3rem);
+	--container-page: 80rem;
+	--container-wide: 96rem;
+	--container-narrow: 56rem;
+
+	--ease-snap: cubic-bezier(0.2, 0.9, 0.2, 1);
+	--duration-snap: 220ms;
+}
+
+@theme {
+	--animate-marquee: marquee 50s linear infinite;
+	--animate-marquee-reverse: marquee 50s linear infinite reverse;
+	--animate-boil: boil 1.1s steps(1) infinite;
+	--animate-float: float 7s ease-in-out infinite;
+	--animate-pop: pop 0.5s var(--ease-snap) both;
+
+	@keyframes boil {
+		0% {
+			transform: rotate(-0.9deg) translate(0, 0);
+		}
+		33% {
+			transform: rotate(0.7deg) translate(0.6px, -0.6px);
+		}
+		66% {
+			transform: rotate(-0.4deg) translate(-0.6px, 0.6px);
+		}
+	}
+
+	@keyframes float {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-10px);
+		}
+	}
+
+	@keyframes pop {
+		0% {
+			transform: scale(0);
+		}
+		70% {
+			transform: scale(1.5);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	@keyframes marquee {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
+}

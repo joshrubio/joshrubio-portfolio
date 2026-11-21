@@ -4,7 +4,7 @@ description: Gated stages, plain files and a human decision at every judgement: 
 category: AI Workflows
 author: Josh D. Rubio
 date: 2026-10-21
-cover: /assets/imgs/projects/conquest-brain/thumbnail.png
+cover: /assets/imgs/projects/conquest-brain/thumbnail.webp
 coverAlt: The Conquest Brain production pipeline dashboard
 ---
 

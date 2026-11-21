@@ -52,6 +52,7 @@ const en = {
 			cv: "Download CV",
 			connect: "Let's Connect",
 			technologies: "Technologies I work with",
+			photoAlt: "Josh smiling in a brown jacket with his hands in his pockets",
 		},
 		stats: {
 			years: ["Years of", "Experience"],

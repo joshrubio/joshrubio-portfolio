@@ -1,13 +1,13 @@
 # Case-study pages: structure, tone and components
 
-Models to open first: `app/[lang]/projects/lifepoint-church/page.tsx` (rebuild + evolution, long), `janus/page.tsx` (short, satellite), `conquest-brain/page.tsx` and `teller-framework/page.tsx` (no UI, diagrams and terminals), `rx-library/page.tsx` (client work, role split), `the-new-paper/page.tsx` (UI-heavy), `pressroom/page.tsx` and `learn-by-doing/page.tsx` (tooling).
+Models to open first: `app/(site)/[lang]/projects/lifepoint-church/page.tsx` (rebuild + evolution, long), `janus/page.tsx` (short, satellite), `conquest-brain/page.tsx` and `teller-framework/page.tsx` (no UI, diagrams and terminals), `rx-library/page.tsx` (client work, role split), `the-new-paper/page.tsx` (UI-heavy), `pressroom/page.tsx` and `learn-by-doing/page.tsx` (tooling).
 
 ## Skeleton
 
 ```tsx
 import { Callout, FeatureList, Figure, FigureGrid, Paragraph, ProcessSteps, ProjectBody, ProjectCTA,
          ProjectHeader, ProjectPage, Section, StatTiles, SubHeading, TableOfContents, Takeaways,
-         Terminal } from "@/components/projects/ProjectPage"
+         Terminal } from "@/components/case-study"
 
 export const metadata = { title: "<Name> - <What it is> | Josh D. Rubio", description: "<1-2 sentences>" }
 const IMG = "/assets/imgs/projects/<slug>"
@@ -35,7 +35,7 @@ Short pages (Janus) skip the table of contents and number the sections inline. P
 - Illustrative terminal sessions carry a caption: "Illustrative: the flow and the sources are real, the wording is an example."
 - No em dashes. No emojis except the ⚠️ and ✓ in the two `Callout` titles.
 
-## Components (all in `components/projects/ProjectPage.tsx`)
+## Components (all in `components/case-study`)
 
 | Component | Use |
 | --- | --- |

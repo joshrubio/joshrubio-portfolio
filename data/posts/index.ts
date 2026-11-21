@@ -16,7 +16,7 @@ import path from "path"
  *   cover: /assets/imgs/projects/<slug>/thumbnail.png   (a file under /public)
  *   coverAlt: ...
  *   ---
- *   Body in the small markdown subset that components/blog/PostBody.tsx renders.
+ *   Body in the small markdown subset that components/case-study/PostBody.tsx renders.
  */
 
 export interface PostMeta {

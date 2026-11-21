@@ -46,6 +46,14 @@ Learned from `git log` of this repo. **Append a new entry at the end of every pa
 - **Lessons from the i18n work:** a matcher string written through a shell heredoc lost a backslash and silently matched nothing (check with `curl` for `x-middleware-rewrite`); relative asset URLs break under `/es`; adding controls to the navbar overflowed phones, so the language switch is one small button below 576 px, the brand shrinks, and in the 992 to 1099 px range the social icons are hidden; the template had pre-existing issues that were left alone and reported: placeholder testimonials, a contact form with `action="#"`, "william.design" in the mobile menu (fixed because it was a visible leftover).
 - Left open: no blog post, no Resume/Skills changes, README only touched where it described the workflow; Pressroom's README says "early scaffold", which the page repeats.
 
+## Redesign pass of 2026-11-21 in detail (branch `redesign/general`)
+
+- **What changed:** the purchased Bootstrap template was replaced by an atomic design system on Next 16, React 19 and Tailwind v4. Atoms and molecules carry the styles (`cva` variants, tokens in `styles/tokens.css`); organisms and pages only compose typed props. ESLint forbids `any`, `style` and `className` outside atoms and molecules. Plan and phases: `docs/redesign-plan.md`.
+- **Case studies:** all 26 pages use the blocks exported from `components/case-study` (same names as the old `ProjectPage.tsx`, plus `BulletList`, `Callout`, `Columns`, `NumberedFeatures`, `ScreenStrip`, `TagList`, `Bento`). Page template: `ProjectPage` > `ProjectHeader` > `ProjectBody` > `Section`. A new page is written with those blocks only, no HTML.
+- **Verification method that worked:** before touching anything, snapshot every route in both languages (status, title, h1, normalized text of `<main>`, images, links) and compare after each migration. It caught two real content losses that a visual check missed (rows with text beside images were converted to image-only grids).
+- **Lessons:** (1) the dev server returns random 500s when many routes compile at once; re-run only the failing routes before suspecting the code. (2) Restoring an old page next to its new copy creates a duplicate route and poisons the dev cache; restart the server and clear `.next/dev` and `.next/types`. (3) `tailwind-merge` drops a custom font-size when it sits next to a text color unless it is registered in `lib/cn.ts`. (4) Git Bash rewrites arguments that look like paths; set `MSYS_NO_PATHCONV=1` when passing a regex starting with `/`.
+- **Left open:** the pricing FAQ answers are template filler (the same sentence about energy-efficient homes six times), services cards 3 and 4 have no description, and the plan prices are unverified; the template stock mockups of `/services` were dropped on purpose.
+
 ## Project sources and relationships
 
 | Project | Repo | Visibility | Live | Notes |

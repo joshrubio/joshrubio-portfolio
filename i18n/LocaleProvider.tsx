@@ -2,28 +2,36 @@
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from "react"
 import { useRouter } from "next/navigation"
 
-import Modal from "@/components/elements/Modal"
+import { Button } from "@/components/atoms/Button"
+import { Text } from "@/components/atoms/Text"
+import { Dialog } from "@/components/molecules/Dialog"
 import type { Locale } from "./config"
 import es from "./dictionaries/es"
 import type { Dictionary } from "./dictionaries"
-import { setPreferredLanguage } from "./preferences"
+import { markNoticeSeen, noticeSeen, setPreferredLanguage } from "./preferences"
 
 interface LocaleContextValue {
 	lang: Locale
 	t: Dictionary
-	/** Asks to switch language. Moving to Spanish shows the notice first. */
+	/** Asks to switch language. Moving to Spanish shows the notice the first time. */
 	requestSwitch: (to: Locale, href: string) => void
 }
 
 const LocaleContext = createContext<LocaleContextValue | null>(null)
 
-export function LocaleProvider({ lang, dictionary, children }: { lang: Locale; dictionary: Dictionary; children: ReactNode }) {
+interface LocaleProviderProps {
+	lang: Locale
+	dictionary: Dictionary
+	children: ReactNode
+}
+
+export function LocaleProvider({ lang, dictionary, children }: LocaleProviderProps) {
 	const router = useRouter()
 	const [pending, setPending] = useState<string | null>(null)
 
 	const requestSwitch = useCallback(
 		(to: Locale, href: string) => {
-			if (to === "es") {
+			if (to === "es" && !noticeSeen()) {
 				setPending(href)
 				return
 			}
@@ -37,40 +45,40 @@ export function LocaleProvider({ lang, dictionary, children }: { lang: Locale; d
 	// The notice is always in Spanish: it is shown to someone who has just chosen Spanish.
 	const text = es.notice
 
+	const confirm = () => {
+		if (!pending) return
+		const href = pending
+		markNoticeSeen()
+		setPending(null)
+		setPreferredLanguage("es")
+		router.push(href)
+	}
+	const dismiss = () => {
+		markNoticeSeen()
+		setPending(null)
+	}
+
 	return (
 		<LocaleContext.Provider value={value}>
 			{children}
 			{pending && (
-				<Modal
+				<Dialog
 					title={text.title}
-					onDismiss={() => setPending(null)}
+					onDismiss={dismiss}
 					actions={
 						<>
-							<button
-								type="button"
-								data-autofocus
-								className="btn btn-gradient"
-								onClick={() => {
-									const href = pending
-									setPending(null)
-									setPreferredLanguage("es")
-									router.push(href)
-								}}
-							>
+							<Button data-autofocus onClick={confirm}>
 								{text.continue}
-							</button>
-							<button type="button" className="btn btn-outline-secondary" onClick={() => setPending(null)}>
+							</Button>
+							<Button tone="ghost" onClick={dismiss}>
 								{text.stay}
-							</button>
+							</Button>
 						</>
 					}
 				>
-					<p className="text-300 mb-3">{text.body}</p>
-					<p className="mb-0">
-						<i className="ri-translate-2 me-2 text-primary-1" aria-hidden="true" />
-						{text.translate}
-					</p>
-				</Modal>
+					<Text tone="soft">{text.body}</Text>
+					<Text>{text.translate}</Text>
+				</Dialog>
 			)}
 		</LocaleContext.Provider>
 	)

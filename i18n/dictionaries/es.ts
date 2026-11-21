@@ -52,6 +52,7 @@ const es: Dictionary = {
 			cv: "Descargar CV",
 			connect: "Hablemos",
 			technologies: "Tecnologías con las que trabajo",
+			photoAlt: "Josh sonriendo con una chaqueta marrón y las manos en los bolsillos",
 		},
 		stats: {
 			years: ["Años de", "Experiencia"],
