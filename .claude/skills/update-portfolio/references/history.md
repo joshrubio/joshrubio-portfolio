@@ -19,6 +19,17 @@ Learned from `git log` of this repo. **Append a new entry at the end of every pa
 | 2026-10-25 | `3a86ca1`, `7dc5abb`, `4565def` | Resume updated from the CV, six blog posts drawn from the projects (`data/posts`), new Mesa360 thumbnail | Optional follow-ups after a pass: resume, a blog post about the new work, thumbnails |
 | 2026-11-20 | not committed at the time of writing | Added Learn by Doing, The New Paper and Pressroom; rewrote Carmen Zambrano around the Next.js rebuild; created this skill | See below |
 
+| 2026-11-21 | not committed at the time of writing | Added Pan de Vida (multilingual outreach site for a Christian community, AR/ES/EN, RTL) in third position | See "Pass of 2026-11-21" |
+
+## Pass of 2026-11-21 in detail
+
+- Source: local folder `D:\Coding\Pandevida`, repo `joshrubio/Pandevida` (public), live at `www.pandevidaparati.com` (also `pandevida.vercel.app`). Next.js 16, React 19, Tailwind 4, Framer Motion, Resend; three JSON dictionaries; Arabic is the default locale (the bare domain redirects to `/arabic`, with no browser-language negotiation although `PROJECT_CONTEXT.md` says otherwise: **trust the code, not the context file**).
+- The user chose: client work ("Pan de Vida", role Design & Development, no people named), **third position** in the grid (after Learn by Doing and Lifepoint Church). Asked before writing, as the rules say.
+- Assets: real captures of the live site at 1440x900 (hero, Bible + Jesus, Good News, Who We Are, contact, video collection), Arabic and Spanish versions, phone captures at dpr 2 (Arabic hero, menu with language buttons). Three diagrams (structure, languages, contact). Thumbnail is the hero cropped to 16:9. The footer of the live site shows the community's real emails and phones: **it was never captured**; sections were chosen with `scrollY` to stay above it, and `shot.mjs` masks contact data anyway. The form was not submitted on the live site.
+- Sections of the page: Overview, What It Needed to Do, Structure, The Page (a `Carousel` of five captures), Three Languages Right to Left, Contact, Key Decisions, Outcome and Role.
+- Things noticed and left out of the page on purpose (reported to the user instead): the contact action has no spam protection or rate limit and sends from Resend's test sender; `PROJECT_CONTEXT.md` says Next.js 15 while `package.json` says 16; some small labels in the video section are hard-coded in English; Google Analytics is loaded from the root layout.
+- **Lesson:** props that take plain strings (`FeatureList` `text`, `title`, captions) do not decode HTML entities, so `&apos;` printed literally. Use a plain `'` inside strings and keep `&apos;` only in JSX text.
+
 ## Pass of 2026-11-20 in detail
 
 - Sources: GitHub repos `joshrubio/learn-by-doing`, `thenewpaper`, `pressroom` and `carmenmazambrano.nl` (private). **Local folder names do not match repo names**: the `thenewpaper` repo is checked out in the local folder `carmenzambrano`; `carmenmazambrano.nl` is the portfolio of the same journalist (the older WordPress `carmenzambrano.nl` is the page that was rewritten, slug `carmen-zambrano`).
@@ -47,3 +58,4 @@ Learned from `git log` of this repo. **Append a new entry at the end of every pa
 | Carmen Zambrano portfolio | `carmenmazambrano.nl` | private | carmenmazambrano.nl | Replaced the WordPress site |
 | RX Library, PharmacyTime, HeyTides, The Long Run | client work (Proventheory) | private | | Describe the work, not internal data |
 | Lifepoint Church | built with Oswaldo | | iglesialifepoint.com | v1 WordPress, v2 custom platform |
+| Pan de Vida | `Pandevida` | public | pandevidaparati.com | Local folder `Pandevida`; client work; footer of the live site shows real contacts, never capture it |

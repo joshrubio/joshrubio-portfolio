@@ -62,6 +62,19 @@ export const projects: Project[] = [
         categories: ["fullstack"]
     },
     {
+        slug: "pan-de-vida",
+        title: "Pan de Vida",
+        subtitle: "Multilingual Outreach Site",
+        workTitle: "Pan de Vida - Multilingual Outreach Site",
+        label: "WEB DESIGN & DEV",
+        description: "A welcoming website in Arabic, Spanish and English for a Christian community, with right-to-left layout, a video library and a contact form that emails the team. Designed and built end to end.",
+        client: "Pan de Vida",
+        duration: "2025 - 2026",
+        tools: ["Next.js", "Tailwind CSS", "Framer Motion", "Resend"],
+        thumbnail: { src: "/assets/imgs/projects/pan-de-vida/thumbnail.webp", width: 1440, height: 810 },
+        categories: ["uxui"]
+    },
+    {
         slug: "the-new-paper",
         title: "The New Paper",
         subtitle: "Trilingual Local Newspaper",

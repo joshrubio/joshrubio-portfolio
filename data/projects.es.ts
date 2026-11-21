@@ -19,6 +19,12 @@ export const projectsEs: Record<string, ProjectTextEs> = {
         workTitle: "Lifepoint Church - Plataforma a medida",
         description: "Una web de iglesia que creció de un tema de WordPress a una plataforma en cuatro idiomas: un sitio público en Next.js, una consola de contenido y una API en NestJS, con accesibilidad, modo oscuro y soporte de árabe de derecha a izquierda. Construida con Oswaldo."
     },
+    "pan-de-vida": {
+        label: "DISEÑO Y DESARROLLO WEB",
+        subtitle: "Sitio de acogida multilingüe",
+        workTitle: "Pan de Vida - Sitio de acogida multilingüe",
+        description: "Un sitio acogedor en árabe, español e inglés para una comunidad cristiana, con diseño de derecha a izquierda, una videoteca y un formulario de contacto que envía un correo al equipo. Diseñado y construido de principio a fin."
+    },
     "the-new-paper": {
         label: "FULL-STACK",
         subtitle: "Periódico local trilingüe",
