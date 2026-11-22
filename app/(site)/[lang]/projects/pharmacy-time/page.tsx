@@ -29,7 +29,7 @@ export default function PharmacyTime() {
                     { label: "Stack", value: "WordPress, WooCommerce, PHP" },
                     { label: "Automation", value: "Python + Airtable" },
                 ]}
-                hero={{ src: `${IMG}/thumbnail.webp`, alt: "PharmacyTime website" }}
+                hero={{ src: `${IMG}/hero.webp`, alt: "PharmacyTime website" }}
             />
 
             <ProjectBody>

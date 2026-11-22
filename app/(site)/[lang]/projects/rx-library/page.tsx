@@ -34,7 +34,7 @@ export default function RxLibrary() {
                     { label: "Stack", value: "Next.js, TypeScript, FHIR" },
                     { label: "Type", value: "Multi-tenant SaaS" },
                 ]}
-                hero={{ src: `${IMG}/thumbnail.webp`, alt: "RX Library platform" }}
+                hero={{ src: `${IMG}/hero.webp`, alt: "RX Library platform" }}
             />
 
             <ProjectBody>

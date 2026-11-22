@@ -3,7 +3,7 @@
 const en = {
 	meta: {
 		title: "Josh D. Rubio - Design Engineer Portfolio",
-		description: "Josh D. Rubio - UX Designer & AI-Driven Web Developer. Crafting intuitive, content-driven web experiences with Next.js, WordPress, and modern UX practices.",
+		description: "Josh D. Rubio - Product Designer & AI-Driven Web Developer. Crafting intuitive, content-driven web experiences with Next.js, WordPress, and modern UX practices.",
 		ogLocale: "en_US",
 	},
 	nav: { home: "Home", services: "Services", portfolio: "Portfolio", pricing: "Pricing", blog: "Blog", contact: "Contact" },
@@ -46,9 +46,9 @@ const en = {
 	home: {
 		hero: {
 			greeting: "👋 Hi, I'm Josh",
-			title: "UX Designer &",
+			title: "Product Designer &",
 			titleAccent: "Fullstack Developer",
-			body: "I design and build digital experiences that feel effortless, meaningful, and human-centered. My work blends product thinking, storytelling, and modern web technologies like Next.js, WordPress, and AI-powered tooling to create interfaces that solve real problems and scale with clarity.",
+			body: "Taking a project from idea to reality is hard work. Understanding the market and knowing how to position a product takes knowledge and expertise, and designing something that truly serves its purpose and converts in the digital era is an art. These are the things I've committed myself to over the last few years. My work blends product design, business logic and modern web technologies to make your idea not only work, but succeed.",
 			cv: "Download CV",
 			connect: "Let's Connect",
 			technologies: "Technologies I work with",
@@ -63,13 +63,13 @@ const en = {
 		},
 		services: {
 			title: "What do I offer?",
-			subtitle: "My journey started with a fascination for design and technology, leading me to specialize in UI/UX design",
+			subtitle: "From the first idea to a product that works and converts: market understanding, design, business logic and modern web technology in one pair of hands.",
 			quote: "Get a Quote",
 			items: [
-				{ title: "UI/UX Design", text: "Designing visually stunning and user-friendly interfaces for web and mobile applications." },
-				{ title: "Mobile App Design", text: "Designing intuitive and appealing mobile applications for both iOS and Android platforms." },
-				{ title: "Brand Identity Design", text: "Developing cohesive visual branding that resonates with your target audience." },
-				{ title: "Web Development", text: "Crafting responsive and engaging websites that align with your brand and business goals." },
+				{ title: "UI/UX Design", text: "Interfaces shaped around real users and the market, designed to serve their purpose and to convert." },
+				{ title: "Mobile App Design", text: "Mobile products for iOS and Android, from the first flow to a prototype that is ready to build." },
+				{ title: "Brand Identity Design", text: "A cohesive visual identity that positions your product and resonates with the people you want to reach." },
+				{ title: "Web Development", text: "Fast, responsive websites and web apps on modern technology, built around your business logic and goals." },
 			],
 		},
 		projects: {
@@ -79,6 +79,7 @@ const en = {
 			moreGithub: "More on GitHub",
 			all: "All Projects",
 			categories: { uxui: "UX/UI", fullstack: "Full-stack", automation: "Automation", branding: "Branding", wordpress: "WordPress" },
+				carousel: { label: "Featured projects", previous: "Previous projects", next: "Next projects", page: "Show projects {page} of {total}" },
 		},
 		resume: {
 			title: "My Resume",
@@ -114,10 +115,10 @@ const en = {
 			title: "Client's Testimonials",
 			subtitle: "I believe that working hard and trying to learn every day will make me improve in satisfying my customers.",
 			items: [
-				{ quote: "Josh transformed our outdated website into a modern, high-converting platform. His attention to detail and technical expertise are unmatched.", name: "Sarah Jenkins", role: "CEO, StartUp Flow" },
-				{ quote: "Working with Josh was seamless. He understood our vision perfectly and delivered a robust application ahead of schedule. Highly recommended!", name: "Michael Chen", role: "Product Manager, TechSphere" },
-				{ quote: "Not only is Josh a skilled developer, but he also has a great eye for design. He brought our mockups to life with pixel-perfect precision.", name: "Emily Rodriguez", role: "Creative Director, DesignHub" },
-				{ quote: "Josh's ability to solve complex problems is impressive. He optimized our site's performance significantly, leading to a 40% increase in user retention.", name: "David Thompson", role: "Founder, EcoSolutions" },
+				{ quote: "On PharmacyTime and HeyTides, Josh was the perfect link between design and implementation. He covered the UX and the frontend alike: a real unicorn of tech.", name: "Miguel Lozano", role: "Founder, Proventheory (Marketing Agency)" },
+				{ quote: "The New Paper, my portfolio website and Pressroom helped me establish my presence online and modernize how I practice journalism. We will keep working together in the years to come.", name: "Carmen Zambrano", role: "Journalist, Rotterdam" },
+				{ quote: "Every week the church now receives messages, new visitors and offers. An impressive number of people tell us they arrived through the website, or even found us through AI recommendations.", name: "Luis Peraza", role: "Pastor, LifePoint Church" },
+				{ quote: "Attentive, always present and highly adaptable. On TakeAway, Josh showed strong technical skills across design tools and real versatility as the product's needs evolved. Working in an agile Scrum team, he made a positive impact and became someone both the team and the product needed.", name: "Tomas Agustin Padilla", role: "Software Engineer, No Country (TakeAway)" },
 			],
 		},
 		blog: {

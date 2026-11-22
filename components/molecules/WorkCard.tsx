@@ -21,18 +21,18 @@ export function WorkCard({ project, labels }: WorkCardProps) {
 	]
 
 	return (
-		<article className="group relative grid border-2 border-ink bg-white shadow-sticker transition-transform duration-snap ease-snap hover:-translate-x-1 hover:-translate-y-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]">
-			<div className="overflow-hidden border-b-2 border-ink md:border-b-0 md:border-r-2">
+		<article className="group relative grid border-2 border-ink bg-white shadow-sticker transition-transform duration-snap ease-snap hover:-translate-x-1 hover:-translate-y-1 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)]">
+			<div className="overflow-hidden border-b-2 border-ink lg:border-b-0 lg:border-r-2">
 				<Image
 					src={project.thumbnail.src}
 					width={project.thumbnail.width}
 					height={project.thumbnail.height}
-					sizes="(min-width: 768px) 40vw, 100vw"
+					sizes="(min-width: 1024px) 58vw, 100vw"
 					alt={project.title}
-					className="size-full object-cover transition-transform duration-500 ease-snap group-hover:scale-105"
+					className="h-auto w-full transition-transform duration-500 ease-snap group-hover:scale-105 lg:size-full lg:object-cover"
 				/>
 			</div>
-			<Stack gap="md" className="p-6 md:p-8">
+			<Stack gap="md" justify="center" className="p-6 lg:p-8">
 				<Tag tone="accent" className="self-start">
 					{project.label}
 				</Tag>
@@ -42,19 +42,19 @@ export function WorkCard({ project, labels }: WorkCardProps) {
 					</LocaleLink>
 				</Heading>
 				<Text tone="soft">{project.description}</Text>
-				<dl className="mt-auto grid gap-3 border-t-2 border-ink pt-4">
-					{rows.map((row) => (
-						<div key={row.label} className="grid gap-1 sm:grid-cols-[9rem_minmax(0,1fr)]">
-							<Text as="span" size="label" tone="accent" weight="bold">
-								<dt>{row.label}</dt>
-							</Text>
-							<Text as="span" size="small" tone="soft">
-								<dd>{row.value}</dd>
-							</Text>
-						</div>
-					))}
-				</dl>
 			</Stack>
+			<dl className="grid gap-4 border-t-2 border-ink p-6 sm:grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] lg:col-span-2 lg:px-8">
+				{rows.map((row) => (
+					<div key={row.label} className="grid gap-1">
+						<Text as="span" size="label" tone="accent" weight="bold">
+							<dt>{row.label}</dt>
+						</Text>
+						<Text as="span" size="small" tone="soft">
+							<dd>{row.value}</dd>
+						</Text>
+					</div>
+				))}
+			</dl>
 		</article>
 	)
 }

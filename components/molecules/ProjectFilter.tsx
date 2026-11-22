@@ -3,12 +3,11 @@
 import { useState } from "react"
 
 import { Button } from "@/components/atoms/Button"
-import { Grid } from "@/components/atoms/Grid"
 import { Reveal } from "@/components/atoms/Reveal"
 import { Stack } from "@/components/atoms/Stack"
 import type { Project, ProjectCategory } from "@/data/projects"
 
-import { ProjectCard } from "./ProjectCard"
+import { ProjectCarousel, type ProjectCarouselLabels } from "./ProjectCarousel"
 
 export interface FilterCategory {
 	key: ProjectCategory
@@ -20,11 +19,12 @@ export interface ProjectFilterProps {
 	categories: FilterCategory[]
 	allLabel: string
 	limit: number
+	carousel: ProjectCarouselLabels
 }
 
 type ActiveFilter = ProjectCategory | "all"
 
-export function ProjectFilter({ projects, categories, allLabel, limit }: ProjectFilterProps) {
+export function ProjectFilter({ projects, categories, allLabel, limit, carousel }: ProjectFilterProps) {
 	const [active, setActive] = useState<ActiveFilter>("all")
 	const labels = Object.fromEntries(categories.map((category) => [category.key, category.label])) as Record<ProjectCategory, string>
 	const visible = (active === "all" ? projects : projects.filter((project) => project.categories.includes(active))).slice(0, limit)
@@ -41,13 +41,9 @@ export function ProjectFilter({ projects, categories, allLabel, limit }: Project
 					</Button>
 				))}
 			</Stack>
-			<Grid columns={2} gap="lg">
-				{visible.map((project, index) => (
-					<Reveal key={project.slug} delay={(index % 2) * 0.08}>
-						<ProjectCard project={project} categoryLabels={labels} />
-					</Reveal>
-				))}
-			</Grid>
+			<Reveal>
+				<ProjectCarousel key={active} projects={visible} categoryLabels={labels} labels={carousel} />
+			</Reveal>
 		</Stack>
 	)
 }

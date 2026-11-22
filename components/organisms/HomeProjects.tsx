@@ -15,7 +15,7 @@ export interface HomeProjectsProps {
 	limit?: number
 }
 
-export function HomeProjects({ copy, projects, limit = 6 }: HomeProjectsProps) {
+export function HomeProjects({ copy, projects, limit = 12 }: HomeProjectsProps) {
 	const categories = projectCategories.map((category) => ({ key: category.key, label: copy.categories[category.key] }))
 
 	return (
@@ -33,7 +33,7 @@ export function HomeProjects({ copy, projects, limit = 6 }: HomeProjectsProps) {
 					</Magnetic>
 				}
 			/>
-			<ProjectFilter projects={projects} categories={categories} allLabel={copy.all} limit={limit} />
+			<ProjectFilter projects={projects} categories={categories} allLabel={copy.all} limit={limit} carousel={copy.carousel} />
 			<Stack direction="row" justify="center" gap="md" wrap spaceTop="lg">
 				<Magnetic>
 					<Button href="/work" size="lg">

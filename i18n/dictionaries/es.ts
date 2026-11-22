@@ -3,7 +3,7 @@ import type { Dictionary } from "./en"
 const es: Dictionary = {
 	meta: {
 		title: "Josh D. Rubio - Portfolio de Design Engineer",
-		description: "Josh D. Rubio - Diseñador UX y desarrollador web con IA. Creo experiencias web intuitivas y centradas en el contenido con Next.js, WordPress y buenas prácticas de UX.",
+		description: "Josh D. Rubio - Diseñador de producto y desarrollador web con IA. Creo experiencias web intuitivas y centradas en el contenido con Next.js, WordPress y buenas prácticas de UX.",
 		ogLocale: "es_ES",
 	},
 	nav: { home: "Inicio", services: "Servicios", portfolio: "Portfolio", pricing: "Precios", blog: "Blog", contact: "Contacto" },
@@ -46,9 +46,9 @@ const es: Dictionary = {
 	home: {
 		hero: {
 			greeting: "👋 Hola, soy Josh",
-			title: "Diseñador UX y",
+			title: "Diseñador de producto y",
 			titleAccent: "Desarrollador Fullstack",
-			body: "Diseño y construyo experiencias digitales que se sienten fáciles, con sentido y centradas en las personas. Mi trabajo une pensamiento de producto, narrativa y tecnologías web modernas como Next.js, WordPress y herramientas con IA para crear interfaces que resuelven problemas reales y escalan con claridad.",
+			body: "Llevar un proyecto de la idea a la realidad es un trabajo duro. Entender el mercado y saber posicionar un producto requiere conocimiento y experiencia, y diseñar algo que de verdad cumpla su propósito y convierta en la era digital es un arte. A eso me he dedicado en los últimos años. Mi trabajo une diseño de producto, lógica de negocio y tecnologías web modernas para que tu idea no solo funcione, sino que triunfe.",
 			cv: "Descargar CV",
 			connect: "Hablemos",
 			technologies: "Tecnologías con las que trabajo",
@@ -63,13 +63,13 @@ const es: Dictionary = {
 		},
 		services: {
 			title: "¿Qué ofrezco?",
-			subtitle: "Mi camino empezó con la fascinación por el diseño y la tecnología, y me llevó a especializarme en diseño UI/UX",
+			subtitle: "De la primera idea a un producto que funciona y convierte: comprensión del mercado, diseño, lógica de negocio y tecnología web moderna en unas mismas manos.",
 			quote: "Pedir presupuesto",
 			items: [
-				{ title: "Diseño UI/UX", text: "Diseño de interfaces atractivas y fáciles de usar para aplicaciones web y móviles." },
-				{ title: "Diseño de apps móviles", text: "Diseño de aplicaciones móviles intuitivas y atractivas para iOS y Android." },
-				{ title: "Diseño de identidad de marca", text: "Desarrollo de identidades visuales coherentes que conecten con tu público." },
-				{ title: "Desarrollo web", text: "Creación de sitios web responsivos y atractivos, alineados con tu marca y tus objetivos de negocio." },
+				{ title: "Diseño UI/UX", text: "Interfaces pensadas para usuarios reales y para el mercado, diseñadas para cumplir su propósito y convertir." },
+				{ title: "Diseño de apps móviles", text: "Productos móviles para iOS y Android, desde el primer flujo hasta un prototipo listo para construir." },
+				{ title: "Diseño de identidad de marca", text: "Una identidad visual coherente que posiciona tu producto y conecta con las personas a las que quieres llegar." },
+				{ title: "Desarrollo web", text: "Sitios y aplicaciones web rápidos y responsivos con tecnología moderna, construidos alrededor de tu lógica de negocio y tus objetivos." },
 			],
 		},
 		projects: {
@@ -79,6 +79,7 @@ const es: Dictionary = {
 			moreGithub: "Más en GitHub",
 			all: "Todos los proyectos",
 			categories: { uxui: "UX/UI", fullstack: "Full-stack", automation: "Automatización", branding: "Marca", wordpress: "WordPress" },
+				carousel: { label: "Proyectos destacados", previous: "Proyectos anteriores", next: "Proyectos siguientes", page: "Ver proyectos {page} de {total}" },
 		},
 		resume: {
 			title: "Mi currículum",
@@ -114,10 +115,10 @@ const es: Dictionary = {
 			title: "Testimonios de clientes",
 			subtitle: "Creo que trabajar duro y aprender cada día me ayudará a mejorar para satisfacer a mis clientes.",
 			items: [
-				{ quote: "Josh transformó nuestra web anticuada en una plataforma moderna que convierte. Su atención al detalle y su pericia técnica son inigualables.", name: "Sarah Jenkins", role: "CEO, StartUp Flow" },
-				{ quote: "Trabajar con Josh fue muy fluido. Entendió nuestra visión a la perfección y entregó una aplicación sólida antes de lo previsto. ¡Muy recomendable!", name: "Michael Chen", role: "Product Manager, TechSphere" },
-				{ quote: "Josh no solo es un desarrollador competente, también tiene muy buen ojo para el diseño. Dio vida a nuestros prototipos con una precisión milimétrica.", name: "Emily Rodriguez", role: "Directora creativa, DesignHub" },
-				{ quote: "La capacidad de Josh para resolver problemas complejos es impresionante. Optimizó el rendimiento de nuestro sitio de forma notable y la retención de usuarios subió un 40%.", name: "David Thompson", role: "Fundador, EcoSolutions" },
+				{ quote: "En PharmacyTime y HeyTides, Josh fue el enlace perfecto entre el diseño y la implementación. Cubrió la UX y el frontend por igual: un auténtico unicornio de la informática.", name: "Miguel Lozano", role: "Fundador, Proventheory (agencia de marketing)" },
+				{ quote: "The New Paper, mi web de portafolio y Pressroom me ayudaron a establecer mi presencia online y a modernizar mi ejercicio del periodismo. Seguiremos trabajando juntos en los próximos años.", name: "Carmen Zambrano", role: "Periodista, Róterdam" },
+				{ quote: "Cada semana la iglesia recibe ahora mensajes, visitas nuevas y ofertas. Una cantidad impresionante de personas nos cuenta que llegó por la web, o incluso que nos encontró por recomendaciones de la IA.", name: "Luis Peraza", role: "Pastor, LifePoint Church" },
+				{ quote: "Muy atento, siempre presente y con gran adaptabilidad. En TakeAway, Josh demostró sólidas habilidades técnicas con las herramientas de diseño y mucha versatilidad a medida que evolucionaban las necesidades del producto. Trabajando en un equipo ágil con Scrum, impactó de forma positiva y se hizo una persona necesaria para el equipo y para el producto.", name: "Tomas Agustin Padilla", role: "Ingeniero de software, No Country (TakeAway)" },
 			],
 		},
 		blog: {

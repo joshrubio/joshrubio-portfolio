@@ -38,7 +38,7 @@ export default function PanDeVida() {
                     { label: "Stack", value: "Next.js, Tailwind CSS, Framer Motion" },
                     { label: "Languages", value: "AR · ES · EN" },
                 ]}
-                hero={{ src: `${IMG}/thumbnail.webp`, alt: "Pan de Vida home page, English version" }}
+                hero={{ src: `${IMG}/hero.webp`, alt: "Pan de Vida home page, English version" }}
             />
 
             <ProjectBody>

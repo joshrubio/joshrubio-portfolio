@@ -16,7 +16,11 @@ const sectionStyles = cva("relative", {
 			bottom: "torn-b",
 			both: "torn-t torn-b",
 		},
-		clip: {
+		overlap: {
+				none: "",
+				up: "-mt-6",
+			},
+			clip: {
 			true: "overflow-hidden",
 			false: "",
 		},
@@ -26,7 +30,7 @@ const sectionStyles = cva("relative", {
 			none: "",
 		},
 	},
-	defaultVariants: { tone: "paper", torn: "none", spacing: "default", clip: false },
+	defaultVariants: { tone: "paper", torn: "none", spacing: "default", clip: false, overlap: "none" },
 })
 
 export interface SectionProps extends VariantProps<typeof sectionStyles> {
@@ -35,9 +39,9 @@ export interface SectionProps extends VariantProps<typeof sectionStyles> {
 	children: ReactNode
 }
 
-export function Section({ id, tone, torn, spacing, clip, width, children }: SectionProps) {
+export function Section({ id, tone, torn, spacing, clip, overlap, width, children }: SectionProps) {
 	return (
-		<section id={id} className={sectionStyles({ tone, torn, spacing, clip })}>
+		<section id={id} className={sectionStyles({ tone, torn, spacing, clip, overlap })}>
 			<Container width={width}>{children}</Container>
 		</section>
 	)

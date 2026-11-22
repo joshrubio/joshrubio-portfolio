@@ -28,7 +28,7 @@ export default function HeyTides() {
                     { label: "Stack", value: "WordPress, WooCommerce, PHP" },
                     { label: "Automation", value: "Python + Airtable" },
                 ]}
-                hero={{ src: `${IMG}/thumbnail.webp`, alt: "HeyTides website" }}
+                hero={{ src: `${IMG}/hero.webp`, alt: "HeyTides website" }}
             />
 
             <ProjectBody>

@@ -20,7 +20,7 @@ export function HomeStats({ labels, values }: HomeStatsProps) {
 	] as const
 
 	return (
-		<Section tone="ink" torn="both" spacing="tight">
+		<Section tone="ink" torn="both" spacing="tight" overlap="up">
 			<Grid columns={5} gap="lg" align="start">
 				{items.map((item, index) => (
 					<Reveal key={item.label[0]} delay={index * 0.08}>

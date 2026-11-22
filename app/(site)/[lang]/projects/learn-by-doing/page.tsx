@@ -51,7 +51,7 @@ export default function LearnByDoing() {
                     { label: "Type", value: "Claude Code plugin" },
                     { label: "Language", value: "Spanish interface, for now" },
                 ]}
-                hero={{ src: `${IMG}/thumbnail.webp`, alt: "The Learn by Doing study space" }}
+                hero={{ src: `${IMG}/hero.webp`, alt: "The Learn by Doing study space" }}
             />
 
             <ProjectBody>

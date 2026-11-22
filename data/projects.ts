@@ -45,7 +45,7 @@ export const projects: Project[] = [
         description: "A Claude Code plugin that turns every commit Claude makes into short lessons, saved as Markdown and studied later with spaced review and a 3D map of what you know. Designed and built end to end.",
         client: "Personal Project",
         tools: ["Node.js", "MCP", "Claude Code", "Artifacts"],
-        thumbnail: { src: "/assets/imgs/projects/learn-by-doing/thumbnail.webp", width: 1280, height: 720 },
+        thumbnail: { src: "/assets/imgs/projects/learn-by-doing/thumbnail.webp", width: 1536, height: 864 },
         categories: ["automation", "fullstack"]
     },
     {
@@ -71,7 +71,7 @@ export const projects: Project[] = [
         client: "Pan de Vida",
         duration: "2025 - 2026",
         tools: ["Next.js", "Tailwind CSS", "Framer Motion", "Resend"],
-        thumbnail: { src: "/assets/imgs/projects/pan-de-vida/thumbnail.webp", width: 1440, height: 810 },
+        thumbnail: { src: "/assets/imgs/projects/pan-de-vida/thumbnail.webp", width: 1536, height: 864 },
         categories: ["uxui"]
     },
     {
@@ -84,7 +84,7 @@ export const projects: Project[] = [
         client: "Carmen Zambrano",
         duration: "2026",
         tools: ["Next.js", "TypeScript", "Upstash Redis", "Resend"],
-        thumbnail: { src: "/assets/imgs/projects/the-new-paper/thumbnail.webp", width: 1440, height: 810 },
+        thumbnail: { src: "/assets/imgs/projects/the-new-paper/thumbnail.webp", width: 1536, height: 864 },
         categories: ["fullstack", "uxui"]
     },
     {
@@ -242,7 +242,7 @@ export const projects: Project[] = [
         description: "A white-label, multi-tenant telehealth platform built on FHIR: patient app, operator console and clinical portal in one Next.js application. I worked on the frontend and the business logic.",
         client: "Proventheory",
         tools: ["Next.js", "TypeScript", "Medplum (FHIR)", "Playwright", "Terraform"],
-        thumbnail: { src: "/assets/imgs/projects/rx-library/thumbnail.webp", width: 1600, height: 900 },
+        thumbnail: { src: "/assets/imgs/projects/rx-library/thumbnail.webp", width: 1536, height: 864 },
         categories: ["fullstack"]
     },
     {
@@ -266,7 +266,7 @@ export const projects: Project[] = [
         description: "A custom WordPress theme and WooCommerce store for a pharmacy brand, with a Python pipeline that syncs the catalog from Airtable. Designed and developed end to end.",
         client: "Proventheory",
         tools: ["WordPress", "WooCommerce", "PHP", "Python", "Airtable"],
-        thumbnail: { src: "/assets/imgs/projects/pharmacy-time/thumbnail.webp", width: 1440, height: 810 },
+        thumbnail: { src: "/assets/imgs/projects/pharmacy-time/thumbnail.webp", width: 1536, height: 864 },
         categories: ["wordpress"]
     },
     {
@@ -278,7 +278,7 @@ export const projects: Project[] = [
         description: "A website for a modern compounding and peptide-focused pharmacy: custom WordPress theme, WooCommerce store and an Airtable-driven catalog. Designed and developed end to end.",
         client: "Proventheory",
         tools: ["WordPress", "WooCommerce", "PHP", "Python", "Airtable"],
-        thumbnail: { src: "/assets/imgs/projects/heytides/thumbnail.webp", width: 1440, height: 810 },
+        thumbnail: { src: "/assets/imgs/projects/heytides/thumbnail.webp", width: 1536, height: 864 },
         categories: ["wordpress"]
     },
     {
@@ -355,7 +355,7 @@ export const projects: Project[] = [
         description: "A trilingual portfolio for a journalist with over 30 years of experience, rebuilt from WordPress into a static Next.js site with motion and dark and light themes. Designed and developed end to end.",
         client: "Carmen Zambrano",
         tools: ["Next.js", "Framer Motion", "GSAP", "Vercel"],
-        thumbnail: { src: "/assets/imgs/projects/carmen-zambrano/thumbnail.webp", width: 1440, height: 810 },
+        thumbnail: { src: "/assets/imgs/projects/carmen-zambrano/thumbnail.webp", width: 1536, height: 864 },
         categories: ["fullstack", "uxui"]
     }
 ];

@@ -52,7 +52,7 @@ export default function CarmenZambrano() {
                     { label: "Stack", value: "Next.js, Framer Motion, GSAP" },
                     { label: "Languages", value: "ES · EN · NL" },
                 ]}
-                hero={{ src: `${IMG}/thumbnail.webp`, alt: "Carmen Zambrano's portfolio, dark theme" }}
+                hero={{ src: `${IMG}/hero.webp`, alt: "Carmen Zambrano's portfolio, dark theme" }}
             />
 
             <ProjectBody>
@@ -132,7 +132,7 @@ export default function CarmenZambrano() {
                     </Paragraph>
                     <FigureGrid
                         images={[
-                            { src: `${IMG}/thumbnail.webp`, alt: "Dark theme", caption: "Dark, the default" },
+                            { src: `${IMG}/hero.webp`, alt: "Dark theme", caption: "Dark, the default" },
                             { src: `${IMG}/screen-light.webp`, alt: "Light theme", caption: "Light" },
                         ]}
                     />

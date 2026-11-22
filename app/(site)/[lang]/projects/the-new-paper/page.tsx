@@ -54,7 +54,7 @@ export default function TheNewPaper() {
                     { label: "Stack", value: "Next.js, TypeScript, Redis" },
                     { label: "Languages", value: "ES · EN · NL" },
                 ]}
-                hero={{ src: `${IMG}/thumbnail.webp`, alt: "The front page of The New Paper" }}
+                hero={{ src: `${IMG}/hero.webp`, alt: "The front page of The New Paper" }}
             />
 
             <ProjectBody>
