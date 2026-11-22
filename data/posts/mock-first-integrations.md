@@ -4,7 +4,7 @@ description: How a telehealth platform with fourteen external integrations staye
 category: Architecture
 author: Josh D. Rubio
 date: 2026-10-05
-cover: /assets/imgs/projects/rx-library/thumbnail.webp
+cover: /assets/imgs/projects/rx-library/hero.webp
 coverAlt: The RX Library telehealth platform
 ---
 
