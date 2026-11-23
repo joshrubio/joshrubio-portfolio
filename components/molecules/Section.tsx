@@ -21,7 +21,7 @@ const sectionStyles = cva("relative", {
 				up: "-mt-6",
 			},
 			clip: {
-			true: "overflow-hidden",
+			true: "overflow-clip",
 			false: "",
 		},
 		spacing: {
