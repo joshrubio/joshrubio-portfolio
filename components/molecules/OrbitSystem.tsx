@@ -38,16 +38,6 @@ const orbits: readonly Orbit[] = [
 		],
 	},
 	{ radius: 280, period: 32, accent: true, satellites: [{ radius: 7, tone: "ink", phase: 0.35 }] },
-	{
-		radius: 345,
-		period: -44,
-		dashed: true,
-		satellites: [
-			{ radius: 5, tone: "accent", phase: 0.8 },
-			{ radius: 4, tone: "ink", phase: 0.3 },
-		],
-	},
-	{ radius: 410, period: 60, satellites: [{ radius: 6, tone: "paper", phase: 0.6 }] },
 ]
 
 const toneClass: Record<Tone, string> = {
