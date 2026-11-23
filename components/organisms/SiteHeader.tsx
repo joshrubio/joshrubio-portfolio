@@ -36,12 +36,13 @@ export function SiteHeader() {
 					</Button>
 				</>
 			}
-			mobile={
-				<MobileNav items={items} toggleLabel="Menu">
+			compact={
+				<>
 					<TranslateButton />
 					<LanguageSwitch />
-				</MobileNav>
+				</>
 			}
+			mobile={<MobileNav items={items} toggleLabel="Menu" />}
 		/>
 	)
 }
