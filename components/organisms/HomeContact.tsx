@@ -20,27 +20,29 @@ export function HomeContact({ copy }: HomeContactProps) {
 	return (
 		<Section id="contact" tone="ink" torn="top">
 			<SectionHeader label="07" title={copy.title} subtitle={copy.subtitle} tone="ink" />
-			<Grid columns={2} gap="lg" align="start">
-				<Stack gap="xl">
-					<Stack gap="lg">
-						<ContactLink icon="phone" label="Phone Number" value="+34-643-529-116" href={`tel:${siteLinks.phone}`} />
-						<ContactLink icon="mail" label="Email" value={siteLinks.email} href={`mailto:${siteLinks.email}`} />
-						<ContactLink icon="github" label="GitHub" value="@joshrubio" href={siteLinks.github} external />
-						<ContactLink icon="linkedin" label="LinkedIn" value="Josh D. Rubio" href={siteLinks.linkedin} external />
+			<Stack gap="xl">
+				<Grid columns={2} gap="lg" align="start">
+					<Stack gap="xl">
+						<Stack gap="lg">
+							<ContactLink icon="phone" label="Phone Number" value="+34-643-529-116" href={`tel:${siteLinks.phone}`} />
+							<ContactLink icon="mail" label="Email" value={siteLinks.email} href={`mailto:${siteLinks.email}`} />
+							<ContactLink icon="github" label="GitHub" value="@joshrubio" href={siteLinks.github} external />
+							<ContactLink icon="linkedin" label="LinkedIn" value="Josh D. Rubio" href={siteLinks.linkedin} external />
+						</Stack>
+						<Reveal direction="pop">
+							<Cutout photo="sitting-floor" alt="" size="md" sizes="20rem" />
+						</Reveal>
 					</Stack>
-					<Reveal direction="pop">
-						<Cutout photo="sitting-floor" alt="" size="md" sizes="20rem" />
+					<Reveal direction="left">
+						<Panel title="mail.app">
+							<ContactForm copy={copy} recipient={siteLinks.email} />
+						</Panel>
 					</Reveal>
-				</Stack>
-				<Reveal direction="left">
-					<Panel title="mail.app">
-						<ContactForm copy={copy} recipient={siteLinks.email} />
-					</Panel>
-				</Reveal>
-			</Grid>
-			<Heading as="p" size="display" width="condensed" tone="strokePaper" aria-hidden="true" align="center">
-				<SplitText text="josh.rubio" by="char" playful />
-			</Heading>
+				</Grid>
+				<Heading as="p" size="display" width="condensed" tone="strokePaper" aria-hidden="true" align="center">
+					<SplitText text="josh.rubio" by="char" playful />
+				</Heading>
+			</Stack>
 		</Section>
 	)
 }
