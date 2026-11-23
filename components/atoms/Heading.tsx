@@ -19,6 +19,7 @@ const headingStyles = cva("font-display font-black uppercase text-balance", {
 		tone: {
 			ink: "text-ink",
 			accent: "text-accent",
+			accentOutline: "text-accent glyph-outline-white",
 			paper: "text-paper",
 			stroke: "text-stroke",
 			strokePaper: "text-stroke-paper",

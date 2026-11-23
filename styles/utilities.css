@@ -16,6 +16,12 @@
 	color: transparent;
 }
 
+@utility glyph-outline-white {
+	-webkit-text-stroke: 0.035em var(--color-white);
+	paint-order: stroke fill;
+	stroke-linejoin: round;
+}
+
 @utility sticker-outline-paper {
 	filter: drop-shadow(3px 0 0 var(--color-white)) drop-shadow(-3px 0 0 var(--color-white)) drop-shadow(0 3px 0 var(--color-white)) drop-shadow(0 -3px 0 var(--color-white));
 }

@@ -39,7 +39,7 @@ export function HomeHero({ copy }: HomeHeroProps) {
 					<Heading as="h1" size="display" width="condensed">
 						<SplitText text={copy.title} />{" "}
 						<Scribbled shape="underline">
-							<Heading as="span" size="display" width="condensed" tone="accent">
+							<Heading as="span" size="display" width="condensed" tone="accentOutline">
 								<SplitText text={copy.titleAccent} delay={0.35} />
 							</Heading>
 						</Scribbled>
