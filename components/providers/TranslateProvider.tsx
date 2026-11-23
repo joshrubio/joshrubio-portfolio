@@ -67,7 +67,14 @@ export const useTranslate = () => useContext(TranslateContext)
 
 type DialogKind = null | "intro" | "prompt"
 
-export function TranslateProvider({ contentLang, children }: { contentLang: string; children: ReactNode }) {
+interface TranslateProviderProps {
+	contentLang: string
+	enabled: boolean
+	routeKey: string
+	children: ReactNode
+}
+
+export function TranslateProvider({ contentLang, enabled, routeKey, children }: TranslateProviderProps) {
 	const { lang, t } = useLocale()
 	const [target, setTarget] = useState<string | null>(null)
 	const [phase, setPhase] = useState<Phase>("idle")
@@ -76,8 +83,9 @@ export function TranslateProvider({ contentLang, children }: { contentLang: stri
 	const [always, setAlways] = useState(false)
 	const state = useRef<{ nodes: Text[]; original: string[] } | null>(null)
 	const busy = useRef(false)
+	const generation = useRef(0)
 
-	const available = target !== null && target !== contentLang
+	const available = enabled && target !== null && target !== contentLang
 
 	const nameOf = useCallback(
 		(code: string) => {
@@ -110,6 +118,7 @@ export function TranslateProvider({ contentLang, children }: { contentLang: stri
 				return
 			}
 			busy.current = true
+			const current = generation.current
 			try {
 				const options = { sourceLanguage: contentLang, targetLanguage: destination }
 				if ((await Translator.availability(options)) === "unavailable") {
@@ -123,6 +132,10 @@ export function TranslateProvider({ contentLang, children }: { contentLang: stri
 						monitor.addEventListener("downloadprogress", () => setPhase("downloading"))
 					},
 				})
+				if (generation.current !== current) {
+					translator.destroy?.()
+					return
+				}
 				const nodes = collectTextNodes(root)
 				const original = nodes.map((node) => node.nodeValue ?? "")
 				state.current = { nodes, original }
@@ -131,7 +144,7 @@ export function TranslateProvider({ contentLang, children }: { contentLang: stri
 				let next = 0
 				let done = 0
 				const worker = async () => {
-					while (next < nodes.length) {
+					while (next < nodes.length && generation.current === current) {
 						const index = next++
 						const text = original[index]
 						const lead = text.match(/^\s*/)?.[0] ?? ""
@@ -143,26 +156,32 @@ export function TranslateProvider({ contentLang, children }: { contentLang: stri
 				}
 				await Promise.all(Array.from({ length: CONCURRENCY }, worker))
 				translator.destroy?.()
-				setPhase("done")
+				if (generation.current === current) setPhase("done")
 			} catch {
-				restore()
-				setPhase("error")
+				if (generation.current === current) restore()
+				if (generation.current === current) setPhase("error")
 			} finally {
-				busy.current = false
+				if (generation.current === current) busy.current = false
 			}
 		},
 		[target, contentLang, restore],
 	)
 
 	useEffect(() => {
-		const language = getTargetLanguage()
+		generation.current += 1
+		busy.current = false
+		state.current = null
 		// eslint-disable-next-line react-hooks/set-state-in-effect
+		setPhase("idle")
+		setDialog(null)
+		if (!enabled) return
+		const language = getTargetLanguage()
 		setTarget(language)
 		if (language === contentLang) return
 		if (autoTranslate()) void run(language)
 		else if (!promptDismissed()) setDialog("prompt")
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [contentLang])
+	}, [contentLang, enabled, routeKey])
 
 	const toggle = useCallback(() => {
 		if (!target) return

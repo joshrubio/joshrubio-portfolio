@@ -18,10 +18,11 @@ export interface SiteShellProps {
 export function SiteShell({ children, footer }: SiteShellProps) {
 	const { lang } = useLocale()
 	const pathname = stripLocale(usePathname())
-	const contentLang = translatedRoutes.includes(pathname) ? lang : "en"
+	const hasOwnTranslation = translatedRoutes.includes(pathname)
+	const contentLang = hasOwnTranslation ? lang : "en"
 
 	return (
-		<TranslateProvider contentLang={contentLang}>
+		<TranslateProvider contentLang={contentLang} enabled={!hasOwnTranslation} routeKey={pathname}>
 			<SiteHeader />
 			<main id="page-content" lang={contentLang}>
 				{children}
